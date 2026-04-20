@@ -1,0 +1,77 @@
+[
+  {
+    "id": "task-001",
+    "type": "task",
+    "title": "STOP SCROLLING START BUILDING",
+    "body": "The Soberin landing page isn't going to design itself. You've got the copy, you've got the wireframe — what's the blocker?",
+    "expanded": "You said you'd have this done by Wednesday. The Figma is ready, the copy doc is final. Just open VS Code and start with the hero section. Ship ugly, iterate later.",
+    "footer": "Related: Soberin"
+  },
+  {
+    "id": "task-002",
+    "type": "task",
+    "title": "REVIEW YOUR OPEN PRS",
+    "body": "You've got 3 PRs waiting for your review. Your team is blocked. 15 minutes of focused review unblocks 3 people.",
+    "footer": "Do it now"
+  },
+  {
+    "id": "insight-001",
+    "type": "insight",
+    "title": "YOUR BEST IDEAS COME POST-EXERCISE",
+    "body": "Pattern: the last 4 breakthrough ideas you logged all came within 2 hours of a workout. Your brain needs the body to move first.",
+    "expanded": "This isn't woo-woo. Exercise increases BDNF which directly supports creative problem-solving. Schedule your hardest thinking for after your gym sessions, not before.",
+    "footer": "Schedule accordingly"
+  },
+  {
+    "id": "insight-002",
+    "type": "insight",
+    "title": "AGENTS WILL EAT SAAS",
+    "body": "Every SaaS product is just a UI over an API. When agents can call APIs directly, the UI layer becomes optional. What does this mean for Soberin?",
+    "footer": "Think about this later"
+  },
+  {
+    "id": "skill-001",
+    "type": "skill",
+    "title": "VIBE CODING MEANS TASTE NOT SPEED",
+    "body": "The point of vibe coding isn't to ship faster. It's to stay in creative flow longer. Speed is the side effect of not breaking your focus to Google syntax.",
+    "footer": "Apply to current workflow"
+  },
+  {
+    "id": "skill-002",
+    "type": "skill",
+    "title": "PROMPT ENGINEERING IS DEAD",
+    "body": "The best prompts aren't clever tricks. They're clear thinking expressed plainly. If your prompt needs engineering, your thinking isn't clear yet.",
+    "expanded": "Write what you want like you're explaining it to a smart colleague. Include context, constraints, and examples. That's it. No frameworks needed.",
+    "footer": "Simplify your prompts"
+  },
+  {
+    "id": "whatif-001",
+    "type": "whatif",
+    "title": "WHAT IF SOBERIN WENT B2B",
+    "body": "You're building for consumers. But what if employers wanted to offer Soberin as a benefit? Different GTM, different pricing, different product surface.",
+    "expanded": "B2B means: longer sales cycles, higher LTV, less churn, fewer users but more revenue per user. You'd need an admin dashboard, team billing, and usage reports. Is that the product you want to build?",
+    "footer": "Explore in next strategy session"
+  },
+  {
+    "id": "whatif-002",
+    "type": "whatif",
+    "title": "WHAT IF YOU HAD 10X USERS TOMORROW",
+    "body": "Your infra would break. Where? Database? Auth? Payments? Knowing where you'd fail first tells you what to harden next.",
+    "footer": "Run a thought experiment"
+  },
+  {
+    "id": "timeless-001",
+    "type": "timeless",
+    "title": "THE OBSTACLE IS THE WAY",
+    "body": "Marcus Aurelius faced plagues, wars, and betrayal. His response: the impediment to action advances action. What stands in the way becomes the way.",
+    "expanded": "This isn't toxic positivity. It's strategic reframing. The problem you're avoiding contains the exact skill you need to develop next. The obstacle is the curriculum.",
+    "footer": "Meditations, Book V"
+  },
+  {
+    "id": "timeless-002",
+    "type": "timeless",
+    "title": "SHIP THEN ITERATE FOREVER",
+    "body": "Leonardo da Vinci said art is never finished, only abandoned. Software is the same — but you can keep iterating. Ship v1, then make it good.",
+    "footer": "Perfectionism is procrastination"
+  }
+]
