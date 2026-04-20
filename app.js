@@ -538,6 +538,10 @@ async function init() {
   // Show first card
   nextCard();
 
+  setTimeout(() => {
+    document.getElementById('splash').classList.add('hidden');
+  }, 1500);
+
   // Wire buttons
   document.getElementById('btn-next').addEventListener('click', () => nextCard());
   document.getElementById('btn-back').addEventListener('click', () => prevCard());
