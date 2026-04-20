@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Nick Feed</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="preload" href="fonts/PlusJakartaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <span id="app-name">NICK FEED</span>
+      <span id="card-counter"></span>
+      <span id="streak"></span>
+    </header>
+    <main id="card-area">
+      <div id="card-container"></div>
+      <div id="drag-indicator-left" class="drag-indicator">← BACK</div>
+      <div id="drag-indicator-right" class="drag-indicator">NEXT →</div>
+    </main>
+    <footer id="footer">
+      <button id="btn-back" aria-label="Previous card">←</button>
+      <div id="feedback-buttons">
+        <button id="btn-dislike" aria-label="Dislike">👎</button>
+        <button id="btn-like" aria-label="Like">👍</button>
+      </div>
+      <button id="btn-next" aria-label="Next card">→</button>
+      <button id="btn-shuffle" aria-label="Shuffle">🔀</button>
+    </footer>
+  </div>
+  <script src="svg-gen.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
