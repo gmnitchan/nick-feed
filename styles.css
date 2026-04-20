@@ -250,6 +250,14 @@ html, body {
   justify-content: center;
 }
 
+.card--nudge {
+  background: linear-gradient(145deg, #1a2400, #0d1400);
+  border: 1px solid var(--accent);
+}
+.card--nudge .card-title {
+  color: var(--accent);
+}
+
 #btn-settings {
   background: none;
   border: none;

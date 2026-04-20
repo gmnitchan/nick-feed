@@ -82,6 +82,7 @@ async function loadCards() {
 function renderCard(card) {
   const el = document.createElement('div');
   el.className = 'card';
+  if (card.isNudge) el.classList.add('card--nudge');
   el.dataset.id = card.id;
 
   const meta = TYPE_META[card.type] || TYPE_META.task;
@@ -538,6 +539,10 @@ async function init() {
   STATE.cards = cards;
   buildQueues(cards);
   updateStreak();
+
+  if (!storageAvailable()) {
+    document.getElementById('app-name').textContent = 'NICK FEED (no storage)';
+  }
 
   // Show first card
   nextCard();
