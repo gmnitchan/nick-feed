@@ -306,6 +306,67 @@ function updateFeedbackButtons() {
   }
 }
 
+// --- Feedback Export ---
+function generateFeedbackExport() {
+  const feedback = loadStorage(STORAGE_KEYS.feedback) || {};
+  const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
+  const today = todayStr();
+
+  const likes = [];
+  const dislikes = [];
+  for (const [id, data] of Object.entries(feedback)) {
+    const card = STATE.cards.find(c => c.id === id);
+    if (!card) continue;
+    if (data.rating === 'like') likes.push(card);
+    else dislikes.push(card);
+  }
+
+  const groupByType = (cards) => {
+    const groups = {};
+    for (const c of cards) { groups[c.type] = (groups[c.type] || 0) + 1; }
+    return Object.entries(groups).map(([t, n]) => `${t} (${n})`).join(', ');
+  };
+
+  const titles = (cards) => cards.map(c => `"${c.title}"`).join(', ');
+
+  const expandedCards = passive.expanded.map(id => STATE.cards.find(c => c.id === id)).filter(Boolean);
+  const retrievedCards = passive.retrieved.map(id => STATE.cards.find(c => c.id === id)).filter(Boolean);
+  const skipped = Object.entries(passive.dwellTimes || {})
+    .filter(([_, t]) => t < 1)
+    .map(([id]) => STATE.cards.find(c => c.id === id))
+    .filter(Boolean);
+
+  let output = `=== NICK'S FEED PREFERENCES (as of ${today}) ===\n\n`;
+  output += `EXPLICIT LIKES (${likes.length} cards):\n`;
+  output += `- Types: ${groupByType(likes) || 'none yet'}\n`;
+  output += `- Titles: ${titles(likes) || 'none yet'}\n\n`;
+  output += `EXPLICIT DISLIKES (${dislikes.length} cards):\n`;
+  output += `- Types: ${groupByType(dislikes) || 'none yet'}\n`;
+  output += `- Titles: ${titles(dislikes) || 'none yet'}\n\n`;
+  output += `PASSIVE SIGNALS:\n`;
+  output += `- Expanded (high interest): ${expandedCards.length} cards — ${titles(expandedCards) || 'none'}\n`;
+  output += `- Retrieved (went back to re-read): ${retrievedCards.length} cards — ${titles(retrievedCards) || 'none'}\n`;
+  output += `- Speed-skipped (<1s): ${skipped.length} cards — ${titles(skipped) || 'none'}\n\n`;
+  output += `=== USE THIS TO CALIBRATE NEW CARDS ===`;
+
+  return output;
+}
+
+function setupSettings() {
+  document.getElementById('btn-settings').addEventListener('click', () => {
+    document.getElementById('settings-overlay').style.display = 'flex';
+  });
+  document.getElementById('btn-close-settings').addEventListener('click', () => {
+    document.getElementById('settings-overlay').style.display = 'none';
+  });
+  document.getElementById('btn-export').addEventListener('click', async () => {
+    const text = generateFeedbackExport();
+    await navigator.clipboard.writeText(text);
+    document.getElementById('btn-export').textContent = 'Copied!';
+    setTimeout(() => { document.getElementById('btn-export').textContent = 'Copy Feedback Summary'; }, 2000);
+  });
+}
+
 // --- Streak ---
 function updateStreak() {
   const streakData = loadStorage(STORAGE_KEYS.streak) || { count: 0, lastOpen: null };
@@ -484,6 +545,7 @@ async function init() {
   setupSwipeHandler();
   setupExpandHandler();
   setupFeedbackButtons();
+  setupSettings();
 }
 
 function showErrorCard() {

@@ -15,10 +15,18 @@
 </head>
 <body>
   <div id="app">
+    <div id="settings-overlay" style="display:none">
+      <div id="settings-panel">
+        <h2>Settings</h2>
+        <button id="btn-export">Copy Feedback Summary</button>
+        <button id="btn-close-settings">Close</button>
+      </div>
+    </div>
     <header id="header">
       <span id="app-name">NICK FEED</span>
       <span id="card-counter"></span>
       <span id="streak"></span>
+      <button id="btn-settings" aria-label="Settings">⚙</button>
     </header>
     <main id="card-area">
       <div id="card-container"></div>
