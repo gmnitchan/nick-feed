@@ -270,6 +270,30 @@ function recordRetrieved(cardId) {
   saveStorage(STORAGE_KEYS.passive, passive);
 }
 
+// --- Streak ---
+function updateStreak() {
+  const streakData = loadStorage(STORAGE_KEYS.streak) || { count: 0, lastOpen: null };
+  const today = todayStr();
+
+  if (!streakData.lastOpen) {
+    streakData.count = 1;
+  } else if (streakData.lastOpen === today) {
+    // No change
+  } else if (daysBetween(streakData.lastOpen, today) === 1) {
+    streakData.count++;
+  } else {
+    streakData.count = 1;
+  }
+
+  streakData.lastOpen = today;
+  saveStorage(STORAGE_KEYS.streak, streakData);
+  renderStreak(streakData.count);
+}
+
+function renderStreak(count) {
+  document.getElementById('streak').textContent = `🔥 ${count}`;
+}
+
 // --- Expand/Collapse ---
 function setupExpandHandler() {
   const cardArea = document.getElementById('card-area');
@@ -412,7 +436,7 @@ async function init() {
   }
   STATE.cards = cards;
   buildQueues(cards);
-  if (typeof updateStreak === 'function') updateStreak();
+  updateStreak();
 
   // Show first card
   nextCard();
