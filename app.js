@@ -108,6 +108,16 @@ function showCard(card) {
 
   const el = renderCard(card);
   container.appendChild(el);
+
+  // Entry animation
+  el.style.transform = 'scale(0.95)';
+  el.style.opacity = '0';
+  requestAnimationFrame(() => {
+    el.style.transition = 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s';
+    el.style.transform = 'scale(1)';
+    el.style.opacity = '1';
+  });
+
   STATE.currentCard = card;
   STATE.cardAppearedAt = Date.now();
 
@@ -259,6 +269,78 @@ function recordRetrieved(cardId) {
   saveStorage(STORAGE_KEYS.passive, passive);
 }
 
+// --- Swipe Gestures ---
+function setupSwipeHandler() {
+  const cardArea = document.getElementById('card-area');
+  let startX = 0, startY = 0, currentX = 0, isDragging = false, cardEl = null;
+
+  cardArea.addEventListener('pointerdown', (e) => {
+    if (STATE.expanded) return;
+    cardEl = document.querySelector('.card');
+    if (!cardEl) return;
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    currentX = 0;
+    cardEl.style.transition = 'none';
+    cardArea.setPointerCapture(e.pointerId);
+  });
+
+  cardArea.addEventListener('pointermove', (e) => {
+    if (!isDragging || !cardEl) return;
+    currentX = e.clientX - startX;
+    const rotation = (currentX / window.innerWidth) * 8;
+    cardEl.style.transform = `translateX(${currentX}px) rotate(${rotation}deg)`;
+
+    // Drag indicators
+    const threshold = window.innerWidth * 0.1;
+    const leftInd = document.getElementById('drag-indicator-left');
+    const rightInd = document.getElementById('drag-indicator-right');
+    if (currentX < -threshold) {
+      leftInd.style.opacity = Math.min(1, Math.abs(currentX) / (window.innerWidth * 0.3));
+      rightInd.style.opacity = '0';
+    } else if (currentX > threshold) {
+      rightInd.style.opacity = Math.min(1, currentX / (window.innerWidth * 0.3));
+      leftInd.style.opacity = '0';
+    } else {
+      leftInd.style.opacity = '0';
+      rightInd.style.opacity = '0';
+    }
+  });
+
+  cardArea.addEventListener('pointerup', (e) => {
+    if (!isDragging || !cardEl) return;
+    isDragging = false;
+    const threshold = window.innerWidth * 0.3;
+
+    document.getElementById('drag-indicator-left').style.opacity = '0';
+    document.getElementById('drag-indicator-right').style.opacity = '0';
+
+    if (currentX > threshold) {
+      // Swipe right — dismiss
+      animateDismiss(cardEl, 'right', () => {
+        nextCard();
+        if (navigator.vibrate) navigator.vibrate(8);
+      });
+    } else if (currentX < -threshold && STATE.history.length > 0) {
+      // Swipe left — go back
+      animateDismiss(cardEl, 'left', () => prevCard());
+    } else {
+      // Snap back
+      cardEl.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      cardEl.style.transform = 'translateX(0) rotate(0deg)';
+    }
+  });
+}
+
+function animateDismiss(el, direction, callback) {
+  const x = direction === 'right' ? window.innerWidth * 1.5 : -window.innerWidth * 1.5;
+  const rot = direction === 'right' ? 15 : -15;
+  el.style.transition = 'transform 0.35s cubic-bezier(0.55, 0, 0.1, 1)';
+  el.style.transform = `translateX(${x}px) rotate(${rot}deg)`;
+  setTimeout(callback, 350);
+}
+
 // --- Init ---
 async function init() {
   const cards = await loadCards();
@@ -277,6 +359,7 @@ async function init() {
   document.getElementById('btn-next').addEventListener('click', () => nextCard());
   document.getElementById('btn-back').addEventListener('click', () => prevCard());
   document.getElementById('btn-shuffle').addEventListener('click', () => shuffleQueue());
+  setupSwipeHandler();
 }
 
 function showErrorCard() {
