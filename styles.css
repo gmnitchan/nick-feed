@@ -235,6 +235,15 @@ html, body {
   color: var(--text-muted);
 }
 
+.card--expanded {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card--expanded .card-content {
+  padding-bottom: 3rem;
+}
+
 .card--error {
   display: flex;
   align-items: center;

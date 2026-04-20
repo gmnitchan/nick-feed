@@ -104,6 +104,7 @@ function renderCard(card) {
 function showCard(card) {
   const container = document.getElementById('card-container');
   container.innerHTML = '';
+  STATE.expanded = false;
   if (!card) return;
 
   const el = renderCard(card);
@@ -269,6 +270,67 @@ function recordRetrieved(cardId) {
   saveStorage(STORAGE_KEYS.passive, passive);
 }
 
+// --- Expand/Collapse ---
+function setupExpandHandler() {
+  const cardArea = document.getElementById('card-area');
+  let pointerDownX = 0, pointerDownY = 0;
+
+  cardArea.addEventListener('pointerdown', (e) => {
+    pointerDownX = e.clientX;
+    pointerDownY = e.clientY;
+  });
+
+  cardArea.addEventListener('click', (e) => {
+    const card = document.querySelector('.card');
+    if (!card) return;
+    const cardData = STATE.currentCard;
+    if (!cardData || !cardData.expanded) return;
+
+    // Don't trigger if pointer moved (swipe gesture)
+    if (Math.abs(e.clientX - pointerDownX) > 10 || Math.abs(e.clientY - pointerDownY) > 10) return;
+
+    if (!STATE.expanded) {
+      expandCard(card);
+    } else {
+      // Tap top area to collapse
+      const rect = card.getBoundingClientRect();
+      if (e.clientY < rect.top + 80) {
+        collapseCard(card);
+      }
+    }
+  });
+}
+
+function expandCard(cardEl) {
+  STATE.expanded = true;
+  cardEl.classList.add('card--expanded');
+  const expandedContent = cardEl.querySelector('.card-expanded');
+  const indicator = cardEl.querySelector('.card-expand-indicator');
+  if (expandedContent) expandedContent.style.display = 'block';
+  if (indicator) indicator.style.display = 'none';
+  cardEl.style.overflow = 'auto';
+  cardEl.style.touchAction = 'pan-y';
+
+  // Record passive signal
+  const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
+  if (!passive.expanded.includes(STATE.currentCard.id)) {
+    passive.expanded.push(STATE.currentCard.id);
+    saveStorage(STORAGE_KEYS.passive, passive);
+  }
+}
+
+function collapseCard(cardEl) {
+  STATE.expanded = false;
+  cardEl.classList.remove('card--expanded');
+  const expandedContent = cardEl.querySelector('.card-expanded');
+  const indicator = cardEl.querySelector('.card-expand-indicator');
+  if (expandedContent) expandedContent.style.display = 'none';
+  if (indicator) indicator.style.display = 'block';
+  cardEl.style.overflow = 'hidden';
+  cardEl.style.touchAction = 'none';
+  cardEl.scrollTop = 0;
+}
+
 // --- Swipe Gestures ---
 function setupSwipeHandler() {
   const cardArea = document.getElementById('card-area');
@@ -360,6 +422,7 @@ async function init() {
   document.getElementById('btn-back').addEventListener('click', () => prevCard());
   document.getElementById('btn-shuffle').addEventListener('click', () => shuffleQueue());
   setupSwipeHandler();
+  setupExpandHandler();
 }
 
 function showErrorCard() {
