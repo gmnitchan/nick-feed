@@ -43,6 +43,26 @@ function saveStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 
+// --- Utility ---
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function daysBetween(dateStr1, dateStr2) {
+  const d1 = new Date(dateStr1);
+  const d2 = new Date(dateStr2);
+  return Math.floor((d2 - d1) / 86400000);
+}
+
 // --- Card loading ---
 async function loadCards() {
   try {
@@ -109,7 +129,137 @@ function updateCounter() {
   counter.textContent = `${STATE.currentIndex} / ${total} ${label}`;
 }
 
-// --- Init (basic, will be expanded in Task 4) ---
+// --- Seen state ---
+function pruneSeen() {
+  const seen = loadStorage(STORAGE_KEYS.seen) || {};
+  const today = todayStr();
+  const pruned = {};
+  for (const [id, date] of Object.entries(seen)) {
+    if (daysBetween(date, today) <= 14) pruned[id] = date;
+  }
+  saveStorage(STORAGE_KEYS.seen, pruned);
+  return pruned;
+}
+
+function markSeen(cardId) {
+  const seen = loadStorage(STORAGE_KEYS.seen) || {};
+  seen[cardId] = todayStr();
+  saveStorage(STORAGE_KEYS.seen, seen);
+}
+
+// --- Queue setup ---
+function buildQueues(cards) {
+  const seen = pruneSeen();
+  const seenIds = new Set(Object.keys(seen));
+  const unseen = cards.filter(c => !seenIds.has(c.id));
+  const seenCards = cards.filter(c => seenIds.has(c.id));
+  STATE.unseenQueue = shuffle(unseen);
+  STATE.seenQueue = shuffle(seenCards);
+  STATE.phase = 'unseen';
+  STATE.currentIndex = 0;
+  STATE.history = [];
+}
+
+const NUDGE_CARD = {
+  id: '__nudge__',
+  type: 'task',
+  title: "YOU'VE SEEN EVERYTHING",
+  body: "Time to generate a fresh batch. Open Claude on your laptop and run the prompt template.",
+  footer: "Run ./add-cards.sh after",
+  isNudge: true,
+};
+
+function nextCard() {
+  // Record dwell time for current card
+  if (STATE.currentCard && !STATE.currentCard.isNudge) {
+    recordDwell(STATE.currentCard.id);
+  }
+
+  if (STATE.currentCard && !STATE.currentCard.isNudge) {
+    markSeen(STATE.currentCard.id);
+    STATE.history.push(STATE.currentCard);
+    STATE.currentIndex++;
+  }
+
+  let card = null;
+  if (STATE.phase === 'unseen') {
+    if (STATE.unseenQueue.length > 0) {
+      card = STATE.unseenQueue.shift();
+    } else {
+      STATE.phase = 'nudge';
+      card = NUDGE_CARD;
+    }
+  } else if (STATE.phase === 'nudge') {
+    STATE.phase = 'seen';
+    STATE.currentIndex = 0;
+    if (STATE.seenQueue.length > 0) {
+      card = STATE.seenQueue.shift();
+    } else {
+      STATE.unseenQueue = shuffle(STATE.cards);
+      STATE.phase = 'unseen';
+      card = STATE.unseenQueue.shift();
+    }
+  } else {
+    // 'seen' phase
+    if (STATE.seenQueue.length > 0) {
+      card = STATE.seenQueue.shift();
+    } else {
+      STATE.seenQueue = shuffle(STATE.cards);
+      card = STATE.seenQueue.shift();
+    }
+  }
+
+  showCard(card);
+}
+
+function prevCard() {
+  if (STATE.history.length === 0) return;
+
+  // Record dwell
+  if (STATE.currentCard && !STATE.currentCard.isNudge) {
+    recordDwell(STATE.currentCard.id);
+  }
+
+  // Push current card back to front of appropriate queue
+  if (STATE.currentCard && !STATE.currentCard.isNudge) {
+    if (STATE.phase === 'unseen') STATE.unseenQueue.unshift(STATE.currentCard);
+    else STATE.seenQueue.unshift(STATE.currentCard);
+  }
+
+  const prev = STATE.history.pop();
+  STATE.currentIndex = Math.max(0, STATE.currentIndex - 1);
+
+  // Record as retrieved (passive signal)
+  recordRetrieved(prev.id);
+
+  showCard(prev);
+}
+
+function shuffleQueue() {
+  if (STATE.phase === 'unseen') {
+    STATE.unseenQueue = shuffle(STATE.unseenQueue);
+  } else if (STATE.phase === 'seen') {
+    STATE.seenQueue = shuffle(STATE.seenQueue);
+  }
+}
+
+function recordDwell(cardId) {
+  if (!STATE.cardAppearedAt) return;
+  const dwell = (Date.now() - STATE.cardAppearedAt) / 1000;
+  const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
+  passive.dwellTimes[cardId] = parseFloat(dwell.toFixed(1));
+  saveStorage(STORAGE_KEYS.passive, passive);
+}
+
+function recordRetrieved(cardId) {
+  const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
+  if (!passive.retrieved.includes(cardId)) {
+    passive.retrieved.push(cardId);
+  }
+  saveStorage(STORAGE_KEYS.passive, passive);
+}
+
+// --- Init ---
 async function init() {
   const cards = await loadCards();
   if (!cards || cards.length === 0) {
@@ -117,8 +267,16 @@ async function init() {
     return;
   }
   STATE.cards = cards;
-  // For now just show first card
-  showCard(cards[0]);
+  buildQueues(cards);
+  if (typeof updateStreak === 'function') updateStreak();
+
+  // Show first card
+  nextCard();
+
+  // Wire buttons
+  document.getElementById('btn-next').addEventListener('click', () => nextCard());
+  document.getElementById('btn-back').addEventListener('click', () => prevCard());
+  document.getElementById('btn-shuffle').addEventListener('click', () => shuffleQueue());
 }
 
 function showErrorCard() {
