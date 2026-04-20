@@ -129,6 +129,7 @@ function showCard(card) {
   }
 
   updateCounter();
+  updateFeedbackButtons();
 }
 
 function updateCounter() {
@@ -268,6 +269,41 @@ function recordRetrieved(cardId) {
     passive.retrieved.push(cardId);
   }
   saveStorage(STORAGE_KEYS.passive, passive);
+}
+
+// --- Explicit Feedback ---
+function setupFeedbackButtons() {
+  document.getElementById('btn-like').addEventListener('click', () => recordFeedback('like'));
+  document.getElementById('btn-dislike').addEventListener('click', () => recordFeedback('dislike'));
+}
+
+function recordFeedback(rating) {
+  if (!STATE.currentCard || STATE.currentCard.isNudge) return;
+  const feedback = loadStorage(STORAGE_KEYS.feedback) || {};
+  feedback[STATE.currentCard.id] = { rating, date: todayStr() };
+  saveStorage(STORAGE_KEYS.feedback, feedback);
+
+  // Visual confirmation
+  const btn = rating === 'like' ? document.getElementById('btn-like') : document.getElementById('btn-dislike');
+  btn.style.transform = 'scale(1.3)';
+  btn.style.background = rating === 'like' ? '#1a3a00' : '#3a1a1a';
+  setTimeout(() => { btn.style.transform = ''; btn.style.background = ''; }, 300);
+}
+
+function updateFeedbackButtons() {
+  const feedback = loadStorage(STORAGE_KEYS.feedback) || {};
+  const btnLike = document.getElementById('btn-like');
+  const btnDislike = document.getElementById('btn-dislike');
+  const container = document.getElementById('feedback-buttons');
+
+  if (STATE.currentCard && STATE.currentCard.isNudge) {
+    container.style.visibility = 'hidden';
+  } else {
+    container.style.visibility = 'visible';
+    const existing = STATE.currentCard ? feedback[STATE.currentCard.id] : null;
+    btnLike.style.background = existing?.rating === 'like' ? '#1a3a00' : '';
+    btnDislike.style.background = existing?.rating === 'dislike' ? '#3a1a1a' : '';
+  }
 }
 
 // --- Streak ---
@@ -447,6 +483,7 @@ async function init() {
   document.getElementById('btn-shuffle').addEventListener('click', () => shuffleQueue());
   setupSwipeHandler();
   setupExpandHandler();
+  setupFeedbackButtons();
 }
 
 function showErrorCard() {
