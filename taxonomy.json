@@ -7,13 +7,13 @@
   "categories": {
     "science": {
       "neuroscience": {
-        "cards": 2,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "marine_biology": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -25,7 +25,7 @@
         "status": "active"
       },
       "quantum_mechanics": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -43,13 +43,13 @@
         "status": "active"
       },
       "materials_science": {
-        "cards": 1,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "acoustics": {
-        "cards": 1,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -73,13 +73,13 @@
         "status": "active"
       },
       "extremophiles": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "biomechanics": {
-        "cards": 1,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -129,19 +129,19 @@
     },
     "history": {
       "ancient_trade_routes": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "failed_utopias": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "espionage": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -171,7 +171,7 @@
         "status": "active"
       },
       "industrial_revolution": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -183,31 +183,31 @@
         "status": "active"
       },
       "ancient_engineering": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "plague_and_pandemic": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "piracy_economics": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "propaganda_history": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "forgotten_civilizations": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -225,7 +225,7 @@
         "status": "active"
       },
       "wwii_resistance": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -239,13 +239,13 @@
     },
     "philosophy": {
       "stoicism": {
-        "cards": 2,
+        "cards": 4,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "epistemology": {
-        "cards": 2,
+        "cards": 5,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -257,13 +257,13 @@
         "status": "active"
       },
       "eastern_philosophy": {
-        "cards": 0,
+        "cards": 4,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "ethics_of_technology": {
-        "cards": 0,
+        "cards": 3,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -281,19 +281,19 @@
         "status": "active"
       },
       "absurdism": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "pragmatism": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "consciousness": {
-        "cards": 0,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -313,13 +313,13 @@
         "status": "active"
       },
       "game_theory": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "market_microstructure": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -349,13 +349,13 @@
         "status": "active"
       },
       "network_effects": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "commons_and_public_goods": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -375,13 +375,13 @@
         "status": "active"
       },
       "motivation_theory": {
-        "cards": 1,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "memory_and_forgetting": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -399,7 +399,7 @@
         "status": "active"
       },
       "perception_and_illusion": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -411,7 +411,7 @@
         "status": "active"
       },
       "creativity_research": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -431,19 +431,19 @@
         "status": "active"
       },
       "infrastructure": {
-        "cards": 1,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "ai_alignment": {
-        "cards": 0,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "hardware_design": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -487,7 +487,7 @@
     },
     "engineering_craft": {
       "software_architecture": {
-        "cards": 1,
+        "cards": 3,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -517,19 +517,19 @@
         "status": "active"
       },
       "testing_philosophy": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "developer_tooling": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "database_internals": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -555,19 +555,19 @@
         "status": "active"
       },
       "user_research": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "product_validation": {
-        "cards": 1,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "pricing": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -579,19 +579,19 @@
         "status": "active"
       },
       "fundraising": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "competitive_strategy": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "growth_mechanics": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -623,13 +623,13 @@
         "status": "active"
       },
       "film_technique": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "typography_and_design": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -673,7 +673,7 @@
     },
     "systems_complexity": {
       "emergence": {
-        "cards": 1,
+        "cards": 2,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -685,7 +685,7 @@
         "status": "active"
       },
       "chaos_theory": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -697,7 +697,7 @@
         "status": "active"
       },
       "scale_invariance": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -741,7 +741,7 @@
         "status": "active"
       },
       "constructed_languages": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -759,7 +759,7 @@
         "status": "active"
       },
       "sapir_whorf": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -785,7 +785,7 @@
     },
     "mathematics": {
       "combinatorics": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -815,7 +815,7 @@
         "status": "active"
       },
       "statistics_misuse": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -835,73 +835,73 @@
     },
     "poetry_eras": {
       "romantic": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "modernist": {
-        "cards": 2,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "victorian": {
-        "cards": 3,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "contemporary": {
-        "cards": 2,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "ancient_classical": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "haiku_and_japanese": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "sufi_and_persian": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "beat_generation": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "war_poetry": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "latin_american": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "confessional": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "chinese_classical": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
@@ -909,73 +909,73 @@
     },
     "chinese_language": {
       "greetings_politeness": {
-        "cards": 2,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "food_and_drink": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "shopping_numbers": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "location_direction": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "time_and_dates": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "essential_verbs": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "family_relationships": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "weather_nature": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "transportation": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "emotions_feelings": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "measure_words": {
-        "cards": 1,
+        "cards": 0,
         "liked": 0,
         "disliked": 0,
         "status": "active"
       },
       "chengyu_idioms": {
-        "cards": 0,
+        "cards": 1,
         "liked": 0,
         "disliked": 0,
         "status": "active"
