@@ -80,6 +80,52 @@ async function loadCards() {
   }
 }
 
+// --- Type-specific body rendering ---
+function renderBodyForType(card) {
+  if (card.type === 'chinese') {
+    return renderChineseBody(card);
+  }
+  if (card.type === 'poetry') {
+    return renderPoetryBody(card);
+  }
+  if (card.type === 'timeless') {
+    return renderTimelessBody(card);
+  }
+  // Default rendering
+  return `<h1 class="card-title">${card.title}</h1>
+    <p class="card-body">${card.body}</p>`;
+}
+
+function renderChineseBody(card) {
+  // Parse the body: first line is the translation, rest is breakdown
+  const lines = card.body.split('\n').filter(l => l.trim());
+  const translation = lines[0] || '';
+  const breakdown = lines.slice(1).join('<br>');
+  // Extract the characters from the title (before the —)
+  const parts = card.title.split('—');
+  const chars = (parts[0] || '').trim();
+  const pinyin = (parts[1] || '').trim();
+  return `<div class="chinese-hero">
+      <div class="chinese-chars">${chars}</div>
+      <div class="chinese-pinyin">${pinyin}</div>
+      <div class="chinese-meaning">${translation}</div>
+    </div>
+    <p class="card-body">${breakdown}</p>`;
+}
+
+function renderPoetryBody(card) {
+  // Preserve line breaks as verse lines
+  const verseHtml = card.body.replace(/\n/g, '<br>');
+  return `<h1 class="card-title">${card.title}</h1>
+    <div class="poetry-verse">${verseHtml}</div>`;
+}
+
+function renderTimelessBody(card) {
+  return `<div class="timeless-quote-mark">"</div>
+    <h1 class="card-title">${card.title}</h1>
+    <p class="card-body">${card.body}</p>`;
+}
+
 // --- Rendering ---
 function renderCard(card) {
   const el = document.createElement('div');
@@ -90,6 +136,11 @@ function renderCard(card) {
   const meta = TYPE_META[card.type] || TYPE_META.discovery;
   const accentColor = meta.color;
 
+  el.classList.add(`card--${card.type}`);
+
+  const bodyHtml = renderBodyForType(card);
+  const expandedHtml = card.expanded ? card.expanded.replace(/\n/g, '<br>') : '';
+
   el.innerHTML = `
     <div class="card-accent" style="background: ${accentColor}"></div>
     <div class="card-svg-bg" id="svg-bg-${card.id}"></div>
@@ -97,10 +148,9 @@ function renderCard(card) {
       <div class="card-badge" style="color: ${accentColor}; border-color: ${accentColor}">
         ${meta.emoji} ${meta.label}
       </div>
-      <h1 class="card-title">${card.title}</h1>
-      <p class="card-body">${card.body}</p>
+      ${bodyHtml}
       ${card.expanded ? '<div class="card-expand-indicator">↓ Tap for more</div>' : ''}
-      <div class="card-expanded" style="display:none">${card.expanded || ''}</div>
+      <div class="card-expanded" style="display:none">${expandedHtml}</div>
       <div class="card-footer">${card.footer}</div>
     </div>
   `;
