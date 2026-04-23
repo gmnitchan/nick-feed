@@ -272,29 +272,32 @@ html, body {
   margin-bottom: 1.25rem;
 }
 
-/* --- Timeless card type --- */
-.timeless-image {
-  width: calc(100% + 3rem);
-  margin: -2rem -1.5rem 1.25rem -1.5rem;
-  height: 180px;
-  overflow: hidden;
+/* --- Card image (used by timeless and any type with image field) --- */
+.card-image {
+  width: 100%;
+  height: 200px;
   position: relative;
+  flex-shrink: 0;
 }
-.timeless-image::after {
-  content: '';
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) saturate(0.7);
+}
+.card-image-fade {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60px;
+  height: 80px;
   background: linear-gradient(to top, var(--card-bg), transparent);
 }
-.timeless-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7) saturate(0.8);
+.card-content--has-image {
+  padding-top: 1rem;
 }
+
+/* --- Timeless card type --- */
 .card--timeless .card-title {
   font-size: 1.6rem;
   font-style: italic;
@@ -304,6 +307,32 @@ html, body {
   line-height: 1.7;
   color: var(--text);
   opacity: 0.85;
+}
+
+/* --- TTS button --- */
+.tts-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--text);
+  border-radius: 100px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background 0.15s;
+}
+.tts-btn:active {
+  background: rgba(255,255,255,0.15);
+}
+.tts-btn--poetry {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: var(--poetry);
+  border-color: rgba(232, 197, 71, 0.3);
 }
 
 .card--expanded {

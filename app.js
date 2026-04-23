@@ -97,11 +97,9 @@ function renderBodyForType(card) {
 }
 
 function renderChineseBody(card) {
-  // Parse the body: first line is the translation, rest is breakdown
   const lines = card.body.split('\n').filter(l => l.trim());
   const translation = lines[0] || '';
   const breakdown = lines.slice(1).join('<br>');
-  // Extract the characters from the title (before the —)
   const parts = card.title.split('—');
   const chars = (parts[0] || '').trim();
   const pinyin = (parts[1] || '').trim();
@@ -109,23 +107,21 @@ function renderChineseBody(card) {
       <div class="chinese-chars">${chars}</div>
       <div class="chinese-pinyin">${pinyin}</div>
       <div class="chinese-meaning">${translation}</div>
+      <button class="tts-btn" onclick="speakChinese('${chars.replace(/'/g, "\\'")}')">🔊</button>
     </div>
     <p class="card-body">${breakdown}</p>`;
 }
 
 function renderPoetryBody(card) {
-  // Preserve line breaks as verse lines
   const verseHtml = card.body.replace(/\n/g, '<br>');
+  const verseText = card.body.replace(/\n/g, ' ');
   return `<h1 class="card-title">${card.title}</h1>
-    <div class="poetry-verse">${verseHtml}</div>`;
+    <div class="poetry-verse">${verseHtml}</div>
+    <button class="tts-btn tts-btn--poetry" onclick="speakPoetry(this)" data-text="${verseText.replace(/"/g, '&quot;')}">🔊 Listen</button>`;
 }
 
 function renderTimelessBody(card) {
-  const imgHtml = card.image
-    ? `<div class="timeless-image"><img src="${card.image}" alt="" loading="lazy"></div>`
-    : '';
-  return `${imgHtml}
-    <h1 class="card-title">${card.title}</h1>
+  return `<h1 class="card-title">${card.title}</h1>
     <p class="card-body">${card.body}</p>`;
 }
 
@@ -144,10 +140,15 @@ function renderCard(card) {
   const bodyHtml = renderBodyForType(card);
   const expandedHtml = card.expanded ? card.expanded.replace(/\n/g, '<br>') : '';
 
+  const imageHtml = card.image
+    ? `<div class="card-image"><img src="${card.image}" alt="" loading="lazy"><div class="card-image-fade"></div></div>`
+    : '';
+
   el.innerHTML = `
     <div class="card-accent" style="background: ${accentColor}"></div>
+    ${imageHtml}
     <div class="card-svg-bg" id="svg-bg-${card.id}"></div>
-    <div class="card-content">
+    <div class="card-content ${card.image ? 'card-content--has-image' : ''}">
       <div class="card-badge" style="color: ${accentColor}; border-color: ${accentColor}">
         ${meta.emoji} ${meta.label}
       </div>
@@ -632,6 +633,43 @@ function showErrorCard() {
       </div>
     </div>
   `;
+}
+
+// --- Text-to-Speech ---
+function speakChinese(text) {
+  speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'zh-CN';
+  utterance.rate = 0.7;
+  utterance.pitch = 1;
+  // Try to find a Chinese voice
+  const voices = speechSynthesis.getVoices();
+  const zhVoice = voices.find(v => v.lang.startsWith('zh'));
+  if (zhVoice) utterance.voice = zhVoice;
+  speechSynthesis.speak(utterance);
+}
+
+function speakPoetry(btn) {
+  speechSynthesis.cancel();
+  const text = btn.dataset.text;
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-GB';
+  utterance.rate = 0.75;
+  utterance.pitch = 0.9;
+  // Prefer a British English voice for dramatic reading
+  const voices = speechSynthesis.getVoices();
+  const enVoice = voices.find(v => v.lang === 'en-GB' && v.name.includes('Male'))
+    || voices.find(v => v.lang === 'en-GB')
+    || voices.find(v => v.lang.startsWith('en'));
+  if (enVoice) utterance.voice = enVoice;
+  btn.textContent = '🔊 Playing...';
+  utterance.onend = () => { btn.textContent = '🔊 Listen'; };
+  speechSynthesis.speak(utterance);
+}
+
+// Preload voices (needed on some browsers)
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
 }
 
 document.addEventListener('DOMContentLoaded', init);
