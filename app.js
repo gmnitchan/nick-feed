@@ -202,6 +202,7 @@ function showCard(card) {
 
   updateCounter();
   updateFeedbackButtons();
+  saveSession();
 }
 
 function updateCounter() {
@@ -515,6 +516,12 @@ function setupSettings() {
     document.getElementById('btn-export').textContent = 'Copied!';
     setTimeout(() => { document.getElementById('btn-export').textContent = 'Copy Feedback Summary'; }, 2000);
   });
+  document.getElementById('btn-restart').addEventListener('click', () => {
+    clearSession();
+    buildQueues(STATE.cards);
+    nextCard();
+    document.getElementById('settings-overlay').style.display = 'none';
+  });
   document.getElementById('btn-sync-feedback').addEventListener('click', () => syncFeedbackToGitHub());
   document.getElementById('btn-save-token').addEventListener('click', () => {
     const token = document.getElementById('github-token-input').value.trim();
@@ -654,15 +661,24 @@ async function init() {
     return;
   }
   STATE.cards = cards;
-  buildQueues(cards);
+
+  // Try to restore previous session
+  const restored = restoreSession(cards);
+  if (!restored) {
+    buildQueues(cards);
+  }
   updateStreak();
 
   if (!storageAvailable()) {
     document.getElementById('app-name').textContent = 'NICK FEED (no storage)';
   }
 
-  // Show first card
-  nextCard();
+  // Show card — resume or start fresh
+  if (restored && STATE.currentCard) {
+    showCard(STATE.currentCard);
+  } else {
+    nextCard();
+  }
 
   setTimeout(() => {
     document.getElementById('splash').classList.add('hidden');
@@ -762,6 +778,67 @@ async function syncFeedbackToGitHub() {
   }
 
   setTimeout(() => { statusEl.textContent = ''; }, 4000);
+}
+
+// --- Session Persistence ---
+function saveSession() {
+  if (!STATE.currentCard) return;
+  const session = {
+    currentCardId: STATE.currentCard.id,
+    unseenIds: STATE.unseenQueue.map(c => c.id),
+    seenIds: STATE.seenQueue.map(c => c.id),
+    historyIds: STATE.history.map(c => c.id),
+    phase: STATE.phase,
+    currentIndex: STATE.currentIndex,
+    phaseTotal: STATE.phaseTotal,
+    savedAt: Date.now(),
+  };
+  saveStorage('nickfeed_session', session);
+}
+
+function restoreSession(cards) {
+  const session = loadStorage('nickfeed_session');
+  if (!session || !session.currentCardId) return false;
+
+  // Don't restore sessions older than 24 hours
+  if (Date.now() - session.savedAt > 24 * 60 * 60 * 1000) return false;
+
+  const cardMap = {};
+  for (const c of cards) cardMap[c.id] = c;
+
+  // Rebuild queues from saved IDs (filter out cards that may have been deleted)
+  const unseenQueue = session.unseenIds.map(id => cardMap[id]).filter(Boolean);
+  const seenQueue = session.seenIds.map(id => cardMap[id]).filter(Boolean);
+  const history = session.historyIds.map(id => cardMap[id]).filter(Boolean);
+  const currentCard = cardMap[session.currentCardId];
+
+  if (!currentCard) return false;
+
+  // Check for new cards added since last session — prepend them to unseen
+  const knownIds = new Set([
+    session.currentCardId,
+    ...session.unseenIds,
+    ...session.seenIds,
+    ...session.historyIds,
+  ]);
+  const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
+  const everViewed = new Set(Object.keys(passive.dwellTimes || {}));
+  const brandNew = cards.filter(c => !knownIds.has(c.id) && !everViewed.has(c.id));
+
+  STATE.unseenQueue = [...shuffle(brandNew), ...unseenQueue];
+  STATE.seenQueue = seenQueue;
+  STATE.history = history;
+  STATE.phase = session.phase;
+  STATE.currentIndex = session.currentIndex;
+  STATE.phaseTotal = session.phaseTotal + brandNew.length;
+  STATE.neverSeenIds = new Set([...brandNew.map(c => c.id), ...unseenQueue.filter(c => !everViewed.has(c.id)).map(c => c.id)]);
+  STATE.currentCard = currentCard;
+
+  return true;
+}
+
+function clearSession() {
+  if (storageAvailable()) localStorage.removeItem('nickfeed_session');
 }
 
 // --- Auto Sync ---
