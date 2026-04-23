@@ -360,5 +360,175 @@
     "body": "To eat (a meal)\n\n吃 (chī) = to eat\n饭 (fàn) = rice / meal\n\nIn Chinese, eating IS rice. The two concepts are inseparable.",
     "expanded": "CULTURAL DEPTH:\nThe character 饭 (fàn) means both 'rice' and 'meal.' When Chinese people say 吃饭, they literally mean 'eat rice' but it means 'have a meal' — even if no rice is involved. Rice is so central to Chinese civilization that it became synonymous with food itself.\n\nCOMMON PHRASES:\n• 你吃饭了吗？(nǐ chīfàn le ma?) — Have you eaten? (common greeting, shows care)\n• 早饭 (zǎofàn) — breakfast (morning-rice)\n• 午饭 (wǔfàn) — lunch (noon-rice)\n• 晚饭 (wǎnfàn) — dinner (evening-rice)\n• 做饭 (zuòfàn) — to cook (make-rice)\n\nCHARACTER ANATOMY:\n吃 has the mouth radical 口 on the left — most eating/speaking characters share this: 喝 (hē, drink), 吗 (ma, question particle), 叫 (jiào, call/shout).\n\n饭 has the food radical 饣on the left — shared with 饿 (è, hungry), 饱 (bǎo, full), 馒头 (mántou, steamed bun).",
     "footer": "HSK 1 — Food"
+  },
+  {
+    "id": "discovery-013",
+    "type": "discovery",
+    "title": "ANTS INVENTED FARMING 60M YEARS AGO",
+    "body": "Leafcutter ants don't eat the leaves they cut. They carry them underground to feed fungus gardens — a crop they've been cultivating for 60 million years. Humans figured out farming 10,000 years ago.",
+    "expanded": "Leafcutter ant colonies are the second most complex societies on Earth after humans. A single colony can contain 8 million individuals across dozens of specialized castes — farmers, soldiers, nurses, waste managers, scouts.\n\nThe fungus they cultivate (Leucoagaricus gongylophorus) exists nowhere in the wild. It's been so heavily domesticated that it can't survive without the ants, and the ants can't survive without it. This is obligate mutualism — a 60-million-year co-dependency.\n\nThe ants even produce antibiotics. They carry Pseudonocardia bacteria on their bodies that produce antifungal compounds to protect their crops from parasitic molds. They're running a pharmaceutical operation alongside their agriculture.\n\nThe parallel to human civilization is striking: agriculture → specialization → complex society → antibiotic use → monoculture vulnerability. The ants hit every milestone we did, just 59.99 million years earlier.",
+    "footer": "Entomology"
+  },
+  {
+    "id": "discovery-014",
+    "type": "discovery",
+    "title": "THERE ARE MORE CHESS GAMES THAN ATOMS",
+    "body": "The number of possible chess games (10^120) vastly exceeds the number of atoms in the observable universe (10^80). This is called the Shannon number. Chess is more complex than the physical universe.",
+    "expanded": "Claude Shannon (yes, the same one who invented information theory) estimated this in 1950. The number is so large that even if every atom in the universe were a computer running since the Big Bang, they couldn't enumerate all possible chess games.\n\nThis is why chess engines don't solve chess by brute force — they use evaluation heuristics, neural networks, and search tree pruning. Even Stockfish, the strongest engine ever built, only searches ~100 million positions per second. At that rate, exploring all games would take longer than the heat death of the universe.\n\nThe philosophical implication: some finite systems are so combinatorially rich that they're effectively infinite. A 64-square board with 32 pieces generates more complexity than all of physical reality. Simplicity of rules doesn't imply simplicity of outcomes.\n\nThis principle extends beyond chess. Simple cellular automata, protein folding, weather systems — many finite rule sets produce undecidable complexity. Reality is richer than it has any right to be.",
+    "footer": "Claude Shannon, 1950"
+  },
+  {
+    "id": "discovery-015",
+    "type": "discovery",
+    "title": "YOUR BONES ARE WET RIGHT NOW",
+    "body": "Living bone is about 31% water. It's flexible, warm, and laced with blood vessels. The dry white objects you see in museums are as different from living bone as jerky is from steak.",
+    "expanded": "Living bone is a composite material — collagen fibers (flexible protein) reinforced with hydroxyapatite crystals (hard mineral). This combination gives bone a strength-to-weight ratio better than steel. Ounce for ounce, bone is stronger than concrete.\n\nYour skeleton completely replaces itself every 7-10 years through a process called remodeling. Osteoclasts dissolve old bone, osteoblasts lay down new bone. You are not walking on the same skeleton you had a decade ago.\n\nWolff's Law states that bone adapts to the loads placed upon it. Tennis players' dominant arms have 20-30% more bone mass. Astronauts lose 1-2% of bone density per month in space because there's no load to adapt to.\n\nThe engineering insight: bone is a self-repairing, load-adaptive, composite material that reconfigures its internal structure in response to stress patterns. We have nothing remotely this sophisticated in materials science.",
+    "footer": "Biomechanics"
+  },
+  {
+    "id": "discovery-016",
+    "type": "discovery",
+    "title": "MAPS WERE ILLEGAL IN THE USSR",
+    "body": "The Soviet Union deliberately distorted every published map. Streets were moved, rivers were curved wrong, whole towns were deleted. Accurate maps were state secrets. Citizens navigated using wrong maps for 70 years.",
+    "expanded": "Soviet cartographic falsification was systematic and deliberate. Starting in the 1930s, the NKVD (later KGB) required all publicly available maps to contain intentional errors. Streets were shifted by hundreds of meters, coastlines redrawn, strategic locations (military bases, factories, research centers) simply erased.\n\nThis wasn't paranoia — it was strategy. Accurate maps would help invaders navigate. The same logic that drove medieval map-makers to mark sea monsters drove the Soviets to move rivers.\n\nThe consequences were bizarre. City planners worked from one set of maps, the public from another. Taxi drivers relied on mental maps because printed ones were useless. When GPS became available after the Soviet collapse, the discrepancies between map and reality were sometimes kilometers.\n\nThe deeper lesson: the information environment you navigate may be deliberately distorted by those who control it. The Soviet case is extreme, but the principle applies anywhere incentives exist to shape your perception of reality.",
+    "footer": "Soviet cartography"
+  },
+  {
+    "id": "discovery-017",
+    "type": "discovery",
+    "title": "CROWS HOLD GRUDGES FOR YEARS",
+    "body": "Researchers who trapped crows while wearing specific masks were dive-bombed by those crows years later — and by crows who weren't even born yet. Crows teach their children who to hate.",
+    "expanded": "Professor John Marzluff at the University of Washington conducted this experiment starting in 2006. Researchers wore \"dangerous\" masks while trapping crows and \"neutral\" masks while walking past. Years later, crows still mobbed the dangerous masks — even crows who had never been trapped.\n\nThe study proved three remarkable things: crows recognize individual human faces, they hold grudges across years, and they transmit threat information culturally to crows who never witnessed the original event.\n\nBrain scans showed that crows process threatening faces in the amygdala — the same brain region humans use for fear processing. Their threat response is neurologically analogous to ours.\n\nCrows also use tools, solve multi-step puzzles, understand water displacement (Aesop's fable is literally true for crows), and have regional dialects. They're one of the few animals that pass the mirror self-recognition test.\n\nThe uncomfortable implication: we share our cities with animals that remember our faces, judge our behavior, and gossip about us to their friends.",
+    "footer": "Marzluff et al., University of Washington"
+  },
+  {
+    "id": "poetry-007",
+    "type": "poetry",
+    "title": "THE WASTE LAND (OPENING)",
+    "body": "April is the cruellest month, breeding\nLilacs out of the dead land, mixing\nMemory and desire, stirring\nDull roots with spring rain.",
+    "expanded": "T.S. Eliot published The Waste Land in 1922, and it detonated like a bomb in English literature. These four lines alone upended centuries of poetic convention.\n\nEvery poet before Eliot treated April as rebirth, hope, renewal — Chaucer opens the Canterbury Tales with April's \"sweet showers.\" Eliot inverts it: April is cruel BECAUSE it forces growth. The dead land was comfortable. The dull roots didn't want to be stirred. Being brought back to life is painful.\n\nThe formal innovation matches the thematic one. Notice the present participles piling up: breeding, mixing, stirring. They create a sense of process without resolution — things are happening but nothing is complete. The syntax mirrors the emotional state: perpetual becoming without arriving.\n\n\"Memory and desire\" is the key phrase. Memory pulls you backward, desire pulls you forward. Spring forces you to feel both simultaneously. For Eliot, writing in the aftermath of World War I, this wasn't nature poetry — it was a diagnosis of a civilization that couldn't decide whether to mourn the past or face the future.",
+    "footer": "T.S. Eliot, 1922"
+  },
+  {
+    "id": "poetry-008",
+    "type": "poetry",
+    "title": "PHENOMENAL WOMAN",
+    "body": "Pretty women wonder where my secret lies.\nI'm not cute or built to suit a fashion model's size\nBut when I start to tell them,\nThey think I'm telling lies.",
+    "expanded": "Maya Angelou's second appearance in this collection, and deliberately so — her range demands it. Where \"Still I Rise\" is a defiant anthem against oppression, \"Phenomenal Woman\" is quieter, more subversive.\n\nThe poem's power is in what it refuses to explain. \"It's in the reach of my arms / The span of my hips / The stride of my step / The curl of my lips.\" She describes physical presence, not physical beauty. The distinction matters: beauty is something others evaluate, presence is something you command.\n\nThe refrain — \"I'm a woman / Phenomenally / Phenomenal woman / That's me\" — breaks every rule of sophisticated poetry. It's simple, repetitive, almost childlike. And that's the point. Confidence doesn't need complexity. It doesn't need justification. The women who \"wonder where my secret lies\" are overthinking it.\n\nAngelou performed this poem hundreds of times, and the performance was inseparable from the text. Her voice would slow down, deepen, become almost a purr. The poem isn't meant to be read — it's meant to be inhabited.",
+    "footer": "Maya Angelou, 1978"
+  },
+  {
+    "id": "poetry-009",
+    "type": "poetry",
+    "title": "THE LOVE SONG OF J. ALFRED PRUFROCK",
+    "body": "Let us go then, you and I,\nWhen the evening is spread out against the sky\nLike a patient etherised upon a table;\nLet us go, through certain half-deserted streets,",
+    "expanded": "Eliot wrote this at 22 years old, and it reads like the interior monologue of a man three times that age. Prufrock is paralyzed by self-consciousness — he can't even ask a woman a question because he's already imagined every possible humiliation.\n\nThat third line — \"Like a patient etherised upon a table\" — was revolutionary. Romantic poets compared evenings to things like \"a nun, breathless with adoration\" (Wordsworth). Eliot compared it to an unconscious surgery patient. The beauty of the evening is clinical, anesthetized, passive. In one simile, he announced that modern poetry would not be pretty.\n\n\"Do I dare to eat a peach?\" is the most famous line, and the most devastating. A man so consumed by anxiety about social judgment that even eating fruit feels like a risk. It's funny and heartbreaking simultaneously.\n\nPrufrock is the patron saint of overthinking. If you've ever drafted a message, deleted it, redrafted it, and then not sent it — you've lived this poem.",
+    "footer": "T.S. Eliot, 1915"
+  },
+  {
+    "id": "chinese-007",
+    "type": "chinese",
+    "title": "在哪里 — ZÀI NǍ LǏ",
+    "body": "Where? / Where is it?\n\n在 (zài) = at/in\n哪里 (nǎlǐ) = where\n\nLocation is one of the first things you need in any language.",
+    "expanded": "GRAMMAR STRUCTURE:\nChinese location structure is the opposite of English. English says \"The book is ON the table.\" Chinese says \"The book is at table's top\" — 书在桌子上 (shū zài zhuōzi shàng).\n\nThe pattern: Subject + 在 + Location + Position word\n\nPOSITION WORDS:\n• 上 (shàng) — on top of\n• 下 (xià) — below\n• 里 (lǐ) — inside\n• 前面 (qiánmiàn) — in front of\n• 后面 (hòumiàn) — behind\n• 旁边 (pángbiān) — beside\n\nPRACTICE:\n• 厕所在哪里？(cèsuǒ zài nǎlǐ?) — Where is the bathroom?\n• 你在哪里？(nǐ zài nǎlǐ?) — Where are you?\n• 我在家里 (wǒ zài jiā lǐ) — I'm at home (literally: I at home inside)\n\nCULTURAL NOTE: 哪里哪里 (nǎlǐ nǎlǐ) said quickly is also how Chinese speakers deflect compliments — literally \"where where?\" meaning \"oh, it's nothing.\"",
+    "footer": "HSK 1 — Location"
+  },
+  {
+    "id": "chinese-008",
+    "type": "chinese",
+    "title": "今天 — JĪN TIĀN",
+    "body": "Today\n\n今 (jīn) = now/present\n天 (tiān) = day/sky/heaven\n\nTime words in Chinese are beautifully logical.",
+    "expanded": "TIME WORD SYSTEM:\nChinese builds time words by combining simple components:\n\n• 今天 (jīntiān) — today (now + day)\n• 昨天 (zuótiān) — yesterday (past + day)\n• 明天 (míngtiān) — tomorrow (bright + day)\n• 前天 (qiántiān) — day before yesterday (front + day)\n• 后天 (hòutiān) — day after tomorrow (back + day)\n\nNotice: the past is \"front\" and the future is \"back\" in Chinese. This is the opposite of English. Chinese speakers conceptualize time as flowing toward them — the past is what's already in front of you (visible), the future is behind you (unseen).\n\nMORE PATTERNS:\n• 今年 (jīnnián) — this year\n• 今晚 (jīnwǎn) — tonight\n• 上午 (shàngwǔ) — morning (upper noon)\n• 下午 (xiàwǔ) — afternoon (lower noon)\n\nThe character 天 (tiān) means both \"day\" and \"sky/heaven.\" In Chinese cosmology, the sky and the passage of time are the same concept. Each day is literally a piece of heaven.",
+    "footer": "HSK 1 — Time"
+  },
+  {
+    "id": "timeless-007",
+    "type": "timeless",
+    "title": "THE ONLY TRUE WISDOM IS KNOWING YOU KNOW NOTHING",
+    "body": "Socrates was declared the wisest man in Athens by the Oracle at Delphi. His response: I must be wise because I'm the only one who knows how ignorant I am. Everyone else thinks they know things.",
+    "expanded": "The Socratic paradox isn't false modesty — it's an epistemological position. Socrates discovered that politicians, poets, and craftsmen all believed they understood things they didn't. The politicians couldn't define justice. The poets couldn't explain their own art. Only Socrates was aware of the boundaries of his knowledge.\n\nThis maps directly to the Dunning-Kruger effect, discovered 2,400 years later: the less you know about a topic, the more confident you are. Expertise brings awareness of complexity, which brings humility. The expert says \"it depends.\" The amateur says \"obviously.\"\n\nCharlie Munger calls this \"the circle of competence.\" The size of your circle matters less than knowing where the edge is. Warren Buffett has made his fortune by staying inside his circle and saying no to everything outside it.\n\nThe practical test: in any domain, can you articulate what you don't know? Can you list the questions you can't answer? If everything seems clear, you're probably in Dunning-Kruger territory.",
+    "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80",
+    "footer": "Plato, Apology"
+  },
+  {
+    "id": "timeless-008",
+    "type": "timeless",
+    "title": "FIRST THEY CAME FOR THE SOCIALISTS",
+    "body": "Martin Niemöller's confession about the cowardice of German intellectuals during the Nazi rise. He listed group after group he didn't speak up for — until there was no one left to speak for him.",
+    "expanded": "Niemöller was a Protestant pastor and initially a Nazi supporter. He voted for Hitler in 1933. It was only when the Nazis started interfering with the church that he resisted — and by then it was too late.\n\nThe poem is a confession of guilt, not a call to action. Niemöller spent 7 years in Dachau and Sachsenhausen concentration camps. After the war, he spent the rest of his life speaking about the moral failure of inaction.\n\nWhat makes the poem endure is its structure: each stanza is identical except for the target group. The repetition creates mounting dread. You know where it's going. The narrator knows where it's going. And yet he does nothing, each time, for the same reason: \"I was not a [X].\"\n\nThe lesson isn't about Nazis specifically. It's about the psychology of selective concern. Every time you see injustice directed at a group you don't belong to and think \"not my problem,\" you're in the first stanza. The poem argues: it's always your problem.",
+    "image": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=800&q=80",
+    "footer": "Martin Niemöller, 1946"
+  },
+  {
+    "id": "insight-006",
+    "type": "insight",
+    "title": "NAMING THINGS IS HALF THE WORK",
+    "body": "Phil Karlton said there are two hard things in computer science: cache invalidation and naming things. But naming isn't just hard — it's where design happens. A good name eliminates the need for documentation.",
+    "expanded": "When you struggle to name a function, it's usually because the function does too much. A function named processData is a design smell — it means you haven't decomposed the problem. A function named extractEmailFromHeader is a design decision.\n\nThis extends beyond code. Product naming forces product clarity. If you can't name your feature in 3 words, you can't explain it to a user. If your API endpoint needs a paragraph of documentation, the abstraction is wrong.\n\nUbiquitous Language (from Domain-Driven Design) takes this further: the entire team — engineers, designers, product managers — should use the same words for the same concepts. When the code says \"order\" but the business says \"booking\" and support says \"reservation,\" every conversation requires translation.\n\nThe discipline: when you're about to name something, stop and think for 30 seconds. That 30 seconds of naming saves hours of confusion downstream.",
+    "footer": "Phil Karlton + DDD"
+  },
+  {
+    "id": "insight-007",
+    "type": "insight",
+    "title": "SPEED OF TRUST BEATS SPEED OF CODE",
+    "body": "The fastest engineering teams aren't the ones with the best tools. They're the ones where people trust each other enough to ship without three rounds of review and a committee sign-off.",
+    "expanded": "Patrick Lencioni's research on team dysfunction found that absence of trust is the root cause of every other problem: fear of conflict, lack of commitment, avoidance of accountability, inattention to results. Fix trust and the rest follows.\n\nIn engineering, low-trust teams optimize for blame avoidance: extensive documentation nobody reads, review processes that catch style nits but miss design flaws, deployment gates that add days of latency. High-trust teams optimize for speed: short reviews focused on correctness, deploy-and-monitor culture, blameless postmortems.\n\nGoogle's Project Aristotle found that psychological safety (a form of trust) was the #1 predictor of team performance — more important than individual talent, experience, or technical skill.\n\nThe implication for builders: if your team is slow, the bottleneck probably isn't technical. Look at the human layer. Who's afraid of what? Where is trust missing?",
+    "footer": "Lencioni + Google Project Aristotle"
+  },
+  {
+    "id": "skill-006",
+    "type": "skill",
+    "title": "LOGS BEAT DEBUGGERS EVERY TIME",
+    "body": "The most underrated debugging tool is structured logging. A debugger shows you one execution path in slow motion. Good logs show you patterns across thousands of requests in real time.",
+    "expanded": "Debuggers are great for understanding a single code path. But most production bugs aren't \"line 42 does the wrong thing\" — they're emergent behaviors that only appear under specific load patterns, timing conditions, or data combinations.\n\nStructured logging (JSON logs with consistent fields) lets you query your system's behavior: \"show me all requests where latency > 2s and user_type = premium and status = 500.\" No debugger can do this.\n\nThe hierarchy: printf debugging < structured logging < distributed tracing < observability platforms. Each level up gives you more context across more dimensions. Most teams are still at level 1.\n\nPractical tip: log at decision points, not action points. Don't log \"saving to database.\" Log \"decided to retry because primary returned timeout after 3s, falling back to replica.\" The decision context is what you need when things break at 3 AM.",
+    "footer": "Observability engineering"
+  },
+  {
+    "id": "skill-007",
+    "type": "skill",
+    "title": "ESTIMATE BY COUNTING NOT GUESSING",
+    "body": "Most engineering estimates are guesses dressed up in confidence. Better approach: break the work into countable units (endpoints, screens, migrations), estimate each at 1-2 days, multiply, add 50% buffer.",
+    "expanded": "Steve McConnell's research in \"Software Estimation\" found that developers underestimate by 20-30% on average. For novel work, they underestimate by 50-100%. The error isn't random — it's systematically optimistic.\n\nThe fix is decomposition. You're terrible at estimating \"build the auth system\" (that could be 2 days or 2 months). You're decent at estimating \"add password reset endpoint\" (1-2 days, rarely more). Break big things into small countable things.\n\nThe 50% buffer isn't pessimism — it's accounting for known unknowns: unexpected bugs, unclear requirements, dependencies on other teams, sick days, meetings. McConnell calls this \"estimation by analogy with adjustment.\"\n\nBonus technique: estimate three values (best case, likely case, worst case) and use the weighted average: (best + 4×likely + worst) / 6. This is called PERT estimation and it's been reliable since NASA used it in the 1950s.",
+    "footer": "McConnell, Software Estimation"
+  },
+  {
+    "id": "whatif-006",
+    "type": "whatif",
+    "title": "WHAT IF ENGLISH DIES IN 100 YEARS",
+    "body": "Latin was the global language for a thousand years. Then it wasn't. Mandarin has more native speakers than English. What happens to your code, your docs, your ideas if English stops being the default?",
+    "expanded": "Every dominant language in history has eventually been replaced. Sumerian, Egyptian, Greek, Latin, Arabic, French — each had centuries of dominance followed by decline. English has been globally dominant for roughly 200 years. That's well within historical norms for a peak.\n\nThe internet might change this pattern — network effects are stronger than ever. But they cut both ways: if another language reaches critical mass online, the switch could be faster than any historical precedent.\n\nFor software: all major programming languages are English-based. Variable names, documentation, Stack Overflow, GitHub — the entire infrastructure assumes English literacy. A non-English-dominant world would need to rebuild this, or develop universal tooling that's language-agnostic.\n\nThe personal question: how much of your knowledge is stored in a format that assumes English permanence? Your notes, your code, your writing — all of it is in a language that, on historical timescales, is almost certainly temporary.",
+    "footer": "Linguistic futures"
+  },
+  {
+    "id": "whatif-007",
+    "type": "whatif",
+    "title": "WHAT IF RENT SEEKING KILLS TECH",
+    "body": "Every mature industry eventually shifts from value creation to value extraction. Banks, telecom, insurance — they all stopped innovating and started taxing. Is tech already there?",
+    "expanded": "Rent-seeking is when you make money not by creating value but by controlling access to something others need. Landlords collect rent. Patent trolls collect licensing fees. App stores take 30% for doing nothing the developer couldn't do themselves.\n\nThe signs in tech: Google search results are now 50% ads. Amazon charges sellers for visibility on their own platform. Apple takes 30% of every digital transaction. Twitter/X charges for API access that was free. These aren't innovation — they're toll booths.\n\nHistorically, rent-seeking industries get disrupted by outsiders who create value again. But tech companies have a new defense: network effects so strong that switching costs are prohibitive. You can't leave Instagram because everyone you know is on Instagram.\n\nThe question for builders: are you creating value or capturing it? If your business model depends on controlling a chokepoint rather than being genuinely better, you're a rent-seeker. And historically, rent-seekers always get disrupted — eventually.",
+    "footer": "Economic theory"
+  },
+  {
+    "id": "discovery-018",
+    "type": "discovery",
+    "title": "CONCRETE IS THE MOST USED MATERIAL ON EARTH",
+    "body": "After water, concrete is the most consumed substance on the planet. We use 30 billion tons per year. If the cement industry were a country, it would be the third-largest CO2 emitter after China and the US.",
+    "expanded": "Concrete is everywhere and invisible. Roads, buildings, bridges, dams, sidewalks — civilization is literally built on it. We produce so much that it works out to about 4 tons per person per year, globally.\n\nThe CO2 problem is chemical, not just energy-related. Making cement requires heating limestone (CaCO3) to 1,450°C. The heating releases CO2 from fuel, but the limestone itself releases CO2 as a chemical byproduct. Even if you powered the kilns with solar, you'd still get emissions from the chemistry.\n\nThis is one of the hardest decarbonization problems because there's no easy substitute. Steel, wood, and brick can't replace concrete in most applications. Research into alternatives (geopolymer cements, carbon-cured concrete, mycelium-based materials) is promising but decades from scale.\n\nThe hidden insight: the most impactful problems are often the most boring ones. Nobody's making a TED talk about cement chemistry. But solving concrete emissions would do more for the climate than every electric car combined.",
+    "footer": "Chatham House, 2018"
+  },
+  {
+    "id": "discovery-019",
+    "type": "discovery",
+    "title": "COLOR DOESN'T EXIST OUTSIDE YOUR BRAIN",
+    "body": "There is no color in the physical world. There are only electromagnetic waves of different frequencies. Color is a hallucination your visual cortex constructs to help you distinguish surfaces.",
+    "expanded": "What we call \"red\" is electromagnetic radiation at ~700nm wavelength. But 700nm isn't red — it's just a wavelength. Redness is a quale (subjective experience) that exists only in consciousness. A colorblind person looking at the same wavelength experiences something different. Neither is \"wrong.\"\n\nThis extends further than you think. Mantis shrimp have 16 types of color receptors (humans have 3). They see UV, infrared, and polarized light. Their visual experience of a sunset is unimaginably richer than yours — or incomprehensibly different; we can't know.\n\nThe philosopher Thomas Nagel asked \"What is it like to be a bat?\" and concluded we can never know, because bat experience (echolocation) has no analogue in human consciousness. The same applies to any animal with different sensory apparatus.\n\nThe implication: your perception of reality is a species-specific user interface, not reality itself. Evolution designed your senses to be useful, not accurate. You see what helps you survive, not what's there.",
+    "footer": "Donald Hoffman, The Case Against Reality"
+  },
+  {
+    "id": "discovery-020",
+    "type": "discovery",
+    "title": "GREENLAND WAS A VIKING MARKETING SCAM",
+    "body": "Erik the Red named it \"Greenland\" in 985 AD specifically to attract settlers. It was a deliberate rebrand — the island was mostly ice. He'd been exiled from Iceland for murder and needed colonists.",
+    "expanded": "Erik the Red was banished from Iceland for manslaughter (his second exile — he'd already been kicked out of Norway). He sailed west, found a massive ice-covered island, and spent three years exploring it.\n\nWhen he returned to recruit settlers, he called it \"Greenland\" because, as the Saga of Erik the Red explicitly states, \"people would be more eager to go there if it had an attractive name.\" This is arguably the first documented case of marketing-driven naming.\n\nIt worked. About 500 Norse settlers followed him in 985 AD, establishing two colonies that survived for nearly 500 years. At peak, the population reached ~5,000.\n\nThe colonies eventually failed around 1450 — likely due to climate cooling (the Little Ice Age), conflict with Inuit populations, and declining trade with Europe. The last written record is a 1408 wedding. After that, silence.\n\nThe meta-lesson: naming shapes reality. \"Greenland\" attracted settlers who built a civilization. Names aren't descriptions — they're tools of persuasion. Every startup founder naming their product understands this instinctively.",
+    "footer": "Saga of Erik the Red"
   }
 ]
