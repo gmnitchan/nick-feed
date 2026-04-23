@@ -481,6 +481,26 @@ function setupSettings() {
     document.getElementById('btn-export').textContent = 'Copied!';
     setTimeout(() => { document.getElementById('btn-export').textContent = 'Copy Feedback Summary'; }, 2000);
   });
+  document.getElementById('btn-share-feedback').addEventListener('click', async () => {
+    const feedbackData = {
+      explicit: loadStorage(STORAGE_KEYS.feedback) || {},
+      passive: loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} },
+      comments: loadStorage('nickfeed_comments') || {},
+      exportedAt: todayStr(),
+    };
+    const blob = new Blob([JSON.stringify(feedbackData, null, 2)], { type: 'application/json' });
+    const file = new File([blob], 'feedback.json', { type: 'application/json' });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ files: [file], title: 'Nick Feed Feedback' });
+    } else {
+      // Fallback: download
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'feedback.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  });
   document.getElementById('btn-export-index').addEventListener('click', async () => {
     const index = generateCardIndex();
     await navigator.clipboard.writeText(index);
