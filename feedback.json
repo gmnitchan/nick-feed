@@ -166,7 +166,11 @@
       "discovery-050": 12.9,
       "skill-009": 3.6,
       "discovery-054": 4.9,
-      "discovery-045": 6.5
+      "discovery-045": 6.5,
+      "timeless-018": 16,
+      "insight-011": 13.5,
+      "discovery-031": 5.5,
+      "poetry-018": 11.5
     }
   },
   "comments": {
@@ -179,5 +183,5 @@
     "count": 1,
     "lastOpen": "2026-04-23"
   },
-  "exportedAt": "2026-04-23T08:48:07.610Z"
+  "exportedAt": "2026-04-23T09:28:23.884Z"
 }
