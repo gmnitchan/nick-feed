@@ -481,6 +481,12 @@ function setupSettings() {
     document.getElementById('btn-export').textContent = 'Copied!';
     setTimeout(() => { document.getElementById('btn-export').textContent = 'Copy Feedback Summary'; }, 2000);
   });
+  document.getElementById('btn-export-index').addEventListener('click', async () => {
+    const index = generateCardIndex();
+    await navigator.clipboard.writeText(index);
+    document.getElementById('btn-export-index').textContent = 'Copied!';
+    setTimeout(() => { document.getElementById('btn-export-index').textContent = 'Copy Card Index (for generation)'; }, 2000);
+  });
   document.getElementById('btn-view-feedback').addEventListener('click', () => {
     document.getElementById('settings-overlay').style.display = 'none';
     const text = generateFeedbackExport();
@@ -633,6 +639,22 @@ function showErrorCard() {
       </div>
     </div>
   `;
+}
+
+// --- Card Index Export ---
+function generateCardIndex() {
+  const byType = {};
+  for (const card of STATE.cards) {
+    if (!byType[card.type]) byType[card.type] = [];
+    byType[card.type].push(`- [${card.id}] ${card.title}`);
+  }
+  let output = `=== EXISTING CARD INDEX (${STATE.cards.length} cards) ===\n\n`;
+  for (const [type, titles] of Object.entries(byType)) {
+    output += `${type.toUpperCase()} (${titles.length}):\n`;
+    output += titles.join('\n') + '\n\n';
+  }
+  output += `=== DO NOT REPEAT THESE TOPICS ===`;
+  return output;
 }
 
 // --- Text-to-Speech ---
