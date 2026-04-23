@@ -207,15 +207,11 @@ function showCard(card) {
 function updateCounter() {
   const counter = document.getElementById('card-counter');
   if (STATE.phase === 'unseen') {
-    const remaining = STATE.unseenQueue.length;
-    const total = remaining + STATE.currentIndex;
-    counter.textContent = `${STATE.currentIndex} / ${total} new`;
+    counter.textContent = `${STATE.currentIndex} / ${STATE.phaseTotal} new`;
   } else if (STATE.phase === 'nudge') {
     counter.textContent = '';
   } else {
-    const remaining = STATE.seenQueue.length;
-    const total = remaining + STATE.currentIndex;
-    counter.textContent = `${STATE.currentIndex} / ${total} seen`;
+    counter.textContent = `${STATE.currentIndex} / ${STATE.phaseTotal} seen`;
   }
 }
 
@@ -260,6 +256,7 @@ function buildQueues(cards) {
   STATE.seenQueue = shuffle(seenCards);
   STATE.phase = 'unseen';
   STATE.currentIndex = 0;
+  STATE.phaseTotal = unseen.length;
   STATE.history = [];
 }
 
@@ -301,6 +298,7 @@ function nextCard() {
   } else if (STATE.phase === 'nudge') {
     STATE.phase = 'seen';
     STATE.currentIndex = 0;
+    STATE.phaseTotal = STATE.seenQueue.length;
     if (STATE.seenQueue.length > 0) {
       card = STATE.seenQueue.shift();
     } else {
