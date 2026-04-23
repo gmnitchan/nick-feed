@@ -686,23 +686,47 @@ async function init() {
   }
   STATE.cards = cards;
 
-  // Try to restore previous session
-  const restored = restoreSession(cards);
-  if (!restored) {
+  // Check for new cards before restoring session
+  const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
+  const everViewed = new Set(Object.keys(passive.dwellTimes || {}));
+  const brandNewCards = cards.filter(c => !everViewed.has(c.id));
+
+  if (brandNewCards.length > 0) {
+    // New cards exist — start fresh with them at the front
+    clearSession();
     buildQueues(cards);
+  } else {
+    // No new cards — try to restore session
+    const restored = restoreSession(cards);
+    if (!restored) {
+      buildQueues(cards);
+    } else {
+      updateStreak();
+      if (!storageAvailable()) {
+        document.getElementById('app-name').textContent = 'NICK FEED (no storage)';
+      }
+      showCard(STATE.currentCard);
+      // skip the nextCard() call below
+      setTimeout(() => { document.getElementById('splash').classList.add('hidden'); }, 1500);
+      document.getElementById('btn-next').addEventListener('click', () => nextCard());
+      document.getElementById('btn-back').addEventListener('click', () => prevCard());
+      setupTapNavigation();
+      setupExpandHandler();
+      setupFeedbackButtons();
+      setupCommentButton();
+      setupSettings();
+      autoSyncFeedback();
+      return; // early return — session restored
+    }
   }
+
   updateStreak();
 
   if (!storageAvailable()) {
     document.getElementById('app-name').textContent = 'NICK FEED (no storage)';
   }
 
-  // Show card — resume or start fresh
-  if (restored && STATE.currentCard) {
-    showCard(STATE.currentCard);
-  } else {
-    nextCard();
-  }
+  nextCard();
 
   setTimeout(() => {
     document.getElementById('splash').classList.add('hidden');
