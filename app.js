@@ -146,13 +146,18 @@ function renderCard(card) {
     ? `<div class="card-image"><img src="${card.image}" alt="" loading="lazy"><div class="card-image-fade"></div></div>`
     : '';
 
+  const isNew = STATE.neverSeenIds && STATE.neverSeenIds.has(card.id);
+
   el.innerHTML = `
     <div class="card-accent" style="background: ${accentColor}"></div>
     ${imageHtml}
     <div class="card-svg-bg" id="svg-bg-${card.id}"></div>
     <div class="card-content ${card.image ? 'card-content--has-image' : ''}">
-      <div class="card-badge" style="color: ${accentColor}; border-color: ${accentColor}">
-        ${meta.emoji} ${meta.label}
+      <div class="card-badge-row">
+        <div class="card-badge" style="color: ${accentColor}; border-color: ${accentColor}">
+          ${meta.emoji} ${meta.label}
+        </div>
+        ${isNew ? '<div class="card-new-badge">NEW</div>' : ''}
       </div>
       ${bodyHtml}
       ${card.expanded ? '<div class="card-expand-indicator">↓ Tap for more</div>' : ''}
@@ -201,11 +206,17 @@ function showCard(card) {
 
 function updateCounter() {
   const counter = document.getElementById('card-counter');
-  const total = STATE.phase === 'unseen'
-    ? STATE.unseenQueue.length + STATE.currentIndex
-    : STATE.seenQueue.length + STATE.currentIndex;
-  const label = STATE.phase === 'unseen' ? 'new' : 'seen';
-  counter.textContent = `${STATE.currentIndex} / ${total} ${label}`;
+  if (STATE.phase === 'unseen') {
+    const remaining = STATE.unseenQueue.length;
+    const total = remaining + STATE.currentIndex;
+    counter.textContent = `${STATE.currentIndex} / ${total} new`;
+  } else if (STATE.phase === 'nudge') {
+    counter.textContent = '';
+  } else {
+    const remaining = STATE.seenQueue.length;
+    const total = remaining + STATE.currentIndex;
+    counter.textContent = `${STATE.currentIndex} / ${total} seen`;
+  }
 }
 
 // --- Seen state ---
@@ -230,8 +241,21 @@ function markSeen(cardId) {
 function buildQueues(cards) {
   const seen = pruneSeen();
   const seenIds = new Set(Object.keys(seen));
-  const unseen = cards.filter(c => !seenIds.has(c.id));
-  const seenCards = cards.filter(c => seenIds.has(c.id));
+
+  // Also check passive dwell times — these persist indefinitely and are
+  // the true record of every card ever viewed, even after the 14-day
+  // seen window expires
+  const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
+  const everViewed = new Set(Object.keys(passive.dwellTimes || {}));
+
+  // A card is "unseen" only if it has NEVER been viewed (no dwell time)
+  // AND is not in the 14-day seen window
+  const unseen = cards.filter(c => !seenIds.has(c.id) && !everViewed.has(c.id));
+  const seenCards = cards.filter(c => seenIds.has(c.id) || everViewed.has(c.id));
+
+  // Track which IDs are truly new for the NEW badge
+  STATE.neverSeenIds = new Set(unseen.map(c => c.id));
+
   STATE.unseenQueue = shuffle(unseen);
   STATE.seenQueue = shuffle(seenCards);
   STATE.phase = 'unseen';
@@ -256,6 +280,7 @@ function nextCard() {
 
   if (STATE.currentCard && !STATE.currentCard.isNudge) {
     markSeen(STATE.currentCard.id);
+    if (STATE.neverSeenIds) STATE.neverSeenIds.delete(STATE.currentCard.id);
     STATE.history.push(STATE.currentCard);
     STATE.currentIndex++;
   }

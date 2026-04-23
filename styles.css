@@ -164,6 +164,23 @@ html, body {
   flex: 1;
 }
 
+.card-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-new-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
 .card-badge {
   font-size: 0.8rem;
   font-weight: 700;
@@ -173,7 +190,6 @@ html, body {
   padding: 4px 10px;
   border-radius: 100px;
   align-self: flex-start;
-  margin-bottom: 1.5rem;
 }
 
 .card-title {
