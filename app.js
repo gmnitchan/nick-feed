@@ -123,7 +123,36 @@ function renderPoetryBody(card) {
 }
 
 function renderTimelessBody(card) {
-  return `<h1 class="card-title">${card.title}</h1>
+  // Pick the most evocative word from the title for the background
+  const words = card.title.split(/\s+/);
+  const heroWord = words.reduce((a, b) => a.length >= b.length ? a : b, '');
+  // Pick a thematic icon based on content keywords
+  const iconMap = [
+    [/stoic|marcus|seneca|epictetus/i, '🏛'],
+    [/tree|plant|grow|seed/i, '🌳'],
+    [/water|fish|ocean|river/i, '🌊'],
+    [/fire|forge|steel|burn/i, '🔥'],
+    [/death|die|mortal|skull/i, '💀'],
+    [/teach|learn|wisdom|know/i, '🕯'],
+    [/wood|chop|zen|buddha/i, '☯'],
+    [/dao|tao|eastern|lao/i, '☯'],
+    [/tool|axe|gift|tech/i, '⚒'],
+    [/time|clock|moment/i, '⏳'],
+    [/war|came|first/i, '🕊'],
+    [/suffer|imagine|fear/i, '🌑'],
+    [/ship|iterate|build/i, '⚡'],
+  ];
+  let icon = '📜';
+  const fullText = card.title + ' ' + card.body;
+  for (const [pattern, emoji] of iconMap) {
+    if (pattern.test(fullText)) { icon = emoji; break; }
+  }
+  return `<div class="timeless-hero">
+      <div class="timeless-hero-word">${heroWord}</div>
+      <div class="timeless-hero-icon">${icon}</div>
+      <div class="timeless-hero-line"></div>
+    </div>
+    <h1 class="card-title">${card.title}</h1>
     <p class="card-body">${card.body}</p>`;
 }
 
@@ -142,17 +171,12 @@ function renderCard(card) {
   const bodyHtml = renderBodyForType(card);
   const expandedHtml = card.expanded ? card.expanded.replace(/\n/g, '<br>') : '';
 
-  const imageHtml = card.image
-    ? `<div class="card-image"><img src="${card.image}" alt="" loading="lazy"><div class="card-image-fade"></div></div>`
-    : '';
-
   const isNew = STATE.neverSeenIds && STATE.neverSeenIds.has(card.id);
 
   el.innerHTML = `
     <div class="card-accent" style="background: ${accentColor}"></div>
-    ${imageHtml}
     <div class="card-svg-bg" id="svg-bg-${card.id}"></div>
-    <div class="card-content ${card.image ? 'card-content--has-image' : ''}">
+    <div class="card-content">
       <div class="card-badge-row">
         <div class="card-badge" style="color: ${accentColor}; border-color: ${accentColor}">
           ${meta.emoji} ${meta.label}
