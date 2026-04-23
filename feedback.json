@@ -21,7 +21,8 @@
       "poetry-020",
       "chinese-016",
       "discovery-067",
-      "timeless-019"
+      "timeless-019",
+      "poetry-019"
     ],
     "retrieved": [
       "poetry-013",
@@ -198,7 +199,9 @@
       "discovery-067": 62.3,
       "timeless-019": 135.6,
       "discovery-063": 3.7,
-      "discovery-068": 8.5
+      "discovery-068": 8.5,
+      "poetry-019": 96.7,
+      "discovery-070": 44.1
     }
   },
   "comments": {
@@ -211,5 +214,5 @@
     "count": 1,
     "lastOpen": "2026-04-23"
   },
-  "exportedAt": "2026-04-23T09:36:54.372Z"
+  "exportedAt": "2026-04-23T13:19:35.259Z"
 }
