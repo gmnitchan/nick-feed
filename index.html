@@ -11,7 +11,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="preload" href="fonts/PlusJakartaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
   <div id="splash">
@@ -21,10 +21,17 @@
     <div id="settings-overlay" style="display:none">
       <div id="settings-panel">
         <h2>Settings</h2>
-        <button id="btn-export">Copy Feedback Summary</button>
+        <button id="btn-sync-feedback">Sync Feedback to GitHub</button>
+        <div id="sync-status"></div>
         <button id="btn-view-feedback">View Feedback Summary</button>
-        <button id="btn-share-feedback">Share Feedback File</button>
+        <button id="btn-export">Copy Feedback Summary</button>
         <button id="btn-export-index">Copy Card Index (for generation)</button>
+        <hr style="border:none;border-top:1px solid #2a2a2a;margin:0.5rem 0">
+        <div id="token-section">
+          <label style="font-size:0.75rem;color:var(--text-muted);display:block;margin-bottom:0.5rem;text-align:left;">GitHub Token (stored locally)</label>
+          <input type="password" id="github-token-input" placeholder="ghp_..." style="width:100%;padding:0.5rem;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:6px;color:var(--text);font-family:inherit;font-size:0.85rem;margin-bottom:0.5rem;">
+          <button id="btn-save-token">Save Token</button>
+        </div>
         <button id="btn-close-settings">Close</button>
       </div>
     </div>
@@ -63,7 +70,7 @@
       </div>
     </div>
   </div>
-  <script src="svg-gen.js?v=8"></script>
-  <script src="app.js?v=8"></script>
+  <script src="svg-gen.js?v=9"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>

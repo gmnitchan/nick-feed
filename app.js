@@ -481,26 +481,21 @@ function setupSettings() {
     document.getElementById('btn-export').textContent = 'Copied!';
     setTimeout(() => { document.getElementById('btn-export').textContent = 'Copy Feedback Summary'; }, 2000);
   });
-  document.getElementById('btn-share-feedback').addEventListener('click', async () => {
-    const feedbackData = {
-      explicit: loadStorage(STORAGE_KEYS.feedback) || {},
-      passive: loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} },
-      comments: loadStorage('nickfeed_comments') || {},
-      exportedAt: todayStr(),
-    };
-    const blob = new Blob([JSON.stringify(feedbackData, null, 2)], { type: 'application/json' });
-    const file = new File([blob], 'feedback.json', { type: 'application/json' });
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      await navigator.share({ files: [file], title: 'Nick Feed Feedback' });
-    } else {
-      // Fallback: download
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'feedback.json';
-      a.click();
-      URL.revokeObjectURL(url);
+  document.getElementById('btn-sync-feedback').addEventListener('click', () => syncFeedbackToGitHub());
+  document.getElementById('btn-save-token').addEventListener('click', () => {
+    const token = document.getElementById('github-token-input').value.trim();
+    if (token) {
+      saveStorage('nickfeed_github_token', token);
+      document.getElementById('btn-save-token').textContent = 'Saved!';
+      document.getElementById('github-token-input').value = '';
+      setTimeout(() => { document.getElementById('btn-save-token').textContent = 'Save Token'; }, 1500);
     }
   });
+  // Show token status
+  const savedToken = loadStorage('nickfeed_github_token');
+  if (savedToken) {
+    document.getElementById('github-token-input').placeholder = 'Token saved ✓ (enter new to replace)';
+  }
   document.getElementById('btn-export-index').addEventListener('click', async () => {
     const index = generateCardIndex();
     await navigator.clipboard.writeText(index);
@@ -659,6 +654,77 @@ function showErrorCard() {
       </div>
     </div>
   `;
+}
+
+// --- GitHub Feedback Sync ---
+async function syncFeedbackToGitHub() {
+  const statusEl = document.getElementById('sync-status');
+  const token = loadStorage('nickfeed_github_token');
+
+  if (!token) {
+    statusEl.textContent = '⚠️ Set your GitHub token below first';
+    statusEl.style.color = '#FF8A00';
+    return;
+  }
+
+  statusEl.textContent = 'Syncing...';
+  statusEl.style.color = 'var(--text-muted)';
+
+  const feedbackData = {
+    explicit: loadStorage(STORAGE_KEYS.feedback) || {},
+    passive: loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} },
+    comments: loadStorage('nickfeed_comments') || {},
+    streak: loadStorage(STORAGE_KEYS.streak) || {},
+    exportedAt: new Date().toISOString(),
+  };
+
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(feedbackData, null, 2))));
+  const repo = 'gmnitchan/nick-feed';
+  const path = 'feedback.json';
+  const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`;
+
+  try {
+    // Check if file exists (need SHA to update)
+    let sha = null;
+    const existing = await fetch(apiUrl, {
+      headers: { 'Authorization': `token ${token}` }
+    });
+    if (existing.ok) {
+      const data = await existing.json();
+      sha = data.sha;
+    }
+
+    // Create or update
+    const body = {
+      message: `Sync feedback from app — ${todayStr()}`,
+      content: content,
+      committer: { name: 'Nick Feed App', email: 'noreply@nickfeed.app' }
+    };
+    if (sha) body.sha = sha;
+
+    const res = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (res.ok) {
+      statusEl.textContent = '✅ Synced!';
+      statusEl.style.color = 'var(--accent)';
+    } else {
+      const err = await res.json();
+      statusEl.textContent = `❌ ${err.message || 'Failed'}`;
+      statusEl.style.color = '#FF4444';
+    }
+  } catch (e) {
+    statusEl.textContent = `❌ ${e.message}`;
+    statusEl.style.color = '#FF4444';
+  }
+
+  setTimeout(() => { statusEl.textContent = ''; }, 4000);
 }
 
 // --- Card Index Export ---

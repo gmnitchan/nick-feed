@@ -407,6 +407,14 @@ html, body {
   cursor: pointer;
 }
 #settings-panel button:active { background: #3a3a3a; }
+#sync-status {
+  font-size: 0.8rem;
+  min-height: 1.2em;
+  margin-bottom: 0.5rem;
+}
+#token-section {
+  margin-top: 0.25rem;
+}
 
 #feedback-view-overlay {
   position: fixed;
