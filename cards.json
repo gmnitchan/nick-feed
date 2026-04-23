@@ -90,5 +90,165 @@
     "body": "Rome. The Ottomans. The British. The average lifespan of a great empire is about 250 years, passing through the same stages: pioneers, builders, merchants, intellectuals, decadents.",
     "expanded": "Sir John Glubb identified six stages that repeat across empires: the Age of Pioneers (outburst), Conquests, Commerce, Affluence, Intellect, and Decadence. The transition from Affluence to Decadence is where it gets interesting.\n\nSigns of the Decadence stage: an obsession with celebrity culture, a widening gap between rich and poor, loss of civic duty replaced by individualism, frivolity in public discourse, and an influx of foreigners (not as a problem, but as a sign the empire's original culture has lost cohesion).\n\nThe pattern isn't destiny — but it's a useful lens. What stage is your country in? What stage is your company in? What stage is your product in? The same lifecycle dynamics that govern empires often govern markets and organizations. Recognizing the stage changes what you should optimize for.",
     "footer": "Sir John Glubb, The Fate of Empires"
+  },
+  {
+    "id": "insight-003",
+    "type": "insight",
+    "title": "CONTEXT SWITCHING COSTS 23 MINUTES",
+    "body": "Gloria Mark's research at UC Irvine found it takes an average of 23 minutes to refocus after an interruption. Every Slack ping isn't a 5-second distraction — it's a 23-minute tax.",
+    "expanded": "The 23-minute figure is an average. For complex creative work (coding, writing, designing), recovery time can exceed 30 minutes. And here's the compounding problem: most knowledge workers are interrupted every 11 minutes on average.\n\nThis means most people never reach deep focus at all during a workday. They operate in a permanent state of partial attention, which feels productive but produces lower-quality output.\n\nThe fix isn't willpower — it's environmental design. Block 2-3 hour chunks with notifications off. Batch communication into scheduled windows. Treat deep focus time like a meeting that can't be moved. The people who seem supernaturally productive aren't smarter — they're just less interrupted.",
+    "footer": "Gloria Mark, Attention Span"
+  },
+  {
+    "id": "insight-004",
+    "type": "insight",
+    "title": "YOUR USERS LIE IN SURVEYS",
+    "body": "What people say they want and what they actually do are two completely different datasets. Survey data tells you what users think you want to hear. Behavioral data tells you what they actually value.",
+    "expanded": "Rob Fitzpatrick's 'The Mom Test' nails this: if you ask 'would you use this product?' everyone says yes because they don't want to hurt your feelings. Instead, ask about their past behavior: 'When was the last time you had this problem? What did you do about it? How much did you spend?'\n\nThis applies beyond user research. Your own self-reports about how you spend time are probably wrong. Track your actual screen time for a week — the gap between perception and reality is always humbling.\n\nThe principle: trust revealed preferences (what people do) over stated preferences (what people say). This is true in product design, hiring, relationships, and self-knowledge.",
+    "footer": "The Mom Test principle"
+  },
+  {
+    "id": "insight-005",
+    "type": "insight",
+    "title": "DISTRIBUTION BEATS PRODUCT EVERY TIME",
+    "body": "The best product doesn't win. The product with the best distribution wins. Google wasn't the best search engine — it was the one that got the Firefox default deal and the iPhone deal.",
+    "expanded": "Peter Thiel's framework: if your product is 10x better, you might overcome a distribution disadvantage. Otherwise, distribution wins. This is why mediocre products from companies with distribution moats (Apple, Google, Microsoft) consistently beat superior startups.\n\nFor builders, this means: spend at least as much time thinking about how your product reaches users as you do building it. The graveyard of startups is full of technically superior products that nobody knew existed.\n\nAsk yourself: what's your unfair distribution advantage? If you don't have one, that's the first problem to solve — not adding more features.",
+    "footer": "Zero to One"
+  },
+  {
+    "id": "skill-003",
+    "type": "skill",
+    "title": "WRITE THE README FIRST",
+    "body": "Amazon's 'Working Backwards' method: write the press release and FAQ before building anything. If you can't explain why a customer would care in plain language, you don't understand the problem yet.",
+    "expanded": "The press release format forces clarity because it has constraints: who is the customer, what is the problem, why do existing solutions fail, and what does success look like? If any of these are fuzzy, the product vision is fuzzy.\n\nThis works for personal projects too. Before coding, write a 3-paragraph README: what does this do, who is it for, and why should they care? If the README feels unconvincing, the project probably is.\n\nThe meta-lesson: writing is thinking made visible. When something is hard to write about, it's because you haven't thought it through. The writing isn't documentation — it's the design process.",
+    "footer": "Amazon Working Backwards"
+  },
+  {
+    "id": "skill-004",
+    "type": "skill",
+    "title": "LEARN TO READ CODE NOT WRITE IT",
+    "body": "Senior engineers spend 10x more time reading code than writing it. The bottleneck isn't typing speed or syntax knowledge — it's the ability to quickly build a mental model of unfamiliar systems.",
+    "expanded": "Code reading is a distinct skill from code writing, and almost nobody practices it deliberately. Here's how to get better:\n\n1. Start from the entry point (main, index, app) and follow the execution flow. Don't try to understand everything — trace one happy path end to end.\n\n2. Read tests before implementation. Tests tell you what the code is supposed to do without making you parse how.\n\n3. Use 'git log --oneline -20' on any file to understand its recent evolution. Code makes more sense when you know what problems it was solving.\n\nIn the age of AI-assisted coding, this skill becomes even more critical. You'll increasingly be reading and evaluating AI-generated code rather than writing from scratch. The developer who can't read fast becomes the bottleneck.",
+    "footer": "Practice deliberately"
+  },
+  {
+    "id": "skill-005",
+    "type": "skill",
+    "title": "DEFAULTS BEAT DECISIONS",
+    "body": "Every decision you make during the day drains a finite pool of willpower. The highest-leverage productivity move isn't a better todo list — it's eliminating decisions by setting good defaults.",
+    "expanded": "Decision fatigue is why judges grant more paroles in the morning than the afternoon, and why Zuckerberg wears the same shirt. Each decision, no matter how trivial, depletes the same mental resource you need for important choices.\n\nApply this to your workflow: pick one code editor and stop evaluating others. Pick one note-taking app. Pick one deployment pipeline. Use the same lunch spot on workdays. Wear the same style of clothes.\n\nThe goal isn't optimization of each choice — it's conservation of decision energy for things that actually matter. A 'good enough' default that you never think about beats a 'perfect' choice that you re-evaluate weekly.",
+    "footer": "Reduce cognitive overhead"
+  },
+  {
+    "id": "whatif-003",
+    "type": "whatif",
+    "title": "WHAT IF AI MAKES CODE FREE",
+    "body": "If writing code becomes nearly free, what becomes expensive? Taste. Judgment. Knowing what to build. The coder becomes the curator. Are you building skills for that world?",
+    "expanded": "In a world where AI writes code as well as a mid-level engineer, the value chain shifts dramatically. The people who thrive won't be the best typists — they'll be the best thinkers.\n\nWhat becomes valuable: deep domain expertise (knowing what to build), design taste (knowing what feels right), systems thinking (knowing how pieces connect), and communication (knowing how to specify intent precisely).\n\nWhat becomes commoditized: syntax knowledge, boilerplate generation, standard CRUD operations, basic debugging.\n\nThe transition is already happening. Are you investing your learning time in the right column?",
+    "footer": "The value chain is shifting"
+  },
+  {
+    "id": "whatif-004",
+    "type": "whatif",
+    "title": "WHAT IF YOU ONLY WORKED 4 HOURS",
+    "body": "Cal Newport argues most knowledge workers produce about 4 hours of genuine deep work per day. What if you accepted that and optimized those 4 hours instead of pretending you work 8-10?",
+    "expanded": "The research consistently shows: elite performers (musicians, athletes, chess players, writers) practice intensely for about 4 hours per day and no more. Beyond that, quality degrades and the risk of burnout increases.\n\nYet most knowledge workers sit at their desks for 8-10 hours, filling the gap with meetings, email, Slack, and busywork that feels productive but isn't. The irony: by trying to work more, they often produce less.\n\nThe experiment: for one week, identify your 4 most productive hours and ruthlessly protect them. Fill them with your hardest, most important work. Use the remaining time for admin, communication, and rest. Track your output — not your hours — and see what happens.",
+    "footer": "Deep Work by Cal Newport"
+  },
+  {
+    "id": "whatif-005",
+    "type": "whatif",
+    "title": "WHAT IF NOBODY NEEDS YOUR APP",
+    "body": "The most dangerous assumption in product development: 'people need this.' 90% of startups fail not because of bad execution but because they built something nobody wanted badly enough to pay for.",
+    "expanded": "Y Combinator's #1 piece of advice: make something people want. It sounds obvious, but founders consistently skip validation because building is more fun than talking to potential users.\n\nThe test isn't 'would someone use this if it existed?' The test is 'is someone actively trying to solve this problem right now with a terrible workaround?' If no one has a painful workaround, the problem isn't painful enough to build a business on.\n\nBefore writing another line of code, find 5 people who have the problem your product solves. Ask them what they currently do about it. If they shrug, that's your answer. If they pull out a janky spreadsheet or a 7-step manual process and complain about it — now you have something.",
+    "footer": "Validate before building"
+  },
+  {
+    "id": "timeless-003",
+    "type": "timeless",
+    "title": "YOU ARE WHAT YOU REPEATEDLY DO",
+    "body": "Aristotle didn't say excellence is an act. He said it's a habit. Your identity isn't defined by your ambitions, your intentions, or your best moments — it's defined by your defaults.",
+    "expanded": "Will Durant, summarizing Aristotle: 'We are what we repeatedly do. Excellence, then, is not an act, but a habit.' This is often misattributed directly to Aristotle, but the insight is Aristotelian in spirit.\n\nThe practical implication is uncomfortable: you are not the person you want to be. You are the person your daily habits reveal. If you say you value health but eat junk food daily, you don't actually value health — you value the idea of health.\n\nJames Clear built an entire framework on this in Atomic Habits: don't set goals, build systems. Don't ask 'what do I want to achieve?' Ask 'what kind of person do I want to become, and what would that person do today?'\n\nThe question to sit with: what do your actual daily habits say about who you are right now?",
+    "footer": "Aristotle via Will Durant"
+  },
+  {
+    "id": "timeless-004",
+    "type": "timeless",
+    "title": "THE MAP IS NOT THE TERRITORY",
+    "body": "Alfred Korzybski's most famous insight: we navigate reality using mental models, not reality itself. Every model is wrong. Some models are useful. Knowing the difference is wisdom.",
+    "expanded": "Your business plan is a map. Your understanding of your users is a map. Your mental model of how the economy works is a map. None of them are the territory — they're simplified representations that leave things out.\n\nThis matters because people fight over maps. They confuse their model of reality with reality itself. 'The market wants X' is a map claim, not a fact. 'This architecture is correct' is a map claim. All of these need to be held lightly and updated frequently.\n\nCharlie Munger's adaptation: collect mental models from many disciplines. No single model captures reality, but a lattice of models from economics, psychology, biology, physics, and history gives you a richer approximation. The person with one model forces every problem through it. The person with many models can pick the most useful one.",
+    "footer": "Korzybski + Munger"
+  },
+  {
+    "id": "timeless-005",
+    "type": "timeless",
+    "title": "MEMENTO MORI",
+    "body": "The Stoics kept skulls on their desks. Not to be morbid — to remember that time is finite. If this were your last year, would you spend it doing what you did today?",
+    "expanded": "Steve Jobs, Stanford commencement 2005: 'Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything — all external expectations, all pride, all fear of embarrassment or failure — these things just fall away in the face of death.'\n\nThis isn't nihilism. It's prioritization through clarity. Most of what stresses you out doesn't matter on a 10-year timescale, let alone a lifetime one. The Stoics used death meditation not to feel depressed but to feel free — free from caring about things that don't deserve your care.\n\nPractical exercise: write your own obituary. Not the one you hope for — the one that's true based on how you're living right now. If there's a gap between the obituary you want and the one you'd get, that gap is your to-do list.",
+    "footer": "Stoic meditation"
+  },
+  {
+    "id": "discovery-005",
+    "type": "discovery",
+    "title": "OCTOPUSES EDIT THEIR OWN RNA",
+    "body": "Most animals evolve through DNA mutations across generations. Octopuses can edit their RNA on the fly — changing their own neural proteins in real time to adapt to temperature, depth, and environment.",
+    "expanded": "A 2017 study in Cell found that coleoid cephalopods (octopuses, squid, cuttlefish) extensively edit their RNA, recoding over 60% of their transcriptome. Most organisms edit less than 1%.\n\nThe trade-off is fascinating: this RNA editing comes at the cost of slower DNA evolution. They sacrificed long-term adaptation for short-term flexibility. It's a completely different strategy for dealing with environmental change.\n\nEach of an octopus's eight arms has its own semi-independent neural cluster — essentially a distributed brain. They can taste with their skin, change color in milliseconds, and solve puzzles despite having lifespans of only 1-2 years (no time to learn from elders).\n\nThe design principle: sometimes flexibility beats optimization. A system that can reconfigure itself in real time may outperform a more 'evolved' but rigid system.",
+    "footer": "Cell, 2017"
+  },
+  {
+    "id": "discovery-006",
+    "type": "discovery",
+    "title": "BITCOIN USES MORE ENERGY THAN FINLAND",
+    "body": "The Bitcoin network consumes roughly 150 TWh per year — more than many countries. This isn't a bug. It's a deliberate design choice: convert electricity into trust without needing institutions.",
+    "expanded": "Proof of Work is intentionally expensive. That's the whole point — making it costly to attack the network. The energy isn't 'wasted' any more than the energy running bank vaults, armored trucks, and the entire SWIFT network is 'wasted.' It's the cost of security.\n\nBut the scale is staggering. A single Bitcoin transaction uses roughly the same energy as an average US household uses in a month. Ethereum's move to Proof of Stake reduced its energy consumption by 99.95%.\n\nThe deeper question: is converting physical resources (electricity) into digital trust the best approach, or is it a transitional technology? Proof of Stake works but introduces different centralization risks. The answer probably isn't settled yet.\n\nWhat's most interesting isn't the energy debate — it's that we now have a working proof that you can build trustworthy systems without trusting anyone. That's a civilizational first.",
+    "footer": "Cambridge Bitcoin Electricity Index"
+  },
+  {
+    "id": "discovery-007",
+    "type": "discovery",
+    "title": "MOST OF YOUR CELLS AREN'T HUMAN",
+    "body": "Your body contains roughly 38 trillion bacterial cells and 30 trillion human cells. By cell count, you're slightly more bacteria than human. Your microbiome weighs about 2kg — roughly the same as your brain.",
+    "expanded": "The Human Microbiome Project revealed that these bacteria aren't passengers — they're active participants in your cognition, mood, and immune function. Your gut produces about 95% of your body's serotonin. Gut bacteria communicate with your brain via the vagus nerve.\n\nStudies have shown that transferring gut bacteria from anxious mice to calm mice makes the calm mice anxious — and vice versa. The microbiome influences food cravings, sleep patterns, and possibly even personality traits.\n\nThis challenges the notion of the individual self. 'You' are not a single organism making choices — you're an ecosystem of trillions of organisms whose collective behavior produces what feels like a unified consciousness.\n\nThe practical takeaway: what you eat directly shapes which bacteria thrive in your gut, which affects your mood and cognition. Diet isn't just about energy — it's about cultivating the right microbial collaborators.",
+    "footer": "Human Microbiome Project"
+  },
+  {
+    "id": "discovery-008",
+    "type": "discovery",
+    "title": "VENICE WAS THE SILICON VALLEY OF 1400",
+    "body": "Venice dominated global trade for centuries by doing what tech companies do today: building platforms. The Venetian state provided infrastructure (ships, trade routes, legal systems) and took a cut of every transaction.",
+    "expanded": "Venice's innovation wasn't ships or navigation — it was institutional design. They invented double-entry bookkeeping, patent law, government bonds, and a meritocratic civil service centuries before anyone else.\n\nThe colleganza (a type of partnership contract) worked almost exactly like modern venture capital: a 'sleeping' partner provided capital, a traveling merchant provided labor, and profits were split 75/25. Risk was distributed, and failure didn't ruin anyone.\n\nVenice declined when they stopped innovating institutionally. The Great Council closed membership in 1297 (the 'Serrata'), turning an open meritocracy into a closed oligarchy. Within generations, entrepreneurial energy moved to Florence, Genoa, and Amsterdam.\n\nThe pattern: platforms win by being open and meritocratic. They die when insiders capture the system and close the gates. Sound familiar?",
+    "footer": "Why Nations Fail"
+  },
+  {
+    "id": "discovery-009",
+    "type": "discovery",
+    "title": "TREES TALK THROUGH CHEMISTRY",
+    "body": "When a tree is attacked by insects, it releases volatile organic compounds into the air. Neighboring trees detect these chemicals and preemptively produce insect-repelling toxins — before they're even attacked.",
+    "expanded": "This isn't metaphorical — it's measurable chemistry. Acacia trees in Africa release ethylene gas when giraffes start eating their leaves. Downwind trees detect the ethylene and increase tannin production in their leaves within minutes, making them bitter and sometimes toxic.\n\nGiraffes have adapted to this: they eat upwind and walk away from a tree they've browsed (not to the nearest neighbor, which would be downwind and already defended) before choosing their next target.\n\nThis has been documented across dozens of species: willows, maples, beeches, and many others. Some trees can even distinguish between damage from herbivores versus mechanical damage (wind, hail) and respond differently to each.\n\nThe implication: communication doesn't require a nervous system, a brain, or even the ability to move. It just requires the ability to send and receive signals. What other forms of communication are we missing because they don't look like ours?",
+    "footer": "Chemical ecology"
+  },
+  {
+    "id": "discovery-010",
+    "type": "discovery",
+    "title": "THE DUNBAR NUMBER IS 150",
+    "body": "Anthropologist Robin Dunbar found that humans can maintain about 150 meaningful relationships. This number shows up everywhere: average village size, military company size, and the point where startups need formal hierarchy.",
+    "expanded": "Dunbar's number comes from the correlation between primate brain size and social group size. Our neocortex can track about 150 relationships with enough depth to know how each person relates to each other person in the group.\n\nThis has direct implications for organizations. Below 150 people, a company can function on informal trust and reputation — everyone roughly knows everyone. Above 150, you need formal processes: HR policies, written rules, management layers. Companies that resist this transition (like many startups) experience chaos.\n\nGore-Tex famously builds a new factory when any facility exceeds 150 people. They found that above this threshold, peer accountability breaks down and people start free-riding.\n\nThe digital question: does social media change Dunbar's number? Probably not. You might have 1,000 Instagram followers, but your brain still maintains genuine relationships with about 150 of them. The rest are acquaintances your neocortex has deprioritized.",
+    "footer": "Robin Dunbar, How Many Friends Does One Person Need?"
+  },
+  {
+    "id": "discovery-011",
+    "type": "discovery",
+    "title": "MIRRORS WEREN'T COMMON UNTIL 1835",
+    "body": "Before cheap silvered glass mirrors, most humans had never seen a clear image of their own face. Self-portraiture was rare. The psychological concept of 'self-image' is younger than you think.",
+    "expanded": "Justus von Liebig invented the silvered-glass mirror process in 1835. Before that, mirrors were polished metal (expensive, blurry) or Venetian glass (extremely expensive, limited production). Most people knew their face only from reflections in water.\n\nThis has profound implications for the history of identity. Concepts like 'body image,' 'self-consciousness about appearance,' and 'beauty standards' couldn't operate the same way when people rarely saw themselves in detail.\n\nThe photography revolution (1840s onward) compounded this — for the first time, people could see themselves as others see them, frozen in time. Then video. Then smartphone selfie cameras. Each technology increased self-surveillance.\n\nWe're now the most self-observed humans in history, spending hours daily looking at images of ourselves. Is this more self-awareness or more self-obsession? The mirror didn't just reflect reality — it changed our relationship to ourselves.",
+    "footer": "History of self-perception"
+  },
+  {
+    "id": "discovery-012",
+    "type": "discovery",
+    "title": "SLEEP IS BRAIN GARBAGE COLLECTION",
+    "body": "During deep sleep, your brain's glymphatic system pumps cerebrospinal fluid through neural tissue, flushing out metabolic waste products — including the amyloid-beta plaques associated with Alzheimer's.",
+    "expanded": "The glymphatic system was only discovered in 2012 by Maiken Nedergaard at the University of Rochester. During sleep, brain cells shrink by about 60%, creating channels that allow cerebrospinal fluid to wash through and clear toxic byproducts of neural activity.\n\nThis process is almost entirely inactive during waking hours. When you skip sleep, these waste products accumulate. Chronic sleep deprivation is now considered a significant risk factor for Alzheimer's and other neurodegenerative diseases.\n\nThe efficiency of this cleaning process depends on sleep quality, not just duration. Deep slow-wave sleep is when most clearance happens. Alcohol before bed suppresses slow-wave sleep, which means even if you sleep 8 hours, you might get minimal brain cleaning.\n\nThe reframe: sleep isn't downtime. It's maintenance. Skipping sleep to be productive is like skipping oil changes to drive more miles — it works until the engine seizes.",
+    "footer": "Nedergaard Lab, 2012"
   }
 ]
