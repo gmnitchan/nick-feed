@@ -13,7 +13,12 @@
       "skill-010",
       "discovery-034",
       "whatif-009",
-      "skill-008"
+      "skill-008",
+      "discovery-072",
+      "skill-011",
+      "discovery-081",
+      "chinese-017",
+      "poetry-020"
     ],
     "retrieved": [
       "poetry-013",
@@ -170,7 +175,17 @@
       "timeless-018": 16,
       "insight-011": 13.5,
       "discovery-031": 5.5,
-      "poetry-018": 11.5
+      "poetry-018": 11.5,
+      "discovery-073": 6.5,
+      "discovery-072": 21,
+      "discovery-064": 4.7,
+      "skill-011": 37.7,
+      "discovery-066": 8.9,
+      "discovery-081": 50.6,
+      "discovery-059": 10.4,
+      "discovery-071": 5.7,
+      "chinese-017": 18.3,
+      "poetry-020": 57.7
     }
   },
   "comments": {
@@ -183,5 +198,5 @@
     "count": 1,
     "lastOpen": "2026-04-23"
   },
-  "exportedAt": "2026-04-23T09:28:23.884Z"
+  "exportedAt": "2026-04-23T09:32:05.270Z"
 }
