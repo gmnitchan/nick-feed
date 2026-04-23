@@ -179,7 +179,7 @@ function buildQueues(cards) {
 
 const NUDGE_CARD = {
   id: '__nudge__',
-  type: 'task',
+  type: 'insight',
   title: "YOU'VE SEEN EVERYTHING",
   body: "Time to generate a fresh batch. Open Claude on your laptop and run the prompt template.",
   footer: "Run ./add-cards.sh after",
@@ -453,33 +453,22 @@ function renderStreak(count) {
 
 // --- Expand/Collapse ---
 function setupExpandHandler() {
-  const cardArea = document.getElementById('card-area');
-  let pointerDownX = 0, pointerDownY = 0;
+  // Expand is now triggered by tapping the expand indicator or the middle zone
+  // Handled inline in setupTapNavigation — middle tap area
+}
 
-  cardArea.addEventListener('pointerdown', (e) => {
-    pointerDownX = e.clientX;
-    pointerDownY = e.clientY;
-  });
+// Called from tap navigation when middle zone is tapped
+function handleExpandTap(e) {
+  const card = document.querySelector('.card');
+  if (!card) return;
+  const cardData = STATE.currentCard;
+  if (!cardData || !cardData.expanded) return;
 
-  cardArea.addEventListener('click', (e) => {
-    const card = document.querySelector('.card');
-    if (!card) return;
-    const cardData = STATE.currentCard;
-    if (!cardData || !cardData.expanded) return;
-
-    // Don't trigger if pointer moved (swipe gesture)
-    if (Math.abs(e.clientX - pointerDownX) > 10 || Math.abs(e.clientY - pointerDownY) > 10) return;
-
-    if (!STATE.expanded) {
-      expandCard(card);
-    } else {
-      // Tap top area to collapse
-      const rect = card.getBoundingClientRect();
-      if (e.clientY < rect.top + 80) {
-        collapseCard(card);
-      }
-    }
-  });
+  if (!STATE.expanded) {
+    expandCard(card);
+  } else {
+    collapseCard(card);
+  }
 }
 
 function expandCard(cardEl) {
@@ -512,76 +501,29 @@ function collapseCard(cardEl) {
   cardEl.scrollTop = 0;
 }
 
-// --- Swipe Gestures ---
-function setupSwipeHandler() {
+// --- Tap Navigation (IG Stories style) ---
+function setupTapNavigation() {
   const cardArea = document.getElementById('card-area');
-  let startX = 0, startY = 0, currentX = 0, isDragging = false, cardEl = null;
 
-  cardArea.addEventListener('pointerdown', (e) => {
+  cardArea.addEventListener('click', (e) => {
     if (STATE.expanded) return;
-    cardEl = document.querySelector('.card');
-    if (!cardEl) return;
-    isDragging = true;
-    startX = e.clientX;
-    startY = e.clientY;
-    currentX = 0;
-    cardEl.style.transition = 'none';
-    cardArea.setPointerCapture(e.pointerId);
-  });
 
-  cardArea.addEventListener('pointermove', (e) => {
-    if (!isDragging || !cardEl) return;
-    currentX = e.clientX - startX;
-    const rotation = (currentX / window.innerWidth) * 8;
-    cardEl.style.transform = `translateX(${currentX}px) rotate(${rotation}deg)`;
+    const rect = cardArea.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const threshold = rect.width * 0.35;
 
-    // Drag indicators
-    const threshold = window.innerWidth * 0.1;
-    const leftInd = document.getElementById('drag-indicator-left');
-    const rightInd = document.getElementById('drag-indicator-right');
-    if (currentX < -threshold) {
-      leftInd.style.opacity = Math.min(1, Math.abs(currentX) / (window.innerWidth * 0.3));
-      rightInd.style.opacity = '0';
-    } else if (currentX > threshold) {
-      rightInd.style.opacity = Math.min(1, currentX / (window.innerWidth * 0.3));
-      leftInd.style.opacity = '0';
+    if (x < threshold) {
+      // Tap left side — go back
+      prevCard();
+    } else if (x > rect.width - threshold) {
+      // Tap right side — go forward
+      nextCard();
+      if (navigator.vibrate) navigator.vibrate(8);
     } else {
-      leftInd.style.opacity = '0';
-      rightInd.style.opacity = '0';
+      // Tap middle — expand/collapse
+      handleExpandTap(e);
     }
   });
-
-  cardArea.addEventListener('pointerup', (e) => {
-    if (!isDragging || !cardEl) return;
-    isDragging = false;
-    const threshold = window.innerWidth * 0.3;
-
-    document.getElementById('drag-indicator-left').style.opacity = '0';
-    document.getElementById('drag-indicator-right').style.opacity = '0';
-
-    if (currentX > threshold) {
-      // Swipe right — dismiss
-      animateDismiss(cardEl, 'right', () => {
-        nextCard();
-        if (navigator.vibrate) navigator.vibrate(8);
-      });
-    } else if (currentX < -threshold && STATE.history.length > 0) {
-      // Swipe left — go back
-      animateDismiss(cardEl, 'left', () => prevCard());
-    } else {
-      // Snap back
-      cardEl.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-      cardEl.style.transform = 'translateX(0) rotate(0deg)';
-    }
-  });
-}
-
-function animateDismiss(el, direction, callback) {
-  const x = direction === 'right' ? window.innerWidth * 1.5 : -window.innerWidth * 1.5;
-  const rot = direction === 'right' ? 15 : -15;
-  el.style.transition = 'transform 0.35s cubic-bezier(0.55, 0, 0.1, 1)';
-  el.style.transform = `translateX(${x}px) rotate(${rot}deg)`;
-  setTimeout(callback, 350);
 }
 
 // --- Init ---
@@ -609,7 +551,7 @@ async function init() {
   // Wire buttons
   document.getElementById('btn-next').addEventListener('click', () => nextCard());
   document.getElementById('btn-back').addEventListener('click', () => prevCard());
-  setupSwipeHandler();
+  setupTapNavigation();
   setupExpandHandler();
   setupFeedbackButtons();
   setupCommentButton();

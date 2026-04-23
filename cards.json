@@ -4,7 +4,7 @@
     "type": "insight",
     "title": "YOUR BEST IDEAS COME POST-EXERCISE",
     "body": "Pattern: the last 4 breakthrough ideas you logged all came within 2 hours of a workout. Your brain needs the body to move first.",
-    "expanded": "This isn't woo-woo. Exercise increases BDNF which directly supports creative problem-solving. Schedule your hardest thinking for after your gym sessions, not before.",
+    "expanded": "This isn't woo-woo. Exercise increases BDNF (brain-derived neurotrophic factor) which directly supports neuroplasticity and creative problem-solving. A 2023 meta-analysis of 33 studies confirmed that even a single bout of moderate exercise enhances divergent thinking for up to 2 hours afterward.\n\nThe mechanism: exercise reduces prefrontal cortex dominance — the part of your brain that censors 'bad' ideas — while boosting activity in the default mode network, which generates novel connections. You're literally loosening your mental filters.\n\nPractical move: schedule your hardest creative thinking for the 2-hour window after your gym sessions. Use pre-gym time for routine execution work. This isn't productivity theater — it's aligning your biology with your calendar.",
     "footer": "Schedule accordingly"
   },
   {
@@ -26,7 +26,7 @@
     "type": "skill",
     "title": "PROMPT ENGINEERING IS DEAD",
     "body": "The best prompts aren't clever tricks. They're clear thinking expressed plainly. If your prompt needs engineering, your thinking isn't clear yet.",
-    "expanded": "Write what you want like you're explaining it to a smart colleague. Include context, constraints, and examples. That's it. No frameworks needed.",
+    "expanded": "Write what you want like you're explaining it to a smart colleague. Include context, constraints, and examples. That's it. No frameworks, no RISEN, no chain-of-thought scaffolding.\n\nThe real skill isn't prompt engineering — it's thinking clearly enough to articulate what you actually want. If you can't explain it to a person, you can't explain it to a model. The bottleneck was never the prompt syntax.\n\nWhat actually helps: be specific about the output format, give 1-2 examples of what good looks like, state your constraints explicitly (length, tone, audience). Everything else is overthinking it.",
     "footer": "Simplify your prompts"
   },
   {
@@ -34,7 +34,7 @@
     "type": "whatif",
     "title": "WHAT IF SOBERIN WENT B2B",
     "body": "You're building for consumers. But what if employers wanted to offer Soberin as a benefit? Different GTM, different pricing, different product surface.",
-    "expanded": "B2B means: longer sales cycles, higher LTV, less churn, fewer users but more revenue per user. You'd need an admin dashboard, team billing, and usage reports. Is that the product you want to build?",
+    "expanded": "B2B means: longer sales cycles, higher LTV, less churn, fewer users but more revenue per user. You'd need an admin dashboard, team billing, usage reports, and enterprise SSO.\n\nBut here's the interesting part: employee wellness is a $60B market and growing. Companies are desperate for anything that reduces absenteeism. If Soberin can show measurable outcomes (reduced sick days, lower insurance claims), you'd have a product that sells itself through HR departments.\n\nThe downside: you'd be building for committee buyers instead of individual users. Every feature decision gets filtered through 'will this pass procurement review?' That's a fundamentally different product culture. The question isn't whether it could work — it's whether that's the company you want to run.",
     "footer": "Explore in next strategy session"
   },
   {
@@ -49,7 +49,7 @@
     "type": "timeless",
     "title": "THE OBSTACLE IS THE WAY",
     "body": "Marcus Aurelius faced plagues, wars, and betrayal. His response: the impediment to action advances action. What stands in the way becomes the way.",
-    "expanded": "This isn't toxic positivity. It's strategic reframing. The problem you're avoiding contains the exact skill you need to develop next. The obstacle is the curriculum.",
+    "expanded": "This isn't toxic positivity. It's strategic reframing. The problem you're avoiding contains the exact skill you need to develop next. The obstacle is the curriculum.\n\nMarcus Aurelius wrote the Meditations as private journal entries — never meant for publication. He was talking to himself during the Antonine Plague (which killed 5 million people) and multiple military campaigns on the Germanic frontier. This wasn't philosophy from a comfortable study.\n\nThe practical application: when you feel resistance toward a task, ask 'what skill would completing this force me to develop?' Usually the resistance IS the signal. You avoid the sales call because you're bad at selling. You avoid the hard conversation because you're bad at confrontation. The avoidance pattern is a map of your growth edges.",
     "footer": "Meditations, Book V"
   },
   {
@@ -64,7 +64,7 @@
     "type": "discovery",
     "title": "WHY JAPAN NEVER DISRUPTS",
     "body": "Japan makes the best hardware in the world but missed every software wave. The same perfectionism that creates a flawless Toyota prevents shipping a rough v1. Sound familiar?",
-    "expanded": "Clayton Christensen explained this: incumbents over-serve existing customers while ignoring low-end disruption. Japan's culture of monozukuri (craftsmanship) makes 'ship rough, iterate fast' almost offensive. There's a lesson here about when perfectionism serves you and when it kills you.",
+    "expanded": "Clayton Christensen explained this: incumbents over-serve existing customers while ignoring low-end disruption. Japan's culture of monozukuri (craftsmanship) makes 'ship rough, iterate fast' almost offensive.\n\nConsider: Sony invented the Walkman, the CD player, the digital camera — then lost to Apple, Spotify, and smartphones. Not because the tech was worse, but because Sony couldn't ship something 'good enough' and iterate. They needed perfection at launch.\n\nThe lesson isn't 'perfectionism is bad.' It's that perfectionism is a strategy that works in hardware/manufacturing but fails in software/digital where the market rewards speed of learning over quality of v1. Know which game you're playing.",
     "footer": "The Innovator's Dilemma"
   },
   {
@@ -72,6 +72,7 @@
     "type": "discovery",
     "title": "THE SCIENCE OF PROCRASTINATION",
     "body": "Procrastination isn't laziness — it's emotional regulation. You avoid tasks that trigger negative emotions (boredom, anxiety, self-doubt). The fix isn't discipline, it's reducing the emotional cost of starting.",
+    "expanded": "Dr. Tim Pychyl's research at Carleton University shows procrastination is a failure of emotion regulation, not time management. You're not choosing to delay — you're choosing short-term mood repair over long-term goals.\n\nThe amygdala perceives the task as a threat (to your ego, your competence, your comfort), and your brain defaults to avoidance. This is why 'just do it' advice fails — it ignores the emotional machinery driving the behavior.\n\nWhat actually works: reduce the emotional activation energy. Make the first step absurdly small ('open the file'). Remove choice friction ('I'll work on X for exactly 10 minutes'). Separate your identity from the outcome ('I'm experimenting, not performing'). The goal is to get past the start — momentum handles the rest.",
     "footer": "Fuschia Sirois, 2013"
   },
   {
@@ -79,7 +80,7 @@
     "type": "discovery",
     "title": "MUSHROOMS ARE THE INTERNET OF FORESTS",
     "body": "Mycorrhizal networks connect trees underground, sharing nutrients, water, and chemical warning signals. A single fungal network can span an entire forest. Trees literally trade resources through it.",
-    "expanded": "Suzanne Simard's research showed that mother trees use these networks to feed their seedlings carbon. When a tree is dying, it dumps its resources into the network for others. The forest is a cooperative system, not a competitive one.",
+    "expanded": "Suzanne Simard's research showed that mother trees use these networks to feed their seedlings carbon. When a tree is dying, it dumps its resources into the network for others. The forest is a cooperative system, not a competitive one.\n\nThe fungal network operates on a market-like logic: trees 'pay' fungi with carbon in exchange for phosphorus and nitrogen that fungal hyphae can access but roots can't. Trees that are shaded (less photosynthesis) receive more carbon from sunnier neighbors through the network — a kind of social safety net.\n\nHere's the kicker: when researchers cut the fungal connections, tree seedling survival rates dropped 50%. The network isn't optional — it's infrastructure. Makes you think about what invisible networks are supporting the things you rely on.",
     "footer": "Suzanne Simard's research"
   },
   {
@@ -87,6 +88,7 @@
     "type": "discovery",
     "title": "EVERY EMPIRE PEAKS AT 250 YEARS",
     "body": "Rome. The Ottomans. The British. The average lifespan of a great empire is about 250 years, passing through the same stages: pioneers, builders, merchants, intellectuals, decadents.",
+    "expanded": "Sir John Glubb identified six stages that repeat across empires: the Age of Pioneers (outburst), Conquests, Commerce, Affluence, Intellect, and Decadence. The transition from Affluence to Decadence is where it gets interesting.\n\nSigns of the Decadence stage: an obsession with celebrity culture, a widening gap between rich and poor, loss of civic duty replaced by individualism, frivolity in public discourse, and an influx of foreigners (not as a problem, but as a sign the empire's original culture has lost cohesion).\n\nThe pattern isn't destiny — but it's a useful lens. What stage is your country in? What stage is your company in? What stage is your product in? The same lifecycle dynamics that govern empires often govern markets and organizations. Recognizing the stage changes what you should optimize for.",
     "footer": "Sir John Glubb, The Fate of Empires"
   }
 ]
