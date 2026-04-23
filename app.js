@@ -283,6 +283,11 @@ function nextCard() {
     if (STATE.neverSeenIds) STATE.neverSeenIds.delete(STATE.currentCard.id);
     STATE.history.push(STATE.currentCard);
     STATE.currentIndex++;
+
+    // Auto-sync feedback every 10 cards
+    if (STATE.currentIndex % 10 === 0) {
+      autoSyncFeedback();
+    }
   }
 
   let card = null;
@@ -673,6 +678,9 @@ async function init() {
   setupFeedbackButtons();
   setupCommentButton();
   setupSettings();
+
+  // Auto-sync on app open
+  autoSyncFeedback();
 }
 
 function showErrorCard() {
@@ -756,6 +764,43 @@ async function syncFeedbackToGitHub() {
   }
 
   setTimeout(() => { statusEl.textContent = ''; }, 4000);
+}
+
+// --- Auto Sync ---
+function autoSyncFeedback() {
+  const token = loadStorage('nickfeed_github_token');
+  if (!token) return; // No token = skip silently
+
+  const feedbackData = {
+    explicit: loadStorage(STORAGE_KEYS.feedback) || {},
+    passive: loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} },
+    comments: loadStorage('nickfeed_comments') || {},
+    streak: loadStorage(STORAGE_KEYS.streak) || {},
+    exportedAt: new Date().toISOString(),
+  };
+
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(feedbackData, null, 2))));
+  const repo = 'gmnitchan/nick-feed';
+  const path = 'feedback.json';
+  const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`;
+
+  // Fire and forget — don't block the UI
+  fetch(apiUrl, { headers: { 'Authorization': `token ${token}` } })
+    .then(res => res.ok ? res.json() : null)
+    .then(data => {
+      const body = {
+        message: `Auto-sync feedback — ${todayStr()}`,
+        content: content,
+        committer: { name: 'Nick Feed App', email: 'noreply@nickfeed.app' },
+      };
+      if (data && data.sha) body.sha = data.sha;
+      return fetch(apiUrl, {
+        method: 'PUT',
+        headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+    })
+    .catch(() => {}); // Fail silently
 }
 
 // --- Card Index Export ---
