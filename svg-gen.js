@@ -22,16 +22,16 @@ function generateSVG(cardId, type) {
   const seed = hashString(cardId);
   const rand = seededRandom(seed);
   const colors = {
-    task: '#B8FF00',
     insight: '#00D4FF',
     skill: '#A855F7',
     whatif: '#FF8A00',
     timeless: '#F5E6D3',
+    discovery: '#FF5CBE',
   };
-  const color = colors[type] || colors.task;
+  const color = colors[type] || colors.discovery;
   const opacity = 0.06 + rand() * 0.06;
 
-  const generators = { task: genAngular, insight: genNodes, skill: genBlocks, whatif: genBranching, timeless: genWaves };
+  const generators = { insight: genNodes, skill: genBlocks, whatif: genBranching, timeless: genWaves, discovery: genAngular };
   const gen = generators[type] || genAngular;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" style="opacity:${opacity.toFixed(3)}">

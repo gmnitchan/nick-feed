@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nickfeed-v1';
+const CACHE_NAME = 'nickfeed-v2';
 const SHELL_FILES = [
   './',
   './index.html',

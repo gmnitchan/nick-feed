@@ -42,9 +42,19 @@
         <button id="btn-dislike" aria-label="Dislike">👎</button>
         <button id="btn-like" aria-label="Like">👍</button>
       </div>
+      <button id="btn-comment" aria-label="Comment">💬</button>
       <button id="btn-next" aria-label="Next card">→</button>
-      <button id="btn-shuffle" aria-label="Shuffle">🔀</button>
     </footer>
+    <div id="comment-overlay" style="display:none">
+      <div id="comment-panel">
+        <h2>Add a thought</h2>
+        <textarea id="comment-input" placeholder="What came to mind?" rows="4"></textarea>
+        <div id="comment-actions">
+          <button id="comment-cancel">Cancel</button>
+          <button id="comment-save">Save</button>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="svg-gen.js"></script>
   <script src="app.js"></script>

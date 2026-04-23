@@ -21,7 +21,7 @@ fi
 python3 << 'EOF'
 import json, sys
 
-VALID_TYPES = {"task", "insight", "skill", "whatif", "timeless"}
+VALID_TYPES = {"insight", "skill", "whatif", "timeless", "discovery"}
 REQUIRED_FIELDS = {"id", "type", "title", "body", "footer"}
 
 with open("cards.json", "r") as f:

@@ -1,20 +1,5 @@
 [
   {
-    "id": "task-001",
-    "type": "task",
-    "title": "STOP SCROLLING START BUILDING",
-    "body": "The Soberin landing page isn't going to design itself. You've got the copy, you've got the wireframe — what's the blocker?",
-    "expanded": "You said you'd have this done by Wednesday. The Figma is ready, the copy doc is final. Just open VS Code and start with the hero section. Ship ugly, iterate later.",
-    "footer": "Related: Soberin"
-  },
-  {
-    "id": "task-002",
-    "type": "task",
-    "title": "REVIEW YOUR OPEN PRS",
-    "body": "You've got 3 PRs waiting for your review. Your team is blocked. 15 minutes of focused review unblocks 3 people.",
-    "footer": "Do it now"
-  },
-  {
     "id": "insight-001",
     "type": "insight",
     "title": "YOUR BEST IDEAS COME POST-EXERCISE",
@@ -73,5 +58,35 @@
     "title": "SHIP THEN ITERATE FOREVER",
     "body": "Leonardo da Vinci said art is never finished, only abandoned. Software is the same — but you can keep iterating. Ship v1, then make it good.",
     "footer": "Perfectionism is procrastination"
+  },
+  {
+    "id": "discovery-001",
+    "type": "discovery",
+    "title": "WHY JAPAN NEVER DISRUPTS",
+    "body": "Japan makes the best hardware in the world but missed every software wave. The same perfectionism that creates a flawless Toyota prevents shipping a rough v1. Sound familiar?",
+    "expanded": "Clayton Christensen explained this: incumbents over-serve existing customers while ignoring low-end disruption. Japan's culture of monozukuri (craftsmanship) makes 'ship rough, iterate fast' almost offensive. There's a lesson here about when perfectionism serves you and when it kills you.",
+    "footer": "The Innovator's Dilemma"
+  },
+  {
+    "id": "discovery-002",
+    "type": "discovery",
+    "title": "THE SCIENCE OF PROCRASTINATION",
+    "body": "Procrastination isn't laziness — it's emotional regulation. You avoid tasks that trigger negative emotions (boredom, anxiety, self-doubt). The fix isn't discipline, it's reducing the emotional cost of starting.",
+    "footer": "Fuschia Sirois, 2013"
+  },
+  {
+    "id": "discovery-003",
+    "type": "discovery",
+    "title": "MUSHROOMS ARE THE INTERNET OF FORESTS",
+    "body": "Mycorrhizal networks connect trees underground, sharing nutrients, water, and chemical warning signals. A single fungal network can span an entire forest. Trees literally trade resources through it.",
+    "expanded": "Suzanne Simard's research showed that mother trees use these networks to feed their seedlings carbon. When a tree is dying, it dumps its resources into the network for others. The forest is a cooperative system, not a competitive one.",
+    "footer": "Suzanne Simard's research"
+  },
+  {
+    "id": "discovery-004",
+    "type": "discovery",
+    "title": "EVERY EMPIRE PEAKS AT 250 YEARS",
+    "body": "Rome. The Ottomans. The British. The average lifespan of a great empire is about 250 years, passing through the same stages: pioneers, builders, merchants, intellectuals, decadents.",
+    "footer": "Sir John Glubb, The Fate of Empires"
   }
 ]

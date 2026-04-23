@@ -24,11 +24,11 @@ const STORAGE_KEYS = {
 };
 
 const TYPE_META = {
-  task: { emoji: '🎯', label: 'Task Nudge', color: 'var(--task)' },
   insight: { emoji: '🧠', label: 'Insight', color: 'var(--insight)' },
   skill: { emoji: '🧩', label: 'Skill Bite', color: 'var(--skill)' },
   whatif: { emoji: '🎲', label: 'What If', color: 'var(--whatif)' },
   timeless: { emoji: '📚', label: 'Timeless', color: 'var(--timeless)' },
+  discovery: { emoji: '🔭', label: 'Discovery', color: 'var(--discovery)' },
 };
 
 // --- Storage helpers ---
@@ -85,7 +85,7 @@ function renderCard(card) {
   if (card.isNudge) el.classList.add('card--nudge');
   el.dataset.id = card.id;
 
-  const meta = TYPE_META[card.type] || TYPE_META.task;
+  const meta = TYPE_META[card.type] || TYPE_META.discovery;
   const accentColor = meta.color;
 
   el.innerHTML = `
@@ -300,15 +300,56 @@ function updateFeedbackButtons() {
   const btnLike = document.getElementById('btn-like');
   const btnDislike = document.getElementById('btn-dislike');
   const container = document.getElementById('feedback-buttons');
+  const btnComment = document.getElementById('btn-comment');
 
   if (STATE.currentCard && STATE.currentCard.isNudge) {
     container.style.visibility = 'hidden';
+    btnComment.style.visibility = 'hidden';
   } else {
     container.style.visibility = 'visible';
+    btnComment.style.visibility = 'visible';
     const existing = STATE.currentCard ? feedback[STATE.currentCard.id] : null;
     btnLike.style.background = existing?.rating === 'like' ? '#1a3a00' : '';
     btnDislike.style.background = existing?.rating === 'dislike' ? '#3a1a1a' : '';
+    // Show dot indicator if card has a comment
+    const comments = loadStorage('nickfeed_comments') || {};
+    btnComment.classList.toggle('has-comment', !!(STATE.currentCard && comments[STATE.currentCard.id]));
   }
+}
+
+// --- Comments ---
+function setupCommentButton() {
+  document.getElementById('btn-comment').addEventListener('click', () => {
+    if (!STATE.currentCard || STATE.currentCard.isNudge) return;
+    openCommentModal();
+  });
+  document.getElementById('comment-save').addEventListener('click', saveComment);
+  document.getElementById('comment-cancel').addEventListener('click', closeCommentModal);
+}
+
+function openCommentModal() {
+  const comments = loadStorage('nickfeed_comments') || {};
+  const existing = comments[STATE.currentCard.id] || '';
+  document.getElementById('comment-input').value = existing;
+  document.getElementById('comment-overlay').style.display = 'flex';
+  document.getElementById('comment-input').focus();
+}
+
+function saveComment() {
+  const text = document.getElementById('comment-input').value.trim();
+  const comments = loadStorage('nickfeed_comments') || {};
+  if (text) {
+    comments[STATE.currentCard.id] = text;
+  } else {
+    delete comments[STATE.currentCard.id];
+  }
+  saveStorage('nickfeed_comments', comments);
+  closeCommentModal();
+  updateFeedbackButtons();
+}
+
+function closeCommentModal() {
+  document.getElementById('comment-overlay').style.display = 'none';
 }
 
 // --- Feedback Export ---
@@ -352,6 +393,20 @@ function generateFeedbackExport() {
   output += `- Expanded (high interest): ${expandedCards.length} cards — ${titles(expandedCards) || 'none'}\n`;
   output += `- Retrieved (went back to re-read): ${retrievedCards.length} cards — ${titles(retrievedCards) || 'none'}\n`;
   output += `- Speed-skipped (<1s): ${skipped.length} cards — ${titles(skipped) || 'none'}\n\n`;
+
+  // Comments
+  const comments = loadStorage('nickfeed_comments') || {};
+  const commentEntries = Object.entries(comments);
+  if (commentEntries.length > 0) {
+    output += `COMMENTS (${commentEntries.length}):\n`;
+    for (const [id, text] of commentEntries) {
+      const card = STATE.cards.find(c => c.id === id);
+      const title = card ? card.title : id;
+      output += `- "${title}": ${text}\n`;
+    }
+    output += '\n';
+  }
+
   output += `=== USE THIS TO CALIBRATE NEW CARDS ===`;
 
   return output;
@@ -554,10 +609,10 @@ async function init() {
   // Wire buttons
   document.getElementById('btn-next').addEventListener('click', () => nextCard());
   document.getElementById('btn-back').addEventListener('click', () => prevCard());
-  document.getElementById('btn-shuffle').addEventListener('click', () => shuffleQueue());
   setupSwipeHandler();
   setupExpandHandler();
   setupFeedbackButtons();
+  setupCommentButton();
   setupSettings();
 }
 
