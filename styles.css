@@ -57,6 +57,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.25rem;
+  padding-top: calc(env(safe-area-inset-top, 20px) + 0.5rem);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
