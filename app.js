@@ -114,10 +114,12 @@ function renderChineseBody(card) {
 
 function renderPoetryBody(card) {
   const verseHtml = card.body.replace(/\n/g, '<br>');
-  const verseText = card.body.replace(/\n/g, ' ');
+  // Store raw lines as JSON in data attribute for line-by-line pacing
+  const lines = card.body.split('\n').filter(l => l.trim());
+  const linesJson = JSON.stringify(lines).replace(/"/g, '&quot;');
   return `<h1 class="card-title">${card.title}</h1>
     <div class="poetry-verse">${verseHtml}</div>
-    <button class="tts-btn tts-btn--poetry" onclick="speakPoetry(this)" data-text="${verseText.replace(/"/g, '&quot;')}">🔊 Listen</button>`;
+    <button class="tts-btn tts-btn--poetry" onclick="togglePoetry(this)" data-lines="${linesJson}">🔊 Listen</button>`;
 }
 
 function renderTimelessBody(card) {
@@ -163,6 +165,10 @@ function renderCard(card) {
 }
 
 function showCard(card) {
+  // Stop any playing TTS when navigating
+  if (typeof stopPoetry === 'function') stopPoetry();
+  speechSynthesis.cancel();
+
   const container = document.getElementById('card-container');
   container.innerHTML = '';
   STATE.expanded = false;
@@ -750,29 +756,102 @@ function speakChinese(text) {
   utterance.lang = 'zh-CN';
   utterance.rate = 0.7;
   utterance.pitch = 1;
-  // Try to find a Chinese voice
   const voices = speechSynthesis.getVoices();
   const zhVoice = voices.find(v => v.lang.startsWith('zh'));
   if (zhVoice) utterance.voice = zhVoice;
   speechSynthesis.speak(utterance);
 }
 
-function speakPoetry(btn) {
-  speechSynthesis.cancel();
-  const text = btn.dataset.text;
-  const utterance = new SpeechSynthesisUtterance(text);
+// --- Poetry TTS with line-by-line pacing and pause/resume ---
+const POETRY_TTS = {
+  active: false,
+  paused: false,
+  lines: [],
+  lineIndex: 0,
+  btn: null,
+  timeoutId: null,
+};
+
+function togglePoetry(btn) {
+  if (POETRY_TTS.active && POETRY_TTS.btn === btn) {
+    if (POETRY_TTS.paused) {
+      resumePoetry();
+    } else {
+      pausePoetry();
+    }
+    return;
+  }
+
+  // Start new reading
+  stopPoetry();
+  const lines = JSON.parse(btn.dataset.lines);
+  POETRY_TTS.active = true;
+  POETRY_TTS.paused = false;
+  POETRY_TTS.lines = lines;
+  POETRY_TTS.lineIndex = 0;
+  POETRY_TTS.btn = btn;
+  btn.textContent = '⏸ Pause';
+  speakNextLine();
+}
+
+function speakNextLine() {
+  if (!POETRY_TTS.active || POETRY_TTS.paused) return;
+  if (POETRY_TTS.lineIndex >= POETRY_TTS.lines.length) {
+    stopPoetry();
+    return;
+  }
+
+  const line = POETRY_TTS.lines[POETRY_TTS.lineIndex];
+  const utterance = new SpeechSynthesisUtterance(line);
   utterance.lang = 'en-GB';
-  utterance.rate = 0.75;
-  utterance.pitch = 0.9;
-  // Prefer a British English voice for dramatic reading
+  utterance.rate = 0.65;
+  utterance.pitch = 0.85;
+  utterance.volume = 1;
+
   const voices = speechSynthesis.getVoices();
-  const enVoice = voices.find(v => v.lang === 'en-GB' && v.name.includes('Male'))
+  const enVoice = voices.find(v => v.lang === 'en-GB' && /female/i.test(v.name))
     || voices.find(v => v.lang === 'en-GB')
     || voices.find(v => v.lang.startsWith('en'));
   if (enVoice) utterance.voice = enVoice;
-  btn.textContent = '🔊 Playing...';
-  utterance.onend = () => { btn.textContent = '🔊 Listen'; };
+
+  utterance.onend = () => {
+    POETRY_TTS.lineIndex++;
+    // Pause between lines — longer pause for empty lines (stanza breaks)
+    const nextLine = POETRY_TTS.lines[POETRY_TTS.lineIndex];
+    const pauseMs = (!nextLine || nextLine.trim() === '') ? 1200 : 600;
+    // Skip empty lines (stanza breaks) but keep the pause
+    if (nextLine && nextLine.trim() === '') {
+      POETRY_TTS.lineIndex++;
+    }
+    POETRY_TTS.timeoutId = setTimeout(() => speakNextLine(), pauseMs);
+  };
+
   speechSynthesis.speak(utterance);
+}
+
+function pausePoetry() {
+  POETRY_TTS.paused = true;
+  speechSynthesis.cancel();
+  if (POETRY_TTS.timeoutId) clearTimeout(POETRY_TTS.timeoutId);
+  if (POETRY_TTS.btn) POETRY_TTS.btn.textContent = '▶️ Resume';
+}
+
+function resumePoetry() {
+  POETRY_TTS.paused = false;
+  if (POETRY_TTS.btn) POETRY_TTS.btn.textContent = '⏸ Pause';
+  speakNextLine();
+}
+
+function stopPoetry() {
+  speechSynthesis.cancel();
+  if (POETRY_TTS.timeoutId) clearTimeout(POETRY_TTS.timeoutId);
+  if (POETRY_TTS.btn) POETRY_TTS.btn.textContent = '🔊 Listen';
+  POETRY_TTS.active = false;
+  POETRY_TTS.paused = false;
+  POETRY_TTS.lines = [];
+  POETRY_TTS.lineIndex = 0;
+  POETRY_TTS.btn = null;
+  POETRY_TTS.timeoutId = null;
 }
 
 // Preload voices (needed on some browsers)
