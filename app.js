@@ -29,6 +29,8 @@ const TYPE_META = {
   whatif: { emoji: '🎲', label: 'What If', color: 'var(--whatif)' },
   timeless: { emoji: '📚', label: 'Timeless', color: 'var(--timeless)' },
   discovery: { emoji: '🔭', label: 'Discovery', color: 'var(--discovery)' },
+  poetry: { emoji: '✒️', label: 'Poetry', color: 'var(--poetry)' },
+  chinese: { emoji: '🇨🇳', label: 'Chinese', color: 'var(--chinese)' },
 };
 
 // --- Storage helpers ---
@@ -424,6 +426,15 @@ function setupSettings() {
     await navigator.clipboard.writeText(text);
     document.getElementById('btn-export').textContent = 'Copied!';
     setTimeout(() => { document.getElementById('btn-export').textContent = 'Copy Feedback Summary'; }, 2000);
+  });
+  document.getElementById('btn-view-feedback').addEventListener('click', () => {
+    document.getElementById('settings-overlay').style.display = 'none';
+    const text = generateFeedbackExport();
+    document.getElementById('feedback-view-content').textContent = text;
+    document.getElementById('feedback-view-overlay').style.display = 'flex';
+  });
+  document.getElementById('btn-close-feedback-view').addEventListener('click', () => {
+    document.getElementById('feedback-view-overlay').style.display = 'none';
   });
 }
 

@@ -250,5 +250,85 @@
     "body": "During deep sleep, your brain's glymphatic system pumps cerebrospinal fluid through neural tissue, flushing out metabolic waste products — including the amyloid-beta plaques associated with Alzheimer's.",
     "expanded": "The glymphatic system was only discovered in 2012 by Maiken Nedergaard at the University of Rochester. During sleep, brain cells shrink by about 60%, creating channels that allow cerebrospinal fluid to wash through and clear toxic byproducts of neural activity.\n\nThis process is almost entirely inactive during waking hours. When you skip sleep, these waste products accumulate. Chronic sleep deprivation is now considered a significant risk factor for Alzheimer's and other neurodegenerative diseases.\n\nThe efficiency of this cleaning process depends on sleep quality, not just duration. Deep slow-wave sleep is when most clearance happens. Alcohol before bed suppresses slow-wave sleep, which means even if you sleep 8 hours, you might get minimal brain cleaning.\n\nThe reframe: sleep isn't downtime. It's maintenance. Skipping sleep to be productive is like skipping oil changes to drive more miles — it works until the engine seizes.",
     "footer": "Nedergaard Lab, 2012"
+  },
+  {
+    "id": "poetry-001",
+    "type": "poetry",
+    "title": "DO NOT GO GENTLE",
+    "body": "Do not go gentle into that good night,\nOld age should burn and rave at close of day;\nRage, rage against the dying of the light.",
+    "expanded": "Dylan Thomas wrote this villanelle in 1947 as his father was going blind and dying. The form itself — a villanelle — is a cage of repetition: two refrains that alternate throughout, circling the same two ideas obsessively. 'Do not go gentle' and 'Rage, rage.'\n\nWhat makes it extraordinary is the tension between the rigid structure and the wild emotion. Thomas is screaming inside a straitjacket. The repetition isn't poetic decoration — it's a son begging, over and over, for his father not to give up.\n\nThe four types of men he lists (wise, good, wild, grave) all failed in different ways, but none went quietly. The poem isn't really about death — it's about the refusal to be passive in the face of the inevitable. Whether it's death, failure, or entropy, the poem argues: fight anyway.\n\nThomas himself died at 39 from alcohol-related causes. He did not go gentle.",
+    "footer": "Dylan Thomas, 1947"
+  },
+  {
+    "id": "poetry-002",
+    "type": "poetry",
+    "title": "THE ROAD NOT TAKEN",
+    "body": "Two roads diverged in a yellow wood,\nAnd sorry I could not travel both\nAnd be one traveler, long I stood\nAnd looked down one as far as I could\nTo where it bent in the undergrowth;",
+    "expanded": "Everyone gets this poem wrong. It's the most misread poem in American literature.\n\nPeople quote the last lines — 'I took the one less traveled by / And that has made all the difference' — as inspirational: be a nonconformist! Choose your own path! But read the middle stanzas. Frost says the two paths were actually 'worn really about the same' and 'equally lay.' There was no less-traveled road.\n\nThe poem is about the stories we tell ourselves after the fact. The narrator admits he'll claim, 'ages and ages hence,' that he chose the special path — but he knows right now that both paths were identical. The 'difference' is a retroactive narrative, not a real choice.\n\nFrost wrote it as a gentle joke about his friend Edward Thomas, who would agonize over which path to take on their walks and then always regret not taking the other one. It's a poem about decision regret and self-mythology, not about rugged individualism.",
+    "footer": "Robert Frost, 1916"
+  },
+  {
+    "id": "poetry-003",
+    "type": "poetry",
+    "title": "OZYMANDIAS",
+    "body": "I met a traveller from an antique land,\nWho said — 'Two vast and trunkless legs of stone\nStand in the desert. Near them, on the sand,\nHalf sunk a shattered visage lies...'",
+    "expanded": "Shelley's sonnet is a masterclass in narrative framing. The speaker heard it from a traveller, who read it on a statue, which was carved by a sculptor interpreting a king. We're four layers removed from Ozymandias himself — and that distance IS the point.\n\nThe inscription reads: 'My name is Ozymandias, King of Kings; Look on my Works, ye Mighty, and despair!' But surrounding it: 'Nothing beside remains. Round the decay of that colossal Wreck, boundless and bare, the lone and level sands stretch far away.'\n\nThe irony works on multiple levels. Ozymandias wanted future mighty rulers to despair at his greatness. Instead, they despair at his irrelevance. His monument to permanence became a monument to impermanence.\n\nBut there's a subtler layer: the sculptor 'well those passions read' — the art survived when the empire didn't. The tyrant is forgotten, but the craftsman's work endures. Creation outlasts power.",
+    "footer": "Percy Bysshe Shelley, 1818"
+  },
+  {
+    "id": "poetry-004",
+    "type": "poetry",
+    "title": "STILL I RISE",
+    "body": "You may write me down in history\nWith your bitter, twisted lies,\nYou may trod me in the very dirt\nBut still, like dust, I'll rise.",
+    "expanded": "Maya Angelou published this in 1978, but it channels centuries. The poem operates on three levels simultaneously: personal (her own survival), racial (Black American resilience), and universal (the human refusal to stay down).\n\nNotice the imagery escalates through natural forces: dust, air, ocean, moon, sun. She starts small and ends cosmic. By the final stanza she's not just rising — she's 'the dream and the hope of the slave.' The personal becomes ancestral.\n\nThe poem's power is in its repetition structure. 'I rise' appears 8 times, but it's never the same rise. Each time she's rising from something worse and into something greater. The repetition isn't redundancy — it's accumulation.\n\nWhat makes Angelou's voice distinctive: she's not asking for sympathy. She's not protesting. She's declaring victory in advance. The tone isn't defiant — it's certain. That certainty is what makes it hit differently than a poem of complaint.",
+    "footer": "Maya Angelou, 1978"
+  },
+  {
+    "id": "poetry-005",
+    "type": "poetry",
+    "title": "IF—",
+    "body": "If you can keep your head when all about you\nAre losing theirs and blaming it on you,\nIf you can trust yourself when all men doubt you,\nBut make allowance for their doubting too;",
+    "expanded": "Kipling wrote this in 1895 as advice to his son, structured as a single sentence spanning 32 lines. The entire poem is one 'if-then' statement: IF you can do all these impossible things, THEN 'yours is the Earth and everything that's in it.'\n\nThe genius is in the contradictions. Trust yourself BUT make allowance for doubt. Dream BUT don't make dreams your master. Meet Triumph and Disaster AND treat them both the same. Each line demands you hold two opposing truths simultaneously.\n\nCritics dismiss it as Victorian self-help, but the poem is subtler than that. Read the conditions carefully — they're genuinely impossible to achieve perfectly. Kipling isn't saying 'do this.' He's saying 'aim at this, knowing you'll fall short.' The gap between the aspiration and reality is where character lives.\n\nIt was voted Britain's favorite poem in a 1995 BBC poll. It's inscribed above the players' entrance at Wimbledon. For better or worse, it defined an entire culture's idea of masculine virtue.",
+    "footer": "Rudyard Kipling, 1895"
+  },
+  {
+    "id": "chinese-001",
+    "type": "chinese",
+    "title": "你好 — NǏ HǍO",
+    "body": "Hello / How are you\n\n你 (nǐ) = you\n好 (hǎo) = good\n\nLiterally: 'You good?' — Chinese greetings are direct.",
+    "expanded": "TONES MATTER:\n• 你 is 3rd tone (nǐ) — dips down then rises, like when you say 'huh?' in disbelief\n• 好 is also 3rd tone (hǎo) — but when two 3rd tones meet, the first shifts to 2nd tone. So it's actually pronounced 'ní hǎo'\n\nThis tone sandhi rule is your first glimpse of how Chinese pronunciation has layers beyond what pinyin shows.\n\nVARIATIONS:\n• 你好吗？(nǐ hǎo ma?) — adds the question particle 吗. More formal, actually less common in daily speech\n• 你们好 (nǐmen hǎo) — hello to a group (们 makes 'you' plural)\n• 大家好 (dàjiā hǎo) — hello everyone (literally 'big family good')\n\nCULTURAL NOTE: Chinese people often greet with 你吃了吗？(Have you eaten?) rather than 你好. Using 你好 can actually sound formal or foreign. But it's the right starting point.",
+    "footer": "HSK 1 — Greeting"
+  },
+  {
+    "id": "chinese-002",
+    "type": "chinese",
+    "title": "谢谢 — XIÈ XIE",
+    "body": "Thank you\n\n谢 (xiè) = to thank\n\nDoubled for emphasis. One of the first words every learner masters.",
+    "expanded": "PRONUNCIATION TRAP:\nThe 'x' sound in Chinese doesn't exist in English. It's between 'sh' and 's' — tongue behind your lower teeth, air flowing over the top. Practice: say 'she' but with your tongue down and forward. That's closer to 'xiè.'\n\nThe second 谢 is unstressed (neutral tone), so it sounds like 'xiè xie' not 'xiè xiè.'\n\nRESPONSES:\n• 不客气 (bú kèqi) — You're welcome (literally 'don't be polite')\n• 不用谢 (bú yòng xiè) — No need to thank (more casual)\n• 没事 (méi shì) — It's nothing (most casual)\n\nCHARACTER BREAKDOWN:\n谢 is made of three parts: 讠(speech radical) + 身 (body) + 寸 (inch/measure). The etymology: expressing gratitude through measured speech about what someone did with their body (effort). Characters often tell stories.\n\nUSAGE: Unlike English, Chinese speakers don't say 谢谢 as frequently between friends/family. Thanking someone close can feel distant — it implies the favor was unexpected. Between intimates, you just reciprocate later.",
+    "footer": "HSK 1 — Politeness"
+  },
+  {
+    "id": "chinese-003",
+    "type": "chinese",
+    "title": "我想要 — WǑ XIǍNG YÀO",
+    "body": "I want / I would like\n\n我 (wǒ) = I/me\n想 (xiǎng) = to think/to want\n要 (yào) = to want/to need\n\nTwo 'want' words — 想 is softer, 要 is more direct.",
+    "expanded": "THE WANT SPECTRUM:\n• 我要... (wǒ yào) — I want (direct, can sound demanding)\n• 我想要... (wǒ xiǎng yào) — I'd like (polite, the 想 softens it)\n• 我想... (wǒ xiǎng) — I'm thinking of / I'd like to (softest)\n\nThis is like the difference between 'I want coffee' / 'I'd like coffee' / 'I'm thinking about coffee.'\n\nPRACTICE SENTENCES:\n• 我想要一杯咖啡 (wǒ xiǎng yào yì bēi kāfēi) — I'd like a cup of coffee\n• 我要这个 (wǒ yào zhège) — I want this one (pointing at menu)\n• 我想去中国 (wǒ xiǎng qù zhōngguó) — I'd like to go to China\n\nGRAMMAR NOTE: 想 can also mean 'to think' or 'to miss someone.' Context determines meaning:\n• 我想你 (wǒ xiǎng nǐ) — I miss you\n• 我想一想 (wǒ xiǎng yi xiǎng) — Let me think about it\n• 你想什么？(nǐ xiǎng shénme?) — What are you thinking?",
+    "footer": "HSK 1 — Essential verbs"
+  },
+  {
+    "id": "chinese-004",
+    "type": "chinese",
+    "title": "多少钱 — DUŌ SHAO QIÁN",
+    "body": "How much money? / How much does it cost?\n\n多少 (duōshao) = how many/how much\n钱 (qián) = money\n\nThe most useful phrase for any market or shop.",
+    "expanded": "BREAKDOWN:\n• 多 (duō) = many/much\n• 少 (shǎo) = few/little\n• Together 多少 literally means 'many-few?' — a beautifully logical way to ask 'how much?'\n\n钱 (qián) has the 金 (metal/gold) radical on the left — most money-related characters share this radical: 银行 (bank), 铁 (iron), 钢 (steel).\n\nPRACTICAL USAGE:\n• 这个多少钱？(zhège duōshao qián?) — How much is this?\n• 太贵了！(tài guì le!) — Too expensive!\n• 便宜一点 (piányi yìdiǎn) — A little cheaper (bargaining)\n• 可以打折吗？(kěyǐ dǎzhé ma?) — Can you give a discount?\n\nNUMBER TIP: Chinese numbers are beautifully regular. 11 = 十一 (shí yī, ten-one). 25 = 二十五 (èr shí wǔ, two-ten-five). 100 = 一百 (yì bǎi). No irregular teens or weird hundred-patterns like in English/French.",
+    "footer": "HSK 1 — Shopping"
+  },
+  {
+    "id": "chinese-005",
+    "type": "chinese",
+    "title": "不好意思 — BÙ HǍO YÌSI",
+    "body": "Excuse me / Sorry / Embarrassed\n\n不 (bù) = not\n好意思 (hǎo yìsi) = to feel comfortable/appropriate\n\nLiterally: 'not good meaning' — I feel bad about this.",
+    "expanded": "This is one of the most culturally loaded phrases in Chinese. It covers a huge range:\n\n• Bumping into someone on the street — 不好意思\n• Asking a stranger for directions — 不好意思，请问...\n• Being 5 minutes late — 不好意思\n• Receiving a compliment you want to deflect — 不好意思\n\nIt's lighter than 对不起 (duìbuqǐ), which is a real apology. 不好意思 is more like 'pardon me' — acknowledging social friction without admitting fault.\n\nTHE CONCEPT OF 面子 (MIÀNZI) — FACE:\n不好意思 is deeply connected to face culture. When you say it, you're acknowledging that a situation is socially awkward and showing you're aware of the discomfort. It's not about guilt — it's about social awareness.\n\nCOMPARISON:\n• 不好意思 — mild, social lubrication (excuse me)\n• 对不起 (duìbuqǐ) — genuine apology (I'm sorry)\n• 抱歉 (bàoqiàn) — formal regret (I apologize)",
+    "footer": "HSK 2 — Social phrases"
   }
 ]

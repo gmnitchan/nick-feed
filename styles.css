@@ -31,6 +31,8 @@
   --whatif: #FF8A00;
   --timeless: #F5E6D3;
   --discovery: #FF5CBE;
+  --poetry: #E8C547;
+  --chinese: #FF4444;
 }
 
 html, body {
@@ -295,6 +297,48 @@ html, body {
   cursor: pointer;
 }
 #settings-panel button:active { background: #3a3a3a; }
+
+#feedback-view-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 110;
+  padding: 1rem;
+}
+#feedback-view-panel {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#feedback-view-content {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+#btn-close-feedback-view {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: var(--text);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
 
 #btn-comment {
   position: relative;

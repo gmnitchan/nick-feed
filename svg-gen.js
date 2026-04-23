@@ -27,11 +27,13 @@ function generateSVG(cardId, type) {
     whatif: '#FF8A00',
     timeless: '#F5E6D3',
     discovery: '#FF5CBE',
+    poetry: '#E8C547',
+    chinese: '#FF4444',
   };
   const color = colors[type] || colors.discovery;
   const opacity = 0.06 + rand() * 0.06;
 
-  const generators = { insight: genNodes, skill: genBlocks, whatif: genBranching, timeless: genWaves, discovery: genAngular };
+  const generators = { insight: genNodes, skill: genBlocks, whatif: genBranching, timeless: genWaves, discovery: genAngular, poetry: genWaves, chinese: genBlocks };
   const gen = generators[type] || genAngular;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" style="opacity:${opacity.toFixed(3)}">
