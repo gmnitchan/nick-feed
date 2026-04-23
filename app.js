@@ -121,7 +121,10 @@ function renderPoetryBody(card) {
 }
 
 function renderTimelessBody(card) {
-  return `<div class="timeless-quote-mark">"</div>
+  const imgHtml = card.image
+    ? `<div class="timeless-image"><img src="${card.image}" alt="" loading="lazy"></div>`
+    : '';
+  return `${imgHtml}
     <h1 class="card-title">${card.title}</h1>
     <p class="card-body">${card.body}</p>`;
 }
