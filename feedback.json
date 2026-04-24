@@ -15,6 +15,10 @@
     "discovery-077": {
       "rating": "like",
       "date": "2026-04-23"
+    },
+    "poetry-021": {
+      "rating": "like",
+      "date": "2026-04-24"
     }
   },
   "passive": {
@@ -38,7 +42,10 @@
       "skill-015",
       "discovery-077",
       "skill-012",
-      "chinese-028"
+      "chinese-028",
+      "poetry-029",
+      "chinese-027",
+      "poetry-021"
     ],
     "retrieved": [
       "poetry-013",
@@ -54,7 +61,8 @@
       "insight-013",
       "timeless-017",
       "chinese-024",
-      "chinese-021"
+      "chinese-021",
+      "poetry-021"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -232,7 +240,17 @@
       "skill-012": 35.2,
       "poetry-031": 13.4,
       "chinese-028": 12.2,
-      "insight-018": 5.7
+      "insight-018": 5.7,
+      "poetry-029": 1024.1,
+      "chinese-027": 39.8,
+      "chinese-030": 7.6,
+      "underthehood-005": 7428.1,
+      "poetry-021": 0.9,
+      "untranslatable-010": 7.2,
+      "discovery-086": 7.8,
+      "discovery-095": 8.5,
+      "discovery-075": 13.1,
+      "whatif-015": 20.7
     }
   },
   "comments": {
@@ -245,5 +263,5 @@
     "count": 2,
     "lastOpen": "2026-04-24"
   },
-  "exportedAt": "2026-04-24T06:11:20.667Z"
+  "exportedAt": "2026-04-24T08:46:43.069Z"
 }
