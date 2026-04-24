@@ -46,7 +46,8 @@
       "poetry-029",
       "chinese-027",
       "poetry-021",
-      "poetry-040"
+      "poetry-040",
+      "insight-021"
     ],
     "retrieved": [
       "poetry-013",
@@ -262,7 +263,17 @@
       "discovery-087": 2.7,
       "discovery-083": 7,
       "whatif-008": 9.7,
-      "poetry-040": 99.5
+      "poetry-040": 99.5,
+      "power-003": 5,
+      "insight-021": 36.9,
+      "discovery-091": 2,
+      "underthehood-003": 8.5,
+      "poetry-026": 55.6,
+      "discovery-096": 23.9,
+      "underthehood-002": 2.8,
+      "power-006": 4.3,
+      "discovery-080": 2.7,
+      "whatif-018": 5.5
     }
   },
   "comments": {
@@ -276,5 +287,5 @@
     "count": 2,
     "lastOpen": "2026-04-24"
   },
-  "exportedAt": "2026-04-24T08:53:51.778Z"
+  "exportedAt": "2026-04-24T08:56:19.050Z"
 }
