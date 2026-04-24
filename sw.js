@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nickfeed-v16';
+const CACHE_NAME = 'nickfeed-v17';
 
 self.addEventListener('install', (e) => {
   self.skipWaiting();

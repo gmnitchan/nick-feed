@@ -29,11 +29,15 @@ function generateSVG(cardId, type) {
     discovery: '#FF5CBE',
     poetry: '#E8C547',
     chinese: '#FF4444',
+    underthehood: '#00E5A0',
+    untranslatable: '#C4A1FF',
+    power: '#FF6B35',
+    paradigm: '#00BFFF',
   };
   const color = colors[type] || colors.discovery;
   const opacity = 0.06 + rand() * 0.06;
 
-  const generators = { insight: genNodes, skill: genBlocks, whatif: genBranching, timeless: genWaves, discovery: genAngular, poetry: genWaves, chinese: genBlocks };
+  const generators = { insight: genNodes, skill: genBlocks, whatif: genBranching, timeless: genWaves, discovery: genAngular, poetry: genWaves, chinese: genBlocks, underthehood: genBlocks, untranslatable: genWaves, power: genAngular, paradigm: genNodes };
   const gen = generators[type] || genAngular;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" style="opacity:${opacity.toFixed(3)}">

@@ -31,6 +31,10 @@ const TYPE_META = {
   discovery: { emoji: '🔭', label: 'Discovery', color: 'var(--discovery)' },
   poetry: { emoji: '✒️', label: 'Poetry', color: 'var(--poetry)' },
   chinese: { emoji: '🇨🇳', label: 'Chinese', color: 'var(--chinese)' },
+  underthehood: { emoji: '⚙️', label: 'Under the Hood', color: 'var(--underthehood)' },
+  untranslatable: { emoji: '🌐', label: 'Untranslatable', color: 'var(--untranslatable)' },
+  power: { emoji: '🏛', label: 'How Power Works', color: 'var(--power)' },
+  paradigm: { emoji: '💡', label: 'Paradigm Shift', color: 'var(--paradigm)' },
 };
 
 // --- Storage helpers ---
