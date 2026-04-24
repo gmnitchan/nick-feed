@@ -221,6 +221,7 @@ function showCard(card) {
 
   STATE.currentCard = card;
   STATE.cardAppearedAt = Date.now();
+  logEvent(card.id, 'view');
 
   // Generate SVG background
   if (typeof generateSVG === 'function') {
@@ -374,6 +375,7 @@ function prevCard() {
 
   // Record as retrieved (passive signal)
   recordRetrieved(prev.id);
+  logEvent(prev.id, 'back');
 
   showCard(prev);
 }
@@ -384,6 +386,15 @@ function shuffleQueue() {
   } else if (STATE.phase === 'seen') {
     STATE.seenQueue = shuffle(STATE.seenQueue);
   }
+}
+
+// --- Session Event Log ---
+function logEvent(cardId, action) {
+  const log = loadStorage('nickfeed_sessionlog') || [];
+  log.push([Date.now(), cardId, action]);
+  // Cap at 500 entries
+  if (log.length > 500) log.splice(0, log.length - 500);
+  saveStorage('nickfeed_sessionlog', log);
 }
 
 function recordDwell(cardId) {
@@ -415,6 +426,7 @@ function recordFeedback(rating) {
   const feedback = loadStorage(STORAGE_KEYS.feedback) || {};
   feedback[STATE.currentCard.id] = { rating, date: todayStr() };
   saveStorage(STORAGE_KEYS.feedback, feedback);
+  logEvent(STATE.currentCard.id, rating);
 
   // Visual confirmation
   const btn = rating === 'like' ? document.getElementById('btn-like') : document.getElementById('btn-dislike');
@@ -468,6 +480,7 @@ function saveComment() {
   const comments = loadStorage('nickfeed_comments') || {};
   if (text) {
     comments[STATE.currentCard.id] = text;
+    logEvent(STATE.currentCard.id, 'comment');
   } else {
     delete comments[STATE.currentCard.id];
   }
@@ -644,6 +657,7 @@ function expandCard(cardEl) {
   if (indicator) indicator.style.display = 'none';
   cardEl.style.overflow = 'auto';
   cardEl.style.touchAction = 'pan-y';
+  logEvent(STATE.currentCard.id, 'expand');
 
   // Record passive signal
   const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
@@ -789,6 +803,7 @@ async function syncFeedbackToGitHub() {
     passive: loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} },
     comments: loadStorage('nickfeed_comments') || {},
     streak: loadStorage(STORAGE_KEYS.streak) || {},
+    sessionLog: loadStorage('nickfeed_sessionlog') || [],
     exportedAt: new Date().toISOString(),
   };
 
@@ -912,6 +927,7 @@ function autoSyncFeedback() {
     passive: loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} },
     comments: loadStorage('nickfeed_comments') || {},
     streak: loadStorage(STORAGE_KEYS.streak) || {},
+    sessionLog: loadStorage('nickfeed_sessionlog') || [],
     exportedAt: new Date().toISOString(),
   };
 
