@@ -19,6 +19,10 @@
     "poetry-021": {
       "rating": "like",
       "date": "2026-04-24"
+    },
+    "poetry-034": {
+      "rating": "like",
+      "date": "2026-04-24"
     }
   },
   "passive": {
@@ -48,7 +52,12 @@
       "poetry-021",
       "poetry-040",
       "insight-021",
-      "discovery-061"
+      "discovery-061",
+      "skill-020",
+      "discovery-088",
+      "insight-016",
+      "poetry-033",
+      "poetry-034"
     ],
     "retrieved": [
       "poetry-013",
@@ -66,7 +75,8 @@
       "chinese-024",
       "chinese-021",
       "poetry-021",
-      "whatif-008"
+      "whatif-008",
+      "poetry-034"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -284,7 +294,17 @@
       "paradigm-004": 3.5,
       "underthehood-010": 3.4,
       "discovery-061": 13.9,
-      "discovery-099": 6.3
+      "discovery-099": 6.3,
+      "skill-020": 47.2,
+      "untranslatable-004": 42.6,
+      "untranslatable-002": 2.4,
+      "underthehood-004": 9.5,
+      "discovery-088": 10.3,
+      "insight-016": 1464.6,
+      "poetry-033": 44.2,
+      "poetry-034": 70.3,
+      "discovery-098": 15.7,
+      "insight-025": 11.6
     }
   },
   "comments": {
@@ -292,11 +312,13 @@
     "insight-013": "Too easy. I do this as psrt of my job",
     "chinese-014": "A bit too tough",
     "timeless-017": "Interested in this but need it to be more advanced",
-    "whatif-008": "This has been served to me multiple times"
+    "whatif-008": "This has been served to me multiple times",
+    "skill-020": "Can you implement this in the app archotecture",
+    "insight-016": "I want you to ask me things to get such feedback"
   },
   "streak": {
     "count": 2,
     "lastOpen": "2026-04-24"
   },
-  "exportedAt": "2026-04-24T08:57:34.787Z"
+  "exportedAt": "2026-04-24T09:26:22.506Z"
 }
