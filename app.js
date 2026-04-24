@@ -327,20 +327,27 @@ function nextCard() {
   } else if (STATE.phase === 'nudge') {
     STATE.phase = 'seen';
     STATE.currentIndex = 0;
+    // Exclude cards already shown this session from the seen queue
+    const sessionIds = new Set(STATE.history.map(c => c.id));
+    const filtered = STATE.seenQueue.filter(c => !sessionIds.has(c.id));
+    STATE.seenQueue = filtered.length > 0 ? filtered : shuffle(STATE.cards);
     STATE.phaseTotal = STATE.seenQueue.length;
     if (STATE.seenQueue.length > 0) {
       card = STATE.seenQueue.shift();
     } else {
-      STATE.unseenQueue = shuffle(STATE.cards);
-      STATE.phase = 'unseen';
-      card = STATE.unseenQueue.shift();
+      STATE.seenQueue = shuffle(STATE.cards);
+      card = STATE.seenQueue.shift();
     }
   } else {
     // 'seen' phase
     if (STATE.seenQueue.length > 0) {
       card = STATE.seenQueue.shift();
     } else {
-      STATE.seenQueue = shuffle(STATE.cards);
+      // Reshuffle seen cards, excluding ones shown this session
+      const sessionIds = new Set(STATE.history.map(c => c.id));
+      if (STATE.currentCard) sessionIds.add(STATE.currentCard.id);
+      const recyclable = STATE.cards.filter(c => !sessionIds.has(c.id));
+      STATE.seenQueue = shuffle(recyclable.length > 0 ? recyclable : STATE.cards);
       card = STATE.seenQueue.shift();
     }
   }
@@ -381,7 +388,9 @@ function shuffleQueue() {
 
 function recordDwell(cardId) {
   if (!STATE.cardAppearedAt) return;
-  const dwell = (Date.now() - STATE.cardAppearedAt) / 1000;
+  let dwell = (Date.now() - STATE.cardAppearedAt) / 1000;
+  // Cap at 5 minutes — anything longer means the user left the app
+  dwell = Math.min(dwell, 300);
   const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
   passive.dwellTimes[cardId] = parseFloat(dwell.toFixed(1));
   saveStorage(STORAGE_KEYS.passive, passive);
@@ -1050,6 +1059,22 @@ function stopPoetry() {
   POETRY_TTS.btn = null;
   POETRY_TTS.timeoutId = null;
 }
+
+// --- Visibility change: reset dwell timer when app goes to background/foreground ---
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') {
+    // App went to background — record dwell now with accurate time
+    if (STATE.currentCard && !STATE.currentCard.isNudge && STATE.cardAppearedAt) {
+      recordDwell(STATE.currentCard.id);
+      STATE.cardAppearedAt = null; // prevent double-recording
+    }
+  } else if (document.visibilityState === 'visible') {
+    // App came back — restart the timer for the current card
+    if (STATE.currentCard) {
+      STATE.cardAppearedAt = Date.now();
+    }
+  }
+});
 
 // Preload voices (needed on some browsers)
 if (speechSynthesis.onvoiceschanged !== undefined) {
