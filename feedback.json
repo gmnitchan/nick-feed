@@ -37,7 +37,8 @@
       "poetry-019",
       "skill-015",
       "discovery-077",
-      "skill-012"
+      "skill-012",
+      "chinese-028"
     ],
     "retrieved": [
       "poetry-013",
@@ -228,7 +229,10 @@
       "discovery-093": 10.7,
       "skill-015": 25,
       "discovery-077": 46.8,
-      "skill-012": 35.2
+      "skill-012": 35.2,
+      "poetry-031": 13.4,
+      "chinese-028": 12.2,
+      "insight-018": 5.7
     }
   },
   "comments": {
@@ -238,8 +242,8 @@
     "timeless-017": "Interested in this but need it to be more advanced"
   },
   "streak": {
-    "count": 1,
-    "lastOpen": "2026-04-23"
+    "count": 2,
+    "lastOpen": "2026-04-24"
   },
-  "exportedAt": "2026-04-23T13:22:21.186Z"
+  "exportedAt": "2026-04-24T06:11:20.667Z"
 }
