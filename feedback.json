@@ -45,7 +45,8 @@
       "chinese-028",
       "poetry-029",
       "chinese-027",
-      "poetry-021"
+      "poetry-021",
+      "poetry-040"
     ],
     "retrieved": [
       "poetry-013",
@@ -62,7 +63,8 @@
       "timeless-017",
       "chinese-024",
       "chinese-021",
-      "poetry-021"
+      "poetry-021",
+      "whatif-008"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -250,18 +252,29 @@
       "discovery-086": 7.8,
       "discovery-095": 8.5,
       "discovery-075": 13.1,
-      "whatif-015": 20.7
+      "whatif-015": 20.7,
+      "insight-020": 14.4,
+      "timeless-026": 80.8,
+      "underthehood-007": 49.7,
+      "poetry-036": 107.4,
+      "discovery-090": 9.8,
+      "poetry-025": 34.9,
+      "discovery-087": 2.7,
+      "discovery-083": 7,
+      "whatif-008": 9.7,
+      "poetry-040": 99.5
     }
   },
   "comments": {
     "discovery-036": "Already know this. More advanced",
     "insight-013": "Too easy. I do this as psrt of my job",
     "chinese-014": "A bit too tough",
-    "timeless-017": "Interested in this but need it to be more advanced"
+    "timeless-017": "Interested in this but need it to be more advanced",
+    "whatif-008": "This has been served to me multiple times"
   },
   "streak": {
     "count": 2,
     "lastOpen": "2026-04-24"
   },
-  "exportedAt": "2026-04-24T08:46:43.069Z"
+  "exportedAt": "2026-04-24T08:53:51.778Z"
 }
