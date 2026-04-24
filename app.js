@@ -389,8 +389,8 @@ function shuffleQueue() {
 function recordDwell(cardId) {
   if (!STATE.cardAppearedAt) return;
   let dwell = (Date.now() - STATE.cardAppearedAt) / 1000;
-  // Cap at 5 minutes — anything longer means the user left the app
-  dwell = Math.min(dwell, 300);
+  // Cap at 2 minutes — anything longer means the user left the app
+  dwell = Math.min(dwell, 120);
   const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
   passive.dwellTimes[cardId] = parseFloat(dwell.toFixed(1));
   saveStorage(STORAGE_KEYS.passive, passive);
