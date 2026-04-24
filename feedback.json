@@ -47,7 +47,8 @@
       "chinese-027",
       "poetry-021",
       "poetry-040",
-      "insight-021"
+      "insight-021",
+      "discovery-061"
     ],
     "retrieved": [
       "poetry-013",
@@ -273,7 +274,17 @@
       "underthehood-002": 2.8,
       "power-006": 4.3,
       "discovery-080": 2.7,
-      "whatif-018": 5.5
+      "whatif-018": 5.5,
+      "power-001": 2.8,
+      "discovery-100": 4.5,
+      "poetry-035": 13.1,
+      "paradigm-001": 7,
+      "skill-013": 9,
+      "timeless-024": 12.1,
+      "paradigm-004": 3.5,
+      "underthehood-010": 3.4,
+      "discovery-061": 13.9,
+      "discovery-099": 6.3
     }
   },
   "comments": {
@@ -287,5 +298,5 @@
     "count": 2,
     "lastOpen": "2026-04-24"
   },
-  "exportedAt": "2026-04-24T08:56:19.050Z"
+  "exportedAt": "2026-04-24T08:57:34.787Z"
 }
