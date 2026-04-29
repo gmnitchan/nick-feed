@@ -87,7 +87,9 @@
       "timeless-027",
       "whatif-017",
       "chinese-018",
-      "whatif-014"
+      "whatif-014",
+      "discovery-078",
+      "underthehood-006"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -342,7 +344,15 @@
       "discovery-085": 23.1,
       "insight-023": 10.1,
       "paradigm-002": 6.6,
-      "poetry-032": 13.8
+      "poetry-032": 13.8,
+      "poetry-022": 13.6,
+      "paradigm-006": 13.1,
+      "discovery-078": 1.5,
+      "underthehood-006": 7.5,
+      "chinese-020": 14.5,
+      "timeless-030": 40.3,
+      "discovery-089": 4.1,
+      "discovery-062": 14.4
     }
   },
   "comments": {
@@ -356,7 +366,7 @@
   },
   "streak": {
     "count": 1,
-    "lastOpen": "2026-04-26"
+    "lastOpen": "2026-04-29"
   },
   "sessionLog": [
     [
@@ -508,7 +518,82 @@
       1777167747159,
       "poetry-032",
       "view"
+    ],
+    [
+      1777167760944,
+      "poetry-022",
+      "view"
+    ],
+    [
+      1777167774511,
+      "paradigm-006",
+      "view"
+    ],
+    [
+      1777167787579,
+      "discovery-078",
+      "view"
+    ],
+    [
+      1777167807171,
+      "underthehood-006",
+      "view"
+    ],
+    [
+      1777167809818,
+      "discovery-078",
+      "back"
+    ],
+    [
+      1777167809819,
+      "discovery-078",
+      "view"
+    ],
+    [
+      1777167811303,
+      "underthehood-006",
+      "view"
+    ],
+    [
+      1777167833654,
+      "chinese-020",
+      "view"
+    ],
+    [
+      1777167835704,
+      "underthehood-006",
+      "back"
+    ],
+    [
+      1777167835705,
+      "underthehood-006",
+      "view"
+    ],
+    [
+      1777167843207,
+      "chinese-020",
+      "view"
+    ],
+    [
+      1777167857663,
+      "timeless-030",
+      "view"
+    ],
+    [
+      1777167897932,
+      "discovery-089",
+      "view"
+    ],
+    [
+      1777167902033,
+      "discovery-062",
+      "view"
+    ],
+    [
+      1777428627998,
+      "untranslatable-001",
+      "view"
     ]
   ],
-  "exportedAt": "2026-04-26T01:42:40.942Z"
+  "exportedAt": "2026-04-29T02:10:27.999Z"
 }
