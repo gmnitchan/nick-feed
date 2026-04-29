@@ -403,7 +403,16 @@
       "timeless-037": 12.7,
       "underthehood-014": 90.4,
       "power-013": 1.4,
-      "timeless-034": 1.3
+      "timeless-034": 11.1,
+      "discovery-113": 45.7,
+      "power-008": 19.2,
+      "power-007": 19.4,
+      "discovery-116": 9.9,
+      "underthehood-016": 11.3,
+      "paradigm-014": 10.1,
+      "contradict-012": 18.5,
+      "timeless-033": 29,
+      "paradigm-010": 19.2
     }
   },
   "comments": {
@@ -929,7 +938,57 @@
       1777442071686,
       "power-013",
       "view"
+    ],
+    [
+      1777442073103,
+      "timeless-034",
+      "view"
+    ],
+    [
+      1777442084235,
+      "discovery-113",
+      "view"
+    ],
+    [
+      1777442129975,
+      "power-008",
+      "view"
+    ],
+    [
+      1777442149135,
+      "power-007",
+      "view"
+    ],
+    [
+      1777442168562,
+      "discovery-116",
+      "view"
+    ],
+    [
+      1777442178503,
+      "underthehood-016",
+      "view"
+    ],
+    [
+      1777442189855,
+      "paradigm-014",
+      "view"
+    ],
+    [
+      1777442199992,
+      "contradict-012",
+      "view"
+    ],
+    [
+      1777442218528,
+      "timeless-033",
+      "view"
+    ],
+    [
+      1777442247544,
+      "paradigm-010",
+      "view"
     ]
   ],
-  "exportedAt": "2026-04-29T05:54:33.100Z"
+  "exportedAt": "2026-04-29T05:57:46.705Z"
 }
