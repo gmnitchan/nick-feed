@@ -67,7 +67,8 @@
       "skill-019",
       "underthehood-008",
       "discovery-074",
-      "underthehood-009"
+      "underthehood-009",
+      "poetry-024"
     ],
     "retrieved": [
       "poetry-013",
@@ -365,7 +366,17 @@
       "paradigm-005": 13.8,
       "discovery-101": 3.1,
       "untranslatable-007": 11.8,
-      "discovery-069": 16.9
+      "discovery-069": 16.9,
+      "power-002": 18.8,
+      "underthehood-001": 5.6,
+      "poetry-024": 94.3,
+      "poetry-039": 27,
+      "poetry-038": 38.6,
+      "discovery-092": 7.6,
+      "untranslatable-009": 15.6,
+      "insight-024": 10.8,
+      "insight-022": 14.6,
+      "untranslatable-003": 12.9
     }
   },
   "comments": {
@@ -666,7 +677,62 @@
       1777429019569,
       "discovery-069",
       "view"
+    ],
+    [
+      1777429036490,
+      "power-002",
+      "view"
+    ],
+    [
+      1777429055326,
+      "underthehood-001",
+      "view"
+    ],
+    [
+      1777429060945,
+      "poetry-024",
+      "view"
+    ],
+    [
+      1777429090450,
+      "poetry-024",
+      "expand"
+    ],
+    [
+      1777429155275,
+      "poetry-039",
+      "view"
+    ],
+    [
+      1777429182231,
+      "poetry-038",
+      "view"
+    ],
+    [
+      1777429220841,
+      "discovery-092",
+      "view"
+    ],
+    [
+      1777429228408,
+      "untranslatable-009",
+      "view"
+    ],
+    [
+      1777429243978,
+      "insight-024",
+      "view"
+    ],
+    [
+      1777429254796,
+      "insight-022",
+      "view"
+    ],
+    [
+      1777429269347,
+      "untranslatable-003",
+      "view"
     ]
   ],
-  "exportedAt": "2026-04-29T02:17:16.488Z"
+  "exportedAt": "2026-04-29T02:21:22.215Z"
 }
