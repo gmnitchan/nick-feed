@@ -91,7 +91,9 @@
       "underthehood-014",
       "underthehood-019",
       "underthehood-012",
-      "untranslatable-025"
+      "untranslatable-025",
+      "poetry-044",
+      "discovery-112"
     ],
     "retrieved": [
       "poetry-013",
@@ -123,7 +125,9 @@
       "power-013",
       "underthehood-019",
       "contradict-008",
-      "paradigm-015"
+      "paradigm-015",
+      "chinese-038",
+      "underthehood-017"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -444,7 +448,17 @@
       "untranslatable-025": 27.9,
       "contradict-008": 2.7,
       "paradigm-015": 2.5,
-      "untranslatable-013": 11.9
+      "untranslatable-013": 11.9,
+      "insight-029": 7.5,
+      "contradict-009": 16.3,
+      "poetry-044": 76.1,
+      "chinese-038": 2.2,
+      "paradigm-008": 40.2,
+      "underthehood-017": 2.3,
+      "discovery-112": 26.9,
+      "discovery-109": 8.4,
+      "discovery-060": 2.4,
+      "contradict-011": 6.1
     }
   },
   "comments": {
@@ -1150,7 +1164,97 @@
       1777442977790,
       "untranslatable-013",
       "like"
+    ],
+    [
+      1777442978201,
+      "insight-029",
+      "view"
+    ],
+    [
+      1777442985669,
+      "contradict-009",
+      "view"
+    ],
+    [
+      1777443001975,
+      "poetry-044",
+      "view"
+    ],
+    [
+      1777445203052,
+      "poetry-044",
+      "expand"
+    ],
+    [
+      1777445259138,
+      "chinese-038",
+      "view"
+    ],
+    [
+      1777445308962,
+      "paradigm-008",
+      "view"
+    ],
+    [
+      1777445312024,
+      "chinese-038",
+      "back"
+    ],
+    [
+      1777445312026,
+      "chinese-038",
+      "view"
+    ],
+    [
+      1777445314275,
+      "paradigm-008",
+      "view"
+    ],
+    [
+      1777445354512,
+      "underthehood-017",
+      "view"
+    ],
+    [
+      1777452914545,
+      "discovery-112",
+      "view"
+    ],
+    [
+      1777452915949,
+      "underthehood-017",
+      "back"
+    ],
+    [
+      1777452915950,
+      "underthehood-017",
+      "view"
+    ],
+    [
+      1777452918220,
+      "discovery-112",
+      "view"
+    ],
+    [
+      1777452941238,
+      "discovery-112",
+      "expand"
+    ],
+    [
+      1777452945090,
+      "discovery-109",
+      "view"
+    ],
+    [
+      1777452978154,
+      "discovery-060",
+      "view"
+    ],
+    [
+      1777453013605,
+      "contradict-011",
+      "view"
     ]
   ],
-  "exportedAt": "2026-04-29T06:09:38.190Z"
+  "exportedAt": "2026-04-29T08:56:59.723Z"
 }
