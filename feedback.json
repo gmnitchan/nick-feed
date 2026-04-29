@@ -100,7 +100,8 @@
       "underthehood-006",
       "chinese-026",
       "timeless-020",
-      "whatif-021"
+      "whatif-021",
+      "power-013"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -401,7 +402,8 @@
       "poetry-048": 17.8,
       "timeless-037": 12.7,
       "underthehood-014": 90.4,
-      "power-013": 21.3
+      "power-013": 1.4,
+      "timeless-034": 1.3
     }
   },
   "comments": {
@@ -912,7 +914,22 @@
       1777442049077,
       "power-013",
       "view"
+    ],
+    [
+      1777442070407,
+      "timeless-034",
+      "view"
+    ],
+    [
+      1777442071685,
+      "power-013",
+      "back"
+    ],
+    [
+      1777442071686,
+      "power-013",
+      "view"
     ]
   ],
-  "exportedAt": "2026-04-29T05:54:30.402Z"
+  "exportedAt": "2026-04-29T05:54:33.100Z"
 }
