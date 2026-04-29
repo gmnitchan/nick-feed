@@ -63,6 +63,14 @@
     "origin-012": {
       "rating": "like",
       "date": "2026-04-29"
+    },
+    "underthehood-020": {
+      "rating": "like",
+      "date": "2026-04-29"
+    },
+    "untranslatable-021": {
+      "rating": "like",
+      "date": "2026-04-29"
     }
   },
   "passive": {
@@ -495,7 +503,17 @@
       "untranslatable-019": 34.4,
       "whatif-016": 50.6,
       "skill-021": 12.3,
-      "origin-012": 74.7
+      "origin-012": 74.7,
+      "untranslatable-014": 5.8,
+      "chinese-033": 50.3,
+      "origin-016": 5.2,
+      "poetry-051": 19.2,
+      "paradigm-009": 9.1,
+      "underthehood-020": 15.5,
+      "untranslatable-021": 18.3,
+      "discovery-118": 4.3,
+      "origin-009": 38.1,
+      "chinese-034": 5.7
     }
   },
   "comments": {
@@ -505,7 +523,8 @@
     "timeless-017": "Interested in this but need it to be more advanced",
     "whatif-008": "This has been served to me multiple times",
     "skill-020": "Can you implement this in the app archotecture",
-    "insight-016": "I want you to ask me things to get such feedback"
+    "insight-016": "I want you to ask me things to get such feedback",
+    "chinese-033": "Ok this is way too advanced. Keep it simple. And for just the chinese category, it is fine to recycle seen cards mixed into fresh cards"
   },
   "streak": {
     "count": 1,
@@ -1421,7 +1440,72 @@
       1777453712480,
       "origin-012",
       "expand"
+    ],
+    [
+      1777453758851,
+      "untranslatable-014",
+      "view"
+    ],
+    [
+      1777453764628,
+      "chinese-033",
+      "view"
+    ],
+    [
+      1777453812839,
+      "chinese-033",
+      "comment"
+    ],
+    [
+      1777453814890,
+      "origin-016",
+      "view"
+    ],
+    [
+      1777453820107,
+      "poetry-051",
+      "view"
+    ],
+    [
+      1777453839310,
+      "paradigm-009",
+      "view"
+    ],
+    [
+      1777453848396,
+      "underthehood-020",
+      "view"
+    ],
+    [
+      1777453863481,
+      "underthehood-020",
+      "like"
+    ],
+    [
+      1777453863913,
+      "untranslatable-021",
+      "view"
+    ],
+    [
+      1777453880500,
+      "untranslatable-021",
+      "like"
+    ],
+    [
+      1777453882235,
+      "discovery-118",
+      "view"
+    ],
+    [
+      1777453886570,
+      "origin-009",
+      "view"
+    ],
+    [
+      1777453924650,
+      "chinese-034",
+      "view"
     ]
   ],
-  "exportedAt": "2026-04-29T09:09:18.843Z"
+  "exportedAt": "2026-04-29T09:12:10.335Z"
 }
