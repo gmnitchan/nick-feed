@@ -35,6 +35,8 @@ const TYPE_META = {
   untranslatable: { emoji: '🌐', label: 'Untranslatable', color: 'var(--untranslatable)' },
   power: { emoji: '🏛', label: 'How Power Works', color: 'var(--power)' },
   paradigm: { emoji: '💡', label: 'Paradigm Shift', color: 'var(--paradigm)' },
+  contradict: { emoji: '⚡', label: 'Actually Wrong', color: 'var(--contradict)' },
+  origin: { emoji: '🔎', label: 'Origin Story', color: 'var(--origin)' },
 };
 
 // --- Storage helpers ---

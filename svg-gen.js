@@ -33,11 +33,13 @@ function generateSVG(cardId, type) {
     untranslatable: '#C4A1FF',
     power: '#FF6B35',
     paradigm: '#00BFFF',
+    contradict: '#FF3366',
+    origin: '#FFAA33',
   };
   const color = colors[type] || colors.discovery;
   const opacity = 0.06 + rand() * 0.06;
 
-  const generators = { insight: genNodes, skill: genBlocks, whatif: genBranching, timeless: genWaves, discovery: genAngular, poetry: genWaves, chinese: genBlocks, underthehood: genBlocks, untranslatable: genWaves, power: genAngular, paradigm: genNodes };
+  const generators = { insight: genNodes, skill: genBlocks, whatif: genBranching, timeless: genWaves, discovery: genAngular, poetry: genWaves, chinese: genBlocks, underthehood: genBlocks, untranslatable: genWaves, power: genAngular, paradigm: genNodes, contradict: genBranching, origin: genNodes };
   const gen = generators[type] || genAngular;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" style="opacity:${opacity.toFixed(3)}">
