@@ -68,7 +68,11 @@
       "underthehood-008",
       "discovery-074",
       "underthehood-009",
-      "poetry-024"
+      "poetry-024",
+      "timeless-021",
+      "poetry-030",
+      "chinese-026",
+      "underthehood-014"
     ],
     "retrieved": [
       "poetry-013",
@@ -93,7 +97,10 @@
       "chinese-018",
       "whatif-014",
       "discovery-078",
-      "underthehood-006"
+      "underthehood-006",
+      "chinese-026",
+      "timeless-020",
+      "whatif-021"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -376,7 +383,25 @@
       "untranslatable-009": 15.6,
       "insight-024": 10.8,
       "insight-022": 14.6,
-      "untranslatable-003": 12.9
+      "untranslatable-003": 12.9,
+      "timeless-021": 34.6,
+      "poetry-030": 68.6,
+      "poetry-037": 17.1,
+      "chinese-026": 6.1,
+      "timeless-020": 1.3,
+      "skill-016": 16.5,
+      "untranslatable-005": 2.3,
+      "timeless-023": 4.9,
+      "power-011": 18.5,
+      "whatif-021": 0.7,
+      "untranslatable-016": 13.8,
+      "timeless-035": 18.5,
+      "origin-004": 10.3,
+      "discovery-102": 17.1,
+      "poetry-048": 17.8,
+      "timeless-037": 12.7,
+      "underthehood-014": 90.4,
+      "power-013": 21.3
     }
   },
   "comments": {
@@ -732,7 +757,162 @@
       1777429269347,
       "untranslatable-003",
       "view"
+    ],
+    [
+      1777429282218,
+      "timeless-021",
+      "view"
+    ],
+    [
+      1777429294931,
+      "timeless-021",
+      "expand"
+    ],
+    [
+      1777429316868,
+      "poetry-030",
+      "view"
+    ],
+    [
+      1777429333220,
+      "poetry-030",
+      "expand"
+    ],
+    [
+      1777429385467,
+      "poetry-037",
+      "view"
+    ],
+    [
+      1777429402554,
+      "chinese-026",
+      "view"
+    ],
+    [
+      1777429404945,
+      "chinese-026",
+      "expand"
+    ],
+    [
+      1777429410003,
+      "timeless-020",
+      "view"
+    ],
+    [
+      1777429411270,
+      "chinese-026",
+      "back"
+    ],
+    [
+      1777429411271,
+      "chinese-026",
+      "view"
+    ],
+    [
+      1777429417419,
+      "timeless-020",
+      "view"
+    ],
+    [
+      1777429425201,
+      "skill-016",
+      "view"
+    ],
+    [
+      1777429426969,
+      "timeless-020",
+      "back"
+    ],
+    [
+      1777429426970,
+      "timeless-020",
+      "view"
+    ],
+    [
+      1777429428301,
+      "skill-016",
+      "view"
+    ],
+    [
+      1777429444756,
+      "untranslatable-005",
+      "view"
+    ],
+    [
+      1777429447087,
+      "timeless-023",
+      "view"
+    ],
+    [
+      1777441809905,
+      "power-011",
+      "view"
+    ],
+    [
+      1777441828442,
+      "whatif-021",
+      "view"
+    ],
+    [
+      1777441835967,
+      "untranslatable-016",
+      "view"
+    ],
+    [
+      1777441838552,
+      "whatif-021",
+      "back"
+    ],
+    [
+      1777441838553,
+      "whatif-021",
+      "view"
+    ],
+    [
+      1777441839266,
+      "untranslatable-016",
+      "view"
+    ],
+    [
+      1777441853087,
+      "timeless-035",
+      "view"
+    ],
+    [
+      1777441871573,
+      "origin-004",
+      "view"
+    ],
+    [
+      1777441881857,
+      "discovery-102",
+      "view"
+    ],
+    [
+      1777441898946,
+      "poetry-048",
+      "view"
+    ],
+    [
+      1777441916729,
+      "timeless-037",
+      "view"
+    ],
+    [
+      1777441958718,
+      "underthehood-014",
+      "view"
+    ],
+    [
+      1777441967741,
+      "underthehood-014",
+      "expand"
+    ],
+    [
+      1777442049077,
+      "power-013",
+      "view"
     ]
   ],
-  "exportedAt": "2026-04-29T02:21:22.215Z"
+  "exportedAt": "2026-04-29T05:54:30.402Z"
 }
