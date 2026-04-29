@@ -43,6 +43,26 @@
     "untranslatable-013": {
       "rating": "like",
       "date": "2026-04-29"
+    },
+    "origin-010": {
+      "rating": "like",
+      "date": "2026-04-29"
+    },
+    "underthehood-011": {
+      "rating": "like",
+      "date": "2026-04-29"
+    },
+    "poetry-043": {
+      "rating": "like",
+      "date": "2026-04-29"
+    },
+    "whatif-016": {
+      "rating": "like",
+      "date": "2026-04-29"
+    },
+    "origin-012": {
+      "rating": "like",
+      "date": "2026-04-29"
     }
   },
   "passive": {
@@ -93,7 +113,12 @@
       "underthehood-012",
       "untranslatable-025",
       "poetry-044",
-      "discovery-112"
+      "discovery-112",
+      "underthehood-013",
+      "poetry-043",
+      "chinese-031",
+      "whatif-016",
+      "origin-012"
     ],
     "retrieved": [
       "poetry-013",
@@ -127,7 +152,9 @@
       "contradict-008",
       "paradigm-015",
       "chinese-038",
-      "underthehood-017"
+      "underthehood-017",
+      "origin-010",
+      "discovery-097"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -458,7 +485,17 @@
       "discovery-112": 26.9,
       "discovery-109": 8.4,
       "discovery-060": 2.4,
-      "contradict-011": 6.1
+      "contradict-011": 6.1,
+      "underthehood-013": 11.2,
+      "origin-010": 4.3,
+      "underthehood-011": 11.6,
+      "discovery-097": 0.6,
+      "poetry-043": 73.9,
+      "chinese-031": 12.5,
+      "untranslatable-019": 34.4,
+      "whatif-016": 50.6,
+      "skill-021": 12.3,
+      "origin-012": 74.7
     }
   },
   "comments": {
@@ -1254,7 +1291,137 @@
       1777453013605,
       "contradict-011",
       "view"
+    ],
+    [
+      1777453019731,
+      "underthehood-013",
+      "view"
+    ],
+    [
+      1777453035290,
+      "underthehood-013",
+      "expand"
+    ],
+    [
+      1777453038167,
+      "origin-010",
+      "view"
+    ],
+    [
+      1777453421604,
+      "underthehood-011",
+      "view"
+    ],
+    [
+      1777453424772,
+      "origin-010",
+      "back"
+    ],
+    [
+      1777453424773,
+      "origin-010",
+      "view"
+    ],
+    [
+      1777453428622,
+      "origin-010",
+      "like"
+    ],
+    [
+      1777453429033,
+      "underthehood-011",
+      "view"
+    ],
+    [
+      1777453439362,
+      "underthehood-011",
+      "like"
+    ],
+    [
+      1777453440614,
+      "discovery-097",
+      "view"
+    ],
+    [
+      1777453453764,
+      "poetry-043",
+      "view"
+    ],
+    [
+      1777453456507,
+      "discovery-097",
+      "back"
+    ],
+    [
+      1777453456508,
+      "discovery-097",
+      "view"
+    ],
+    [
+      1777453457140,
+      "poetry-043",
+      "view"
+    ],
+    [
+      1777453472586,
+      "poetry-043",
+      "expand"
+    ],
+    [
+      1777453515300,
+      "poetry-043",
+      "like"
+    ],
+    [
+      1777453531072,
+      "chinese-031",
+      "view"
+    ],
+    [
+      1777453533704,
+      "chinese-031",
+      "expand"
+    ],
+    [
+      1777453543532,
+      "untranslatable-019",
+      "view"
+    ],
+    [
+      1777453577921,
+      "whatif-016",
+      "view"
+    ],
+    [
+      1777453585236,
+      "whatif-016",
+      "expand"
+    ],
+    [
+      1777453617632,
+      "whatif-016",
+      "like"
+    ],
+    [
+      1777453628480,
+      "skill-021",
+      "view"
+    ],
+    [
+      1777453684132,
+      "origin-012",
+      "view"
+    ],
+    [
+      1777453711787,
+      "origin-012",
+      "like"
+    ],
+    [
+      1777453712480,
+      "origin-012",
+      "expand"
     ]
   ],
-  "exportedAt": "2026-04-29T08:56:59.723Z"
+  "exportedAt": "2026-04-29T09:09:18.843Z"
 }
