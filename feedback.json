@@ -27,6 +27,22 @@
     "timeless-027": {
       "rating": "like",
       "date": "2026-04-24"
+    },
+    "underthehood-012": {
+      "rating": "like",
+      "date": "2026-04-29"
+    },
+    "untranslatable-025": {
+      "rating": "like",
+      "date": "2026-04-29"
+    },
+    "contradict-008": {
+      "rating": "like",
+      "date": "2026-04-29"
+    },
+    "untranslatable-013": {
+      "rating": "like",
+      "date": "2026-04-29"
     }
   },
   "passive": {
@@ -72,7 +88,10 @@
       "timeless-021",
       "poetry-030",
       "chinese-026",
-      "underthehood-014"
+      "underthehood-014",
+      "underthehood-019",
+      "underthehood-012",
+      "untranslatable-025"
     ],
     "retrieved": [
       "poetry-013",
@@ -101,7 +120,10 @@
       "chinese-026",
       "timeless-020",
       "whatif-021",
-      "power-013"
+      "power-013",
+      "underthehood-019",
+      "contradict-008",
+      "paradigm-015"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -412,7 +434,17 @@
       "paradigm-014": 10.1,
       "contradict-012": 18.5,
       "timeless-033": 29,
-      "paradigm-010": 19.2
+      "paradigm-010": 19.2,
+      "power-016": 11.9,
+      "underthehood-019": 49.4,
+      "discovery-117": 10.6,
+      "whatif-020": 21.5,
+      "origin-003": 19,
+      "underthehood-012": 74.1,
+      "untranslatable-025": 27.9,
+      "contradict-008": 2.7,
+      "paradigm-015": 2.5,
+      "untranslatable-013": 11.9
     }
   },
   "comments": {
@@ -988,7 +1020,137 @@
       1777442247544,
       "paradigm-010",
       "view"
+    ],
+    [
+      1777442266708,
+      "power-016",
+      "view"
+    ],
+    [
+      1777442278622,
+      "underthehood-019",
+      "view"
+    ],
+    [
+      1777442304147,
+      "discovery-117",
+      "view"
+    ],
+    [
+      1777442305597,
+      "underthehood-019",
+      "back"
+    ],
+    [
+      1777442305598,
+      "underthehood-019",
+      "view"
+    ],
+    [
+      1777442306365,
+      "underthehood-019",
+      "expand"
+    ],
+    [
+      1777442354963,
+      "discovery-117",
+      "view"
+    ],
+    [
+      1777442365611,
+      "whatif-020",
+      "view"
+    ],
+    [
+      1777442387115,
+      "origin-003",
+      "view"
+    ],
+    [
+      1777442406150,
+      "underthehood-012",
+      "view"
+    ],
+    [
+      1777442425257,
+      "underthehood-012",
+      "expand"
+    ],
+    [
+      1777442454676,
+      "underthehood-012",
+      "like"
+    ],
+    [
+      1777442480208,
+      "untranslatable-025",
+      "view"
+    ],
+    [
+      1777442503482,
+      "untranslatable-025",
+      "like"
+    ],
+    [
+      1777442508282,
+      "untranslatable-025",
+      "expand"
+    ],
+    [
+      1777442937685,
+      "contradict-008",
+      "view"
+    ],
+    [
+      1777442950838,
+      "paradigm-015",
+      "view"
+    ],
+    [
+      1777442955313,
+      "contradict-008",
+      "back"
+    ],
+    [
+      1777442955313,
+      "contradict-008",
+      "view"
+    ],
+    [
+      1777442956670,
+      "contradict-008",
+      "like"
+    ],
+    [
+      1777442958057,
+      "paradigm-015",
+      "view"
+    ],
+    [
+      1777442961156,
+      "untranslatable-013",
+      "view"
+    ],
+    [
+      1777442963852,
+      "paradigm-015",
+      "back"
+    ],
+    [
+      1777442963853,
+      "paradigm-015",
+      "view"
+    ],
+    [
+      1777442966306,
+      "untranslatable-013",
+      "view"
+    ],
+    [
+      1777442977790,
+      "untranslatable-013",
+      "like"
     ]
   ],
-  "exportedAt": "2026-04-29T05:57:46.705Z"
+  "exportedAt": "2026-04-29T06:09:38.190Z"
 }
