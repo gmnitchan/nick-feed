@@ -71,6 +71,10 @@
     "untranslatable-021": {
       "rating": "like",
       "date": "2026-04-29"
+    },
+    "contradict-010": {
+      "rating": "like",
+      "date": "2026-04-29"
     }
   },
   "passive": {
@@ -126,7 +130,9 @@
       "poetry-043",
       "chinese-031",
       "whatif-016",
-      "origin-012"
+      "origin-012",
+      "poetry-050",
+      "contradict-010"
     ],
     "retrieved": [
       "poetry-013",
@@ -162,7 +168,8 @@
       "chinese-038",
       "underthehood-017",
       "origin-010",
-      "discovery-097"
+      "discovery-097",
+      "contradict-010"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -513,7 +520,13 @@
       "untranslatable-021": 18.3,
       "discovery-118": 4.3,
       "origin-009": 38.1,
-      "chinese-034": 5.7
+      "chinese-034": 5.7,
+      "poetry-050": 76.3,
+      "origin-007": 14.2,
+      "contradict-010": 1.8,
+      "untranslatable-018": 17.6,
+      "discovery-105": 6.8,
+      "discovery-114": 0.3
     }
   },
   "comments": {
@@ -528,7 +541,7 @@
   },
   "streak": {
     "count": 1,
-    "lastOpen": "2026-04-29"
+    "lastOpen": "2026-05-01"
   },
   "sessionLog": [
     [
@@ -1505,7 +1518,77 @@
       1777453924650,
       "chinese-034",
       "view"
+    ],
+    [
+      1777453930337,
+      "poetry-050",
+      "view"
+    ],
+    [
+      1777453975982,
+      "poetry-050",
+      "expand"
+    ],
+    [
+      1777454006674,
+      "origin-007",
+      "view"
+    ],
+    [
+      1777454020921,
+      "contradict-010",
+      "view"
+    ],
+    [
+      1777454078324,
+      "contradict-010",
+      "expand"
+    ],
+    [
+      1777454189165,
+      "contradict-010",
+      "like"
+    ],
+    [
+      1777454234952,
+      "untranslatable-018",
+      "view"
+    ],
+    [
+      1777454235769,
+      "contradict-010",
+      "back"
+    ],
+    [
+      1777454235770,
+      "contradict-010",
+      "view"
+    ],
+    [
+      1777454236233,
+      "contradict-010",
+      "like"
+    ],
+    [
+      1777454237599,
+      "untranslatable-018",
+      "view"
+    ],
+    [
+      1777454321842,
+      "discovery-105",
+      "view"
+    ],
+    [
+      1777454328691,
+      "discovery-114",
+      "view"
+    ],
+    [
+      1777633297105,
+      "contradict-013",
+      "view"
     ]
   ],
-  "exportedAt": "2026-04-29T09:12:10.335Z"
+  "exportedAt": "2026-05-01T11:01:37.113Z"
 }
