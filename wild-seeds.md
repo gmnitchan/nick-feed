@@ -25,13 +25,11 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 - The overlap between jazz improvisation and military strategy
 - How hospital architecture measurably affects patient recovery
 - The mathematics of gerrymandering
-- Fermentation chemistry connecting beer, bread, and biotech
 
 ### Places almost nobody thinks about
 - Nauru: the richest-then-poorest country per capita on earth
 - Svalbard Global Seed Vault logistics
 - Why Iceland has no mosquitoes but Greenland does
-- The Darien Gap: the missing 100km of the Pan-American Highway
 - Socotra Island: alien-looking trees that exist nowhere else
 - Kowloon Walled City: the densest human settlement ever
 - The Zone of Alienation around Chernobyl as accidental nature reserve
@@ -44,7 +42,6 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 - Why QWERTY persists despite being designed to slow you down
 - How the international date line was negotiated
 - How credit card numbers encode error detection (Luhn algorithm)
-- Why voting systems are mathematically impossible to perfect (Arrow's theorem)
 
 ### Forgotten knowledge
 - Greek fire: the lost weapon of the Byzantine Empire
@@ -57,7 +54,6 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 - The gut-brain axis and fecal transplants for depression
 - How wound healing recapitulates embryonic development
 - The immunology of pregnancy (how the body doesn't reject the fetus)
-- Phantom limb pain and what it tells us about body maps
 
 ### Sound & silence
 - How earthquakes sound underwater (hydroacoustics)
@@ -78,6 +74,10 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 - How perfumers describe smells they've never encountered → discovery-121 (perfumers smell things that don't exist yet)
 - Prison economies and the cigarette-to-ramen currency shift → rejected by dedup (similar to discovery-022)
 - Knot theory applied to DNA replication → discovery-123 (mathematicians tie knots inside your DNA)
+- Arrow's theorem — voting systems impossible to perfect → whatif-030
+- Fermentation connecting beer, bread, biotech → discovery-129
+- Phantom limb pain and body maps → discovery-128
+- The Darien Gap → discovery-127
 - Witch trials as economic competition between neighbors → history-007
 - Incan quipu: a writing system made of knotted strings → discovery-124
 - How submarine cables get repaired 4km underwater → underthehood-025
