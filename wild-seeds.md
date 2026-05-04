@@ -12,18 +12,14 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 ### Obscure professions & crafts
 - How professional safecrackers think about lock design
 - The art of tuning a pipe organ by ear
-- Forensic accountants who catch embezzlement through Benford's Law
 - People who restore 16th century maps for a living
-- How perfumers describe smells they've never encountered
 - Competitive auctioneers and their speech patterns
 - The last remaining telegraph operators
 - How elevator inspectors detect danger
 
 ### Weird intersections
 - Acoustics of medieval cathedrals and modern concert halls
-- Origami mathematics applied to satellite solar panels
 - How submarine cables get repaired 4km underwater
-- Prison economies and the cigarette-to-ramen currency shift
 - Competitive pigeon racing and the genetics of homing
 - The physics behind Mongolian throat singing
 - How color naming evolves across languages (Berlin & Kay)
@@ -32,7 +28,6 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 - How hospital architecture measurably affects patient recovery
 - The mathematics of gerrymandering
 - Fermentation chemistry connecting beer, bread, and biotech
-- Knot theory applied to DNA replication
 
 ### Places almost nobody thinks about
 - Nauru: the richest-then-poorest country per capita on earth
@@ -50,35 +45,40 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 - The design of airline boarding and why it's intentionally suboptimal
 - Why QWERTY persists despite being designed to slow you down
 - How the international date line was negotiated
-- The economics of font licensing and why Helvetica costs money
 - How credit card numbers encode error detection (Luhn algorithm)
 - Why voting systems are mathematically impossible to perfect (Arrow's theorem)
 
 ### Forgotten knowledge
-- Roman concrete that's stronger after 2000 years (and we don't know why)
 - Greek fire: the lost weapon of the Byzantine Empire
-- Antikythera mechanism: a 2000-year-old analog computer
 - The library of Ashurbanipal: older than Alexandria, still readable
 - Incan quipu: a writing system made of knotted strings
 - Damascus steel: lost metallurgical technique from the Middle Ages
 - The Voynich manuscript: 600 years of failed decryption
 
 ### Bodies & biology people ignore
-- Why humans can outrun every animal over marathon distance
 - How your liver regenerates from 25% of itself
 - The gut-brain axis and fecal transplants for depression
-- Why you can't tickle yourself (and what it reveals about prediction)
 - How wound healing recapitulates embryonic development
 - The immunology of pregnancy (how the body doesn't reject the fetus)
 - Phantom limb pain and what it tells us about body maps
 
 ### Sound & silence
 - How earthquakes sound underwater (hydroacoustics)
-- The quietest room on earth and why people can't stay in it
-- Whale song dialects that change across oceans
-- How vinyl records encode sound in physical grooves
 - The brown note myth and infrasound effects on the body
 - Cymatics: sound waves making physical patterns in sand
 
 ## Used Seeds
-(move seeds here after generating cards from them)
+
+- Roman concrete that's stronger after 2000 years → discovery (roman concrete gets stronger with age)
+- Antikythera mechanism: a 2000-year-old analog computer → discovery (the antikythera mechanism is 2000 years old)
+- Origami mathematics applied to satellite solar panels → discovery (origami engineers design satellites)
+- Why you can't tickle yourself (and what it reveals about prediction) → discovery (you can't tickle yourself and that's profound)
+- Whale song dialects that change across oceans → discovery (whales have regional accents)
+- Why humans can outrun every animal over marathon distance → discovery (the olympic marathon distance is an accident)
+- Forensic accountants who catch embezzlement through Benford's Law → discovery (benford's law catches tax cheats)
+- The economics of font licensing and why Helvetica costs money → discovery (helvetica is everywhere and invisible)
+- The quietest room on earth and why people can't stay in it → discovery (the quietest room drives you mad)
+- How vinyl records encode sound in physical grooves → referenced in existing card body
+- How perfumers describe smells they've never encountered → discovery-121 (perfumers smell things that don't exist yet)
+- Prison economies and the cigarette-to-ramen currency shift → rejected by dedup (similar to discovery-022)
+- Knot theory applied to DNA replication → discovery-123 (mathematicians tie knots inside your DNA)

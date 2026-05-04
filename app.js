@@ -21,22 +21,26 @@ const STORAGE_KEYS = {
   streak: 'nickfeed_streak',
   feedback: 'nickfeed_feedback',
   passive: 'nickfeed_passive',
+  learned: 'nickfeed_learned',
 };
 
 const TYPE_META = {
   insight: { emoji: '🧠', label: 'Insight', color: 'var(--insight)' },
-  skill: { emoji: '🧩', label: 'Skill Bite', color: 'var(--skill)' },
   whatif: { emoji: '🎲', label: 'What If', color: 'var(--whatif)' },
-  timeless: { emoji: '📚', label: 'Timeless', color: 'var(--timeless)' },
+  timeless: { emoji: '📜', label: 'Timeless', color: 'var(--timeless)' },
   discovery: { emoji: '🔭', label: 'Discovery', color: 'var(--discovery)' },
   poetry: { emoji: '✒️', label: 'Poetry', color: 'var(--poetry)' },
   chinese: { emoji: '🇨🇳', label: 'Chinese', color: 'var(--chinese)' },
   underthehood: { emoji: '⚙️', label: 'Under the Hood', color: 'var(--underthehood)' },
   untranslatable: { emoji: '🌐', label: 'Untranslatable', color: 'var(--untranslatable)' },
   power: { emoji: '🏛', label: 'How Power Works', color: 'var(--power)' },
-  paradigm: { emoji: '💡', label: 'Paradigm Shift', color: 'var(--paradigm)' },
+  philosophy: { emoji: '🪞', label: 'Philosophy', color: 'var(--philosophy)' },
+  history: { emoji: '🗝', label: 'History', color: 'var(--history)' },
   contradict: { emoji: '⚡', label: 'Actually Wrong', color: 'var(--contradict)' },
   origin: { emoji: '🔎', label: 'Origin Story', color: 'var(--origin)' },
+  // Legacy types — still render existing cards, no longer generated
+  skill: { emoji: '🧩', label: 'Insight', color: 'var(--insight)' },
+  paradigm: { emoji: '💡', label: 'History', color: 'var(--history)' },
 };
 
 // --- Storage helpers ---
@@ -109,13 +113,32 @@ function renderChineseBody(card) {
   const parts = card.title.split('—');
   const chars = (parts[0] || '').trim();
   const pinyin = (parts[1] || '').trim();
+  const learned = new Set(loadStorage(STORAGE_KEYS.learned) || []);
+  const isLearned = learned.has(card.id);
   return `<div class="chinese-hero">
       <div class="chinese-chars">${chars}</div>
       <div class="chinese-pinyin">${pinyin}</div>
       <div class="chinese-meaning">${translation}</div>
       <button class="tts-btn" onclick="speakChinese('${chars.replace(/'/g, "\\'")}')">🔊</button>
     </div>
-    <p class="card-body">${breakdown}</p>`;
+    <p class="card-body">${breakdown}</p>
+    <button class="chinese-learned-btn ${isLearned ? 'chinese-learned-btn--done' : ''}" onclick="toggleLearned('${card.id}', this)">
+      ${isLearned ? '✓ Learned' : '✓ Mark as learned'}
+    </button>`;
+}
+
+function toggleLearned(cardId, btn) {
+  const learned = new Set(loadStorage(STORAGE_KEYS.learned) || []);
+  if (learned.has(cardId)) {
+    learned.delete(cardId);
+    btn.textContent = '✓ Mark as learned';
+    btn.classList.remove('chinese-learned-btn--done');
+  } else {
+    learned.add(cardId);
+    btn.textContent = '✓ Learned';
+    btn.classList.add('chinese-learned-btn--done');
+  }
+  saveStorage(STORAGE_KEYS.learned, [...learned]);
 }
 
 function renderPoetryBody(card) {
@@ -281,14 +304,20 @@ function buildQueues(cards) {
   const unseen = cards.filter(c => !seenIds.has(c.id) && !everViewed.has(c.id));
   const seenCards = cards.filter(c => seenIds.has(c.id) || everViewed.has(c.id));
 
+  // Chinese cards recycle until manually learned — mix seen-but-not-learned
+  // Chinese cards into the unseen queue for spaced repetition
+  const learned = new Set(loadStorage(STORAGE_KEYS.learned) || []);
+  const chineseReview = seenCards.filter(c => c.type === 'chinese' && !learned.has(c.id));
+  const seenNonReview = seenCards.filter(c => c.type !== 'chinese' || learned.has(c.id));
+
   // Track which IDs are truly new for the NEW badge
   STATE.neverSeenIds = new Set(unseen.map(c => c.id));
 
-  STATE.unseenQueue = shuffle(unseen);
-  STATE.seenQueue = shuffle(seenCards);
+  STATE.unseenQueue = shuffle([...unseen, ...chineseReview]);
+  STATE.seenQueue = shuffle(seenNonReview);
   STATE.phase = 'unseen';
   STATE.currentIndex = 0;
-  STATE.phaseTotal = unseen.length;
+  STATE.phaseTotal = STATE.unseenQueue.length;
   STATE.history = [];
 }
 
@@ -471,7 +500,8 @@ function setupCommentButton() {
 
 function openCommentModal() {
   const comments = loadStorage('nickfeed_comments') || {};
-  const existing = comments[STATE.currentCard.id] || '';
+  const raw = comments[STATE.currentCard.id];
+  const existing = typeof raw === 'string' ? raw : (raw?.text || '');
   document.getElementById('comment-input').value = existing;
   document.getElementById('comment-overlay').style.display = 'flex';
   document.getElementById('comment-input').focus();
@@ -481,8 +511,18 @@ function saveComment() {
   const text = document.getElementById('comment-input').value.trim();
   const comments = loadStorage('nickfeed_comments') || {};
   if (text) {
-    comments[STATE.currentCard.id] = text;
-    logEvent(STATE.currentCard.id, 'comment');
+    const cardId = STATE.currentCard.id;
+    const passive = loadStorage(STORAGE_KEYS.passive) || { expanded: [], retrieved: [], dwellTimes: {} };
+    const explicit = loadStorage(STORAGE_KEYS.feedback) || {};
+    const dwell = passive.dwellTimes[cardId] || 0;
+    const expanded = passive.expanded.includes(cardId);
+    const rating = explicit[cardId]?.rating || null;
+    comments[cardId] = {
+      text,
+      date: todayStr(),
+      context: { dwell, expanded, rating }
+    };
+    logEvent(cardId, 'comment');
   } else {
     delete comments[STATE.currentCard.id];
   }
@@ -542,10 +582,14 @@ function generateFeedbackExport() {
   const commentEntries = Object.entries(comments);
   if (commentEntries.length > 0) {
     output += `COMMENTS (${commentEntries.length}):\n`;
-    for (const [id, text] of commentEntries) {
+    for (const [id, val] of commentEntries) {
       const card = STATE.cards.find(c => c.id === id);
       const title = card ? card.title : id;
-      output += `- "${title}": ${text}\n`;
+      const text = typeof val === 'string' ? val : val.text;
+      const ctx = typeof val === 'object' && val.context
+        ? ` [dwell: ${val.context.dwell}s, expanded: ${val.context.expanded}, rating: ${val.context.rating || 'none'}, date: ${val.date}]`
+        : '';
+      output += `- "${title}": ${text}${ctx}\n`;
     }
     output += '\n';
   }
@@ -806,6 +850,7 @@ async function syncFeedbackToGitHub() {
     comments: loadStorage('nickfeed_comments') || {},
     streak: loadStorage(STORAGE_KEYS.streak) || {},
     sessionLog: loadStorage('nickfeed_sessionlog') || [],
+    learned: loadStorage(STORAGE_KEYS.learned) || [],
     exportedAt: new Date().toISOString(),
   };
 
@@ -930,6 +975,7 @@ function autoSyncFeedback() {
     comments: loadStorage('nickfeed_comments') || {},
     streak: loadStorage(STORAGE_KEYS.streak) || {},
     sessionLog: loadStorage('nickfeed_sessionlog') || [],
+    learned: loadStorage(STORAGE_KEYS.learned) || [],
     exportedAt: new Date().toISOString(),
   };
 

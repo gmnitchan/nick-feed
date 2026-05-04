@@ -1,2 +1,4 @@
 .DS_Store
 .superpowers/
+dedup-index.npz
+new-cards-*.json

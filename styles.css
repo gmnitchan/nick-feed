@@ -27,7 +27,6 @@
   --text-secondary: #aaaaaa;
   --text-muted: #555555;
   --insight: #00D4FF;
-  --skill: #A855F7;
   --whatif: #FF8A00;
   --timeless: #F5E6D3;
   --discovery: #FF5CBE;
@@ -36,9 +35,13 @@
   --underthehood: #00E5A0;
   --untranslatable: #C4A1FF;
   --power: #FF6B35;
-  --paradigm: #00BFFF;
+  --philosophy: #B39DDB;
+  --history: #D4A574;
   --contradict: #FF3366;
   --origin: #FFAA33;
+  /* Legacy */
+  --paradigm: #D4A574;
+  --skill: #00D4FF;
 }
 
 html, body {
@@ -276,6 +279,22 @@ html, body {
 .card--chinese .card-body {
   font-size: 1rem;
   line-height: 1.7;
+}
+.chinese-learned-btn {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.5rem 1.2rem;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 20px;
+  color: #888;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.chinese-learned-btn--done {
+  border-color: var(--chinese);
+  color: var(--chinese);
+  background: rgba(255, 68, 68, 0.1);
 }
 
 /* --- Poetry card type --- */
