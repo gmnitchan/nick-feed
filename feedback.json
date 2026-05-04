@@ -143,6 +143,14 @@
     "discovery-104": {
       "rating": "like",
       "date": "2026-05-04"
+    },
+    "philosophy-003": {
+      "rating": "like",
+      "date": "2026-05-04"
+    },
+    "poetry-042": {
+      "rating": "like",
+      "date": "2026-05-04"
     }
   },
   "passive": {
@@ -223,7 +231,13 @@
       "insight-026",
       "timeless-041",
       "whatif-024",
-      "discovery-104"
+      "discovery-104",
+      "chinese-036",
+      "history-002",
+      "chinese-039",
+      "poetry-049",
+      "chinese-018",
+      "poetry-042"
     ],
     "retrieved": [
       "poetry-013",
@@ -330,7 +344,7 @@
       "poetry-011": 0.2,
       "timeless-002": 0.2,
       "discovery-026": 0.2,
-      "chinese-005": 0.4,
+      "chinese-005": 13.9,
       "discovery-012": 0.2,
       "poetry-002": 0.2,
       "insight-009": 0.4,
@@ -503,7 +517,7 @@
       "timeless-027": 0.9,
       "whatif-017": 1.8,
       "insight-019": 1.3,
-      "chinese-018": 7.2,
+      "chinese-018": 9.8,
       "timeless-025": 13,
       "timeless-028": 12,
       "poetry-023": 27.3,
@@ -669,7 +683,15 @@
       "insight-035": 24.7,
       "whatif-024": 44.3,
       "contradict-018": 12.9,
-      "discovery-104": 59.2
+      "discovery-104": 59.2,
+      "chinese-036": 28.7,
+      "untranslatable-024": 16.1,
+      "history-002": 70.8,
+      "chinese-039": 21.4,
+      "history-005": 30.1,
+      "poetry-049": 108.2,
+      "philosophy-003": 54.1,
+      "poetry-042": 72.7
     }
   },
   "comments": {
@@ -2423,8 +2445,103 @@
       1777889515380,
       "discovery-104",
       "like"
+    ],
+    [
+      1777889524706,
+      "chinese-036",
+      "view"
+    ],
+    [
+      1777889534438,
+      "chinese-036",
+      "expand"
+    ],
+    [
+      1777889553419,
+      "untranslatable-024",
+      "view"
+    ],
+    [
+      1777889569474,
+      "history-002",
+      "view"
+    ],
+    [
+      1777889585109,
+      "history-002",
+      "expand"
+    ],
+    [
+      1777889640311,
+      "chinese-039",
+      "view"
+    ],
+    [
+      1777889643711,
+      "chinese-039",
+      "expand"
+    ],
+    [
+      1777889661664,
+      "chinese-005",
+      "view"
+    ],
+    [
+      1777889675533,
+      "history-005",
+      "view"
+    ],
+    [
+      1777889705605,
+      "poetry-049",
+      "view"
+    ],
+    [
+      1777889725720,
+      "poetry-049",
+      "expand"
+    ],
+    [
+      1777889813855,
+      "chinese-018",
+      "view"
+    ],
+    [
+      1777889817288,
+      "chinese-018",
+      "expand"
+    ],
+    [
+      1777889823690,
+      "philosophy-003",
+      "view"
+    ],
+    [
+      1777889873780,
+      "philosophy-003",
+      "like"
+    ],
+    [
+      1777889877781,
+      "poetry-042",
+      "view"
+    ],
+    [
+      1777889906501,
+      "poetry-042",
+      "expand"
+    ],
+    [
+      1777889946254,
+      "poetry-042",
+      "like"
+    ],
+    [
+      1777893727531,
+      "chinese-033",
+      "view"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-04T10:12:04.703Z"
+  "exportedAt": "2026-05-04T11:22:07.570Z"
 }
