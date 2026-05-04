@@ -304,16 +304,22 @@ function buildQueues(cards) {
   const unseen = cards.filter(c => !seenIds.has(c.id) && !everViewed.has(c.id));
   const seenCards = cards.filter(c => seenIds.has(c.id) || everViewed.has(c.id));
 
-  // Chinese cards recycle until manually learned — mix seen-but-not-learned
-  // Chinese cards into the unseen queue for spaced repetition
+  // Chinese spaced repetition: max 15 Chinese cards in rotation (new + review combined)
+  // Learn cards to free up slots for new ones
+  const CHINESE_ROTATION_MAX = 15;
   const learned = new Set(loadStorage(STORAGE_KEYS.learned) || []);
-  const chineseReview = seenCards.filter(c => c.type === 'chinese' && !learned.has(c.id));
-  const seenNonReview = seenCards.filter(c => c.type !== 'chinese' || learned.has(c.id));
+  const newChinese = unseen.filter(c => c.type === 'chinese');
+  const unseenNonChinese = unseen.filter(c => c.type !== 'chinese');
+  const allChineseReview = shuffle(seenCards.filter(c => c.type === 'chinese' && !learned.has(c.id)));
+  const chineseSlots = Math.max(0, CHINESE_ROTATION_MAX - newChinese.length);
+  const chineseReview = allChineseReview.slice(0, chineseSlots);
+  const chineseOverflow = allChineseReview.slice(chineseSlots);
+  const seenNonReview = seenCards.filter(c => c.type !== 'chinese' || learned.has(c.id)).concat(chineseOverflow);
 
   // Track which IDs are truly new for the NEW badge
   STATE.neverSeenIds = new Set(unseen.map(c => c.id));
 
-  STATE.unseenQueue = shuffle([...unseen, ...chineseReview]);
+  STATE.unseenQueue = shuffle([...unseenNonChinese, ...newChinese, ...chineseReview]);
   STATE.seenQueue = shuffle(seenNonReview);
   STATE.phase = 'unseen';
   STATE.currentIndex = 0;
