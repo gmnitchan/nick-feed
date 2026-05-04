@@ -75,6 +75,30 @@
     "contradict-010": {
       "rating": "like",
       "date": "2026-04-29"
+    },
+    "discovery-115": {
+      "rating": "like",
+      "date": "2026-05-01"
+    },
+    "poetry-041": {
+      "rating": "like",
+      "date": "2026-05-01"
+    },
+    "origin-002": {
+      "rating": "like",
+      "date": "2026-05-01"
+    },
+    "origin-011": {
+      "rating": "like",
+      "date": "2026-05-01"
+    },
+    "origin-008": {
+      "rating": "like",
+      "date": "2026-05-01"
+    },
+    "contradict-003": {
+      "rating": "like",
+      "date": "2026-05-01"
     }
   },
   "passive": {
@@ -132,7 +156,14 @@
       "whatif-016",
       "origin-012",
       "poetry-050",
-      "contradict-010"
+      "contradict-010",
+      "contradict-013",
+      "poetry-041",
+      "poetry-046",
+      "origin-002",
+      "origin-011",
+      "origin-008",
+      "contradict-003"
     ],
     "retrieved": [
       "poetry-013",
@@ -169,7 +200,9 @@
       "underthehood-017",
       "origin-010",
       "discovery-097",
-      "contradict-010"
+      "contradict-010",
+      "poetry-046",
+      "origin-011"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -526,7 +559,17 @@
       "contradict-010": 1.8,
       "untranslatable-018": 17.6,
       "discovery-105": 6.8,
-      "discovery-114": 0.3
+      "discovery-114": 0.3,
+      "contradict-013": 70.6,
+      "discovery-115": 13.5,
+      "poetry-046": 72.7,
+      "poetry-041": 0.8,
+      "origin-002": 120,
+      "origin-011": 3.8,
+      "origin-013": 18.8,
+      "origin-008": 120,
+      "contradict-003": 40.2,
+      "paradigm-011": 4.4
     }
   },
   "comments": {
@@ -541,7 +584,7 @@
   },
   "streak": {
     "count": 1,
-    "lastOpen": "2026-05-01"
+    "lastOpen": "2026-05-04"
   },
   "sessionLog": [
     [
@@ -1588,7 +1631,158 @@
       1777633297105,
       "contradict-013",
       "view"
+    ],
+    [
+      1777633319480,
+      "contradict-013",
+      "expand"
+    ],
+    [
+      1777633367683,
+      "discovery-115",
+      "view"
+    ],
+    [
+      1777633378779,
+      "discovery-115",
+      "like"
+    ],
+    [
+      1777633380330,
+      "discovery-115",
+      "like"
+    ],
+    [
+      1777633381168,
+      "poetry-046",
+      "view"
+    ],
+    [
+      1777633399508,
+      "poetry-041",
+      "view"
+    ],
+    [
+      1777633410168,
+      "poetry-041",
+      "expand"
+    ],
+    [
+      1777633442149,
+      "poetry-041",
+      "like"
+    ],
+    [
+      1777633471279,
+      "poetry-046",
+      "back"
+    ],
+    [
+      1777633471280,
+      "poetry-046",
+      "view"
+    ],
+    [
+      1777633487294,
+      "poetry-046",
+      "expand"
+    ],
+    [
+      1777633544017,
+      "poetry-041",
+      "view"
+    ],
+    [
+      1777633544850,
+      "origin-002",
+      "view"
+    ],
+    [
+      1777633565986,
+      "origin-002",
+      "expand"
+    ],
+    [
+      1777633597999,
+      "origin-002",
+      "like"
+    ],
+    [
+      1777633680904,
+      "origin-011",
+      "view"
+    ],
+    [
+      1777633685601,
+      "origin-011",
+      "like"
+    ],
+    [
+      1777633740090,
+      "origin-013",
+      "view"
+    ],
+    [
+      1777633741203,
+      "origin-011",
+      "back"
+    ],
+    [
+      1777633741204,
+      "origin-011",
+      "view"
+    ],
+    [
+      1777633741786,
+      "origin-011",
+      "expand"
+    ],
+    [
+      1777633745019,
+      "origin-013",
+      "view"
+    ],
+    [
+      1777633763824,
+      "origin-008",
+      "view"
+    ],
+    [
+      1777633769786,
+      "origin-008",
+      "like"
+    ],
+    [
+      1777633844283,
+      "origin-008",
+      "expand"
+    ],
+    [
+      1777633991599,
+      "contradict-003",
+      "view"
+    ],
+    [
+      1777634002196,
+      "contradict-003",
+      "expand"
+    ],
+    [
+      1777634008819,
+      "contradict-003",
+      "like"
+    ],
+    [
+      1777634077854,
+      "paradigm-011",
+      "view"
+    ],
+    [
+      1777868200624,
+      "contradict-007",
+      "view"
     ]
   ],
-  "exportedAt": "2026-05-01T11:01:37.113Z"
+  "learned": [],
+  "exportedAt": "2026-05-04T04:16:40.628Z"
 }
