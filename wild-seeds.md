@@ -19,11 +19,9 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 
 ### Weird intersections
 - Acoustics of medieval cathedrals and modern concert halls
-- How submarine cables get repaired 4km underwater
 - Competitive pigeon racing and the genetics of homing
 - The physics behind Mongolian throat singing
 - How color naming evolves across languages (Berlin & Kay)
-- Witch trials as economic competition between neighbors
 - The overlap between jazz improvisation and military strategy
 - How hospital architecture measurably affects patient recovery
 - The mathematics of gerrymandering
@@ -51,7 +49,6 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 ### Forgotten knowledge
 - Greek fire: the lost weapon of the Byzantine Empire
 - The library of Ashurbanipal: older than Alexandria, still readable
-- Incan quipu: a writing system made of knotted strings
 - Damascus steel: lost metallurgical technique from the Middle Ages
 - The Voynich manuscript: 600 years of failed decryption
 
@@ -65,7 +62,6 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 ### Sound & silence
 - How earthquakes sound underwater (hydroacoustics)
 - The brown note myth and infrasound effects on the body
-- Cymatics: sound waves making physical patterns in sand
 
 ## Used Seeds
 
@@ -82,3 +78,7 @@ Anti-obvious prompts for the 25% wild budget. Each seed forces generation into t
 - How perfumers describe smells they've never encountered → discovery-121 (perfumers smell things that don't exist yet)
 - Prison economies and the cigarette-to-ramen currency shift → rejected by dedup (similar to discovery-022)
 - Knot theory applied to DNA replication → discovery-123 (mathematicians tie knots inside your DNA)
+- Witch trials as economic competition between neighbors → history-007
+- Incan quipu: a writing system made of knotted strings → discovery-124
+- How submarine cables get repaired 4km underwater → underthehood-025
+- Cymatics: sound waves making physical patterns in sand → discovery-125
