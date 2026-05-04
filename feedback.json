@@ -127,6 +127,22 @@
     "philosophy-002": {
       "rating": "like",
       "date": "2026-05-04"
+    },
+    "origin-005": {
+      "rating": "like",
+      "date": "2026-05-04"
+    },
+    "timeless-041": {
+      "rating": "like",
+      "date": "2026-05-04"
+    },
+    "insight-035": {
+      "rating": "like",
+      "date": "2026-05-04"
+    },
+    "discovery-104": {
+      "rating": "like",
+      "date": "2026-05-04"
     }
   },
   "passive": {
@@ -202,7 +218,12 @@
       "skill-024",
       "whatif-025",
       "philosophy-002",
-      "contradict-001"
+      "contradict-001",
+      "origin-005",
+      "insight-026",
+      "timeless-041",
+      "whatif-024",
+      "discovery-104"
     ],
     "retrieved": [
       "poetry-013",
@@ -599,7 +620,7 @@
       "untranslatable-021": 18.3,
       "discovery-118": 4.3,
       "origin-009": 38.1,
-      "chinese-034": 5.7,
+      "chinese-034": 12.9,
       "poetry-050": 76.3,
       "origin-007": 14.2,
       "contradict-010": 1.8,
@@ -639,7 +660,16 @@
       "origin-015": 10.5,
       "contradict-001": 62.4,
       "discovery-103": 3.4,
-      "whatif-023": 6.1
+      "whatif-023": 6.1,
+      "untranslatable-023": 40.5,
+      "origin-005": 91.7,
+      "insight-026": 23.7,
+      "timeless-041": 115.1,
+      "chinese-032": 61.7,
+      "insight-035": 24.7,
+      "whatif-024": 44.3,
+      "contradict-018": 12.9,
+      "discovery-104": 59.2
     }
   },
   "comments": {
@@ -667,6 +697,15 @@
         "dwell": 0,
         "expanded": true,
         "rating": "like"
+      }
+    },
+    "chinese-032": {
+      "text": "Too difficult. Keep it everyday stuff",
+      "date": "2026-05-04",
+      "context": {
+        "dwell": 0,
+        "expanded": false,
+        "rating": null
       }
     }
   },
@@ -2284,8 +2323,108 @@
       1777888954296,
       "whatif-023",
       "view"
+    ],
+    [
+      1777888960449,
+      "untranslatable-023",
+      "view"
+    ],
+    [
+      1777889000970,
+      "origin-005",
+      "view"
+    ],
+    [
+      1777889025739,
+      "origin-005",
+      "expand"
+    ],
+    [
+      1777889091255,
+      "origin-005",
+      "like"
+    ],
+    [
+      1777889092649,
+      "insight-026",
+      "view"
+    ],
+    [
+      1777889102400,
+      "insight-026",
+      "expand"
+    ],
+    [
+      1777889116357,
+      "timeless-041",
+      "view"
+    ],
+    [
+      1777889140992,
+      "timeless-041",
+      "like"
+    ],
+    [
+      1777889147175,
+      "timeless-041",
+      "expand"
+    ],
+    [
+      1777889309003,
+      "chinese-032",
+      "view"
+    ],
+    [
+      1777889369374,
+      "chinese-032",
+      "comment"
+    ],
+    [
+      1777889370713,
+      "chinese-034",
+      "view"
+    ],
+    [
+      1777889383633,
+      "insight-035",
+      "view"
+    ],
+    [
+      1777889403317,
+      "insight-035",
+      "like"
+    ],
+    [
+      1777889408320,
+      "whatif-024",
+      "view"
+    ],
+    [
+      1777889419936,
+      "whatif-024",
+      "expand"
+    ],
+    [
+      1777889452593,
+      "contradict-018",
+      "view"
+    ],
+    [
+      1777889465495,
+      "discovery-104",
+      "view"
+    ],
+    [
+      1777889481713,
+      "discovery-104",
+      "expand"
+    ],
+    [
+      1777889515380,
+      "discovery-104",
+      "like"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-04T10:02:40.446Z"
+  "exportedAt": "2026-05-04T10:12:04.703Z"
 }
