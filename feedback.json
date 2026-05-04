@@ -99,6 +99,18 @@
     "contradict-003": {
       "rating": "like",
       "date": "2026-05-01"
+    },
+    "chinese-010": {
+      "rating": "like",
+      "date": "2026-05-04"
+    },
+    "philosophy-001": {
+      "rating": "like",
+      "date": "2026-05-04"
+    },
+    "origin-001": {
+      "rating": "like",
+      "date": "2026-05-04"
     }
   },
   "passive": {
@@ -163,7 +175,11 @@
       "origin-002",
       "origin-011",
       "origin-008",
-      "contradict-003"
+      "contradict-003",
+      "philosophy-001",
+      "origin-001",
+      "poetry-056",
+      "chinese-012"
     ],
     "retrieved": [
       "poetry-013",
@@ -202,12 +218,13 @@
       "discovery-097",
       "contradict-010",
       "poetry-046",
-      "origin-011"
+      "origin-011",
+      "contradict-007"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
       "whatif-001": 1.3,
-      "chinese-010": 0.2,
+      "chinese-010": 27.7,
       "discovery-028": 0.3,
       "whatif-003": 0.2,
       "discovery-004": 0.2,
@@ -329,7 +346,7 @@
       "skill-008": 11,
       "discovery-058": 6.5,
       "timeless-017": 14.9,
-      "chinese-012": 12.9,
+      "chinese-012": 19.2,
       "discovery-039": 10.4,
       "discovery-048": 4.8,
       "insight-012": 17.7,
@@ -569,7 +586,15 @@
       "origin-013": 18.8,
       "origin-008": 120,
       "contradict-003": 40.2,
-      "paradigm-011": 4.4
+      "paradigm-011": 4.4,
+      "contradict-007": 1.9,
+      "philosophy-001": 89.2,
+      "origin-001": 120,
+      "poetry-056": 120,
+      "discovery-107": 8.3,
+      "discovery-110": 12.9,
+      "insight-034": 49.5,
+      "power-015": 3.5
     }
   },
   "comments": {
@@ -580,7 +605,16 @@
     "whatif-008": "This has been served to me multiple times",
     "skill-020": "Can you implement this in the app archotecture",
     "insight-016": "I want you to ask me things to get such feedback",
-    "chinese-033": "Ok this is way too advanced. Keep it simple. And for just the chinese category, it is fine to recycle seen cards mixed into fresh cards"
+    "chinese-033": "Ok this is way too advanced. Keep it simple. And for just the chinese category, it is fine to recycle seen cards mixed into fresh cards",
+    "chinese-010": {
+      "text": "Right level of difficulty",
+      "date": "2026-05-04",
+      "context": {
+        "dwell": 1.9,
+        "expanded": false,
+        "rating": "like"
+      }
+    }
   },
   "streak": {
     "count": 1,
@@ -1781,8 +1815,108 @@
       1777868200624,
       "contradict-007",
       "view"
+    ],
+    [
+      1777868274386,
+      "chinese-010",
+      "view"
+    ],
+    [
+      1777868276312,
+      "contradict-007",
+      "back"
+    ],
+    [
+      1777868276313,
+      "contradict-007",
+      "view"
+    ],
+    [
+      1777868278213,
+      "chinese-010",
+      "view"
+    ],
+    [
+      1777868291197,
+      "chinese-010",
+      "like"
+    ],
+    [
+      1777868304239,
+      "chinese-010",
+      "comment"
+    ],
+    [
+      1777868305908,
+      "philosophy-001",
+      "view"
+    ],
+    [
+      1777868689778,
+      "philosophy-001",
+      "expand"
+    ],
+    [
+      1777868834361,
+      "philosophy-001",
+      "like"
+    ],
+    [
+      1777869032593,
+      "origin-001",
+      "view"
+    ],
+    [
+      1777869040350,
+      "origin-001",
+      "expand"
+    ],
+    [
+      1777869140392,
+      "origin-001",
+      "like"
+    ],
+    [
+      1777869165307,
+      "poetry-056",
+      "view"
+    ],
+    [
+      1777869194122,
+      "poetry-056",
+      "expand"
+    ],
+    [
+      1777869288014,
+      "discovery-107",
+      "view"
+    ],
+    [
+      1777869296331,
+      "discovery-110",
+      "view"
+    ],
+    [
+      1777869309184,
+      "insight-034",
+      "view"
+    ],
+    [
+      1777869358699,
+      "chinese-012",
+      "view"
+    ],
+    [
+      1777869418550,
+      "chinese-012",
+      "expand"
+    ],
+    [
+      1777869637370,
+      "power-015",
+      "view"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-04T04:16:40.628Z"
+  "exportedAt": "2026-05-04T04:40:40.836Z"
 }
