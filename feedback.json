@@ -163,6 +163,10 @@
     "untranslatable-011": {
       "rating": "like",
       "date": "2026-05-06"
+    },
+    "contradict-021": {
+      "rating": "like",
+      "date": "2026-05-06"
     }
   },
   "passive": {
@@ -254,7 +258,11 @@
       "untranslatable-006",
       "whatif-030",
       "untranslatable-011",
-      "whatif-019"
+      "whatif-019",
+      "untranslatable-012",
+      "contradict-021",
+      "philosophy-008",
+      "contradict-004"
     ],
     "retrieved": [
       "poetry-013",
@@ -301,7 +309,9 @@
       "skill-024",
       "insight-028",
       "discovery-103",
-      "whatif-019"
+      "whatif-019",
+      "underthehood-030",
+      "philosophy-008"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -720,7 +730,17 @@
       "untranslatable-011": 86.9,
       "whatif-019": 60.6,
       "origin-018": 21.8,
-      "chinese-019": 10.1
+      "chinese-019": 10.1,
+      "underthehood-030": 1.3,
+      "history-001": 6.3,
+      "untranslatable-012": 16.5,
+      "timeless-045": 19.1,
+      "history-010": 12.3,
+      "contradict-021": 120,
+      "power-022": 9.9,
+      "contradict-015": 2.9,
+      "philosophy-008": 30.3,
+      "contradict-004": 30.6
     }
   },
   "comments": {
@@ -2693,8 +2713,113 @@
       1778067816729,
       "chinese-019",
       "view"
+    ],
+    [
+      1778067826800,
+      "underthehood-030",
+      "view"
+    ],
+    [
+      1778067976867,
+      "history-001",
+      "view"
+    ],
+    [
+      1778067978316,
+      "underthehood-030",
+      "back"
+    ],
+    [
+      1778067978317,
+      "underthehood-030",
+      "view"
+    ],
+    [
+      1778067979666,
+      "history-001",
+      "view"
+    ],
+    [
+      1778067985949,
+      "untranslatable-012",
+      "view"
+    ],
+    [
+      1778068005168,
+      "untranslatable-012",
+      "expand"
+    ],
+    [
+      1778068101103,
+      "timeless-045",
+      "view"
+    ],
+    [
+      1778068120187,
+      "history-010",
+      "view"
+    ],
+    [
+      1778068132521,
+      "contradict-021",
+      "view"
+    ],
+    [
+      1778068159034,
+      "contradict-021",
+      "expand"
+    ],
+    [
+      1778068217743,
+      "contradict-021",
+      "like"
+    ],
+    [
+      1778068325480,
+      "power-022",
+      "view"
+    ],
+    [
+      1778068335362,
+      "contradict-015",
+      "view"
+    ],
+    [
+      1778068338262,
+      "philosophy-008",
+      "view"
+    ],
+    [
+      1778068360734,
+      "contradict-004",
+      "view"
+    ],
+    [
+      1778068361967,
+      "philosophy-008",
+      "back"
+    ],
+    [
+      1778068361969,
+      "philosophy-008",
+      "view"
+    ],
+    [
+      1778068362799,
+      "philosophy-008",
+      "expand"
+    ],
+    [
+      1778068392223,
+      "contradict-004",
+      "view"
+    ],
+    [
+      1778068784805,
+      "contradict-004",
+      "expand"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-06T11:43:46.797Z"
+  "exportedAt": "2026-05-06T12:00:01.430Z"
 }
