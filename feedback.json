@@ -151,6 +151,10 @@
     "poetry-042": {
       "rating": "like",
       "date": "2026-05-04"
+    },
+    "underthehood-023": {
+      "rating": "like",
+      "date": "2026-05-05"
     }
   },
   "passive": {
@@ -237,7 +241,8 @@
       "chinese-039",
       "poetry-049",
       "chinese-018",
-      "poetry-042"
+      "poetry-042",
+      "underthehood-023"
     ],
     "retrieved": [
       "poetry-013",
@@ -691,7 +696,8 @@
       "history-005": 30.1,
       "poetry-049": 108.2,
       "philosophy-003": 54.1,
-      "poetry-042": 72.7
+      "poetry-042": 72.7,
+      "underthehood-023": 67.8
     }
   },
   "comments": {
@@ -729,11 +735,20 @@
         "expanded": false,
         "rating": null
       }
+    },
+    "underthehood-023": {
+      "text": "I want a feature that keeps all the liked cards. Can be hidden in the settings. I just want to keep a collection of the ones I liked",
+      "date": "2026-05-05",
+      "context": {
+        "dwell": 0,
+        "expanded": true,
+        "rating": "like"
+      }
     }
   },
   "streak": {
-    "count": 2,
-    "lastOpen": "2026-05-05"
+    "count": 3,
+    "lastOpen": "2026-05-06"
   },
   "sessionLog": [
     [
@@ -2545,8 +2560,28 @@
       1777975093060,
       "underthehood-023",
       "view"
+    ],
+    [
+      1777975104898,
+      "underthehood-023",
+      "expand"
+    ],
+    [
+      1777975119235,
+      "underthehood-023",
+      "like"
+    ],
+    [
+      1777975151825,
+      "underthehood-023",
+      "comment"
+    ],
+    [
+      1778067407337,
+      "chinese-045",
+      "view"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-05T09:58:13.068Z"
+  "exportedAt": "2026-05-06T11:36:47.338Z"
 }
