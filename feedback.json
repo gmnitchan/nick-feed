@@ -155,6 +155,14 @@
     "underthehood-023": {
       "rating": "like",
       "date": "2026-05-05"
+    },
+    "untranslatable-006": {
+      "rating": "like",
+      "date": "2026-05-06"
+    },
+    "untranslatable-011": {
+      "rating": "like",
+      "date": "2026-05-06"
     }
   },
   "passive": {
@@ -242,7 +250,11 @@
       "poetry-049",
       "chinese-018",
       "poetry-042",
-      "underthehood-023"
+      "underthehood-023",
+      "untranslatable-006",
+      "whatif-030",
+      "untranslatable-011",
+      "whatif-019"
     ],
     "retrieved": [
       "poetry-013",
@@ -288,7 +300,8 @@
       "chinese-015",
       "skill-024",
       "insight-028",
-      "discovery-103"
+      "discovery-103",
+      "whatif-019"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -697,7 +710,17 @@
       "poetry-049": 108.2,
       "philosophy-003": 54.1,
       "poetry-042": 72.7,
-      "underthehood-023": 67.8
+      "underthehood-023": 67.8,
+      "chinese-045": 14.6,
+      "untranslatable-006": 80.8,
+      "insight-040": 10.2,
+      "history-006": 15.2,
+      "whatif-030": 100.7,
+      "discovery-121": 10.3,
+      "untranslatable-011": 86.9,
+      "whatif-019": 60.6,
+      "origin-018": 21.8,
+      "chinese-019": 10.1
     }
   },
   "comments": {
@@ -2580,8 +2603,98 @@
       1778067407337,
       "chinese-045",
       "view"
+    ],
+    [
+      1778067421905,
+      "untranslatable-006",
+      "view"
+    ],
+    [
+      1778067435186,
+      "untranslatable-006",
+      "like"
+    ],
+    [
+      1778067443111,
+      "untranslatable-006",
+      "expand"
+    ],
+    [
+      1778067502706,
+      "insight-040",
+      "view"
+    ],
+    [
+      1778067512875,
+      "history-006",
+      "view"
+    ],
+    [
+      1778067528078,
+      "whatif-030",
+      "view"
+    ],
+    [
+      1778067543278,
+      "whatif-030",
+      "expand"
+    ],
+    [
+      1778067628739,
+      "discovery-121",
+      "view"
+    ],
+    [
+      1778067639042,
+      "untranslatable-011",
+      "view"
+    ],
+    [
+      1778067661860,
+      "untranslatable-011",
+      "like"
+    ],
+    [
+      1778067662659,
+      "untranslatable-011",
+      "expand"
+    ],
+    [
+      1778067725980,
+      "whatif-019",
+      "view"
+    ],
+    [
+      1778067732782,
+      "origin-018",
+      "view"
+    ],
+    [
+      1778067734315,
+      "whatif-019",
+      "back"
+    ],
+    [
+      1778067734316,
+      "whatif-019",
+      "view"
+    ],
+    [
+      1778067735747,
+      "whatif-019",
+      "expand"
+    ],
+    [
+      1778067794942,
+      "origin-018",
+      "view"
+    ],
+    [
+      1778067816729,
+      "chinese-019",
+      "view"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-06T11:36:47.338Z"
+  "exportedAt": "2026-05-06T11:43:46.797Z"
 }
