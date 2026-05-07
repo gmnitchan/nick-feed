@@ -273,10 +273,12 @@ function updateCounter() {
 // --- Seen state ---
 function pruneSeen() {
   const seen = loadStorage(STORAGE_KEYS.seen) || {};
+  const feedback = loadStorage(STORAGE_KEYS.feedback) || {};
   const today = todayStr();
   const pruned = {};
   for (const [id, date] of Object.entries(seen)) {
-    if (daysBetween(date, today) <= 14) pruned[id] = date;
+    // Keep liked/disliked cards permanently — never prune explicit feedback cards
+    if (daysBetween(date, today) <= 14 || feedback[id]) pruned[id] = date;
   }
   saveStorage(STORAGE_KEYS.seen, pruned);
   return pruned;
