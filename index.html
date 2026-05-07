@@ -11,7 +11,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="preload" href="fonts/PlusJakartaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20">
+  <link rel="stylesheet" href="styles.css?v=21">
 </head>
 <body>
   <div id="splash">
@@ -26,6 +26,7 @@
         <button id="btn-view-feedback">View Feedback Summary</button>
         <button id="btn-export">Copy Feedback Summary</button>
         <button id="btn-export-index">Copy Card Index (for generation)</button>
+        <button id="btn-liked-collection">My Liked Cards</button>
         <button id="btn-restart" style="background:#3a1a1a;border-color:#5a2a2a;">Restart Feed</button>
         <hr style="border:none;border-top:1px solid #2a2a2a;margin:0.5rem 0">
         <div id="token-section">
@@ -40,6 +41,13 @@
       <div id="feedback-view-panel">
         <pre id="feedback-view-content"></pre>
         <button id="btn-close-feedback-view">Close</button>
+      </div>
+    </div>
+    <div id="liked-overlay" style="display:none">
+      <div id="liked-panel">
+        <h2>Liked Cards</h2>
+        <div id="liked-list"></div>
+        <button id="btn-close-liked">Close</button>
       </div>
     </div>
     <header id="header">
@@ -71,7 +79,7 @@
       </div>
     </div>
   </div>
-  <script src="svg-gen.js?v=20"></script>
-  <script src="app.js?v=20"></script>
+  <script src="svg-gen.js?v=21"></script>
+  <script src="app.js?v=21"></script>
 </body>
 </html>

@@ -63,10 +63,11 @@ Discovery is the exploration type — it surfaces topics that don't fit any exis
 ## Difficulty Calibration
 
 ### chinese
-- **Level:** HSK 1-2 max for vocabulary cards
-- **Chengyu (4-char idioms):** Too hard at HSK 3+ without heavy scaffolding. Either stay HSK 1-2 or provide full sentence examples with literal translation
-- **What works:** Cultural context cards (meanings, customs behind phrases) > pure vocabulary drilling
-- Source: chinese-014 "A bit too tough" (HSK 3 chengyu)
+- **Level:** Keep it SIMPLE. Everyday stuff only. No advanced grammar, no literary chengyu, no formal/written Chinese.
+- **What works:** Common conversational phrases with cultural context (热闹, 马马虎虎, 加油). Cards that explain how a phrase is used socially, not just what it means.
+- **What doesn't:** Anything that feels like a textbook lesson. Advanced chengyu (HSK 3+), formal/literary language, complex grammar structures.
+- **Right difficulty benchmark:** chinese-010 got a "right level of difficulty" like. Stay at that register.
+- Sources: chinese-014 "A bit too tough", chinese-032 "Too difficult. Keep it everyday stuff", chinese-033 "way too advanced. Keep it simple", chinese-010 "Right level of difficulty" (liked)
 
 ### discovery
 - **Must be genuinely unexpected** — topics that don't fit any other type
@@ -89,6 +90,8 @@ Discovery is the exploration type — it surfaces topics that don't fit any exis
 - **ADVANCED.** Assume familiarity with intro-level philosophy (see Known Territory)
 - Go into tensions, counter-arguments, lesser-known thinkers, non-Western traditions
 - Systematic thought: arguments, schools, thought experiments — not just quotes from famous thinkers
+- **What works:** Jain epistemology card (philosophy-004) got like + expand + positive comment about the "related mentioned concepts." Cards that connect to other schools/thinkers resonate — the web of connections is the value.
+- Source: philosophy-004 "All the related mentioned concepts here are very interesting" (liked, expanded)
 
 ### history
 - **ADVANCED.** No pop history, no typical history YouTube channel content
@@ -213,3 +216,4 @@ Updated each feedback cycle. Cross-reference against existing card titles to fin
 | Date | Signals processed | Rules changed |
 |------|------------------|---------------|
 | 2026-05-04 | 7 comments (4 addressed previously, 3 new), 7 likes, dwell/expand/retrieve data through Apr 29 | Initial rules created. Difficulty calibration for chinese, discovery, timeless, insight. Known territory list. Engagement patterns. Type restructure: +philosophy, +history, skill→insight, paradigm→history, discovery redefined. |
+| 2026-05-07 | 5 new comments (chinese-033, chinese-010, philosophy-004, chinese-032, underthehood-023) | Chinese difficulty tightened: "keep it simple, everyday stuff only." Philosophy positive signal: connections between schools/thinkers is the value. Feature request: liked cards collection. |

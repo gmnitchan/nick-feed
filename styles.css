@@ -515,6 +515,71 @@ html, body {
   cursor: pointer;
 }
 
+#liked-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 110;
+  padding: 1rem;
+}
+#liked-panel {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#liked-panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+#liked-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.liked-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #0d0d0d;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.liked-card:active {
+  background: #2a2a2a;
+}
+.liked-card-badge {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.liked-card-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+#btn-close-liked {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: var(--text);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
 #btn-comment {
   position: relative;
 }

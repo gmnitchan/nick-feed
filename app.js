@@ -393,6 +393,17 @@ function nextCard() {
   showCard(card);
 }
 
+function jumpToCard(cardId) {
+  const card = STATE.cards.find(c => c.id === cardId);
+  if (!card) return;
+  document.getElementById('liked-overlay').style.display = 'none';
+  if (STATE.currentCard && !STATE.currentCard.isNudge) {
+    recordDwell(STATE.currentCard.id);
+    STATE.history.push(STATE.currentCard);
+  }
+  showCard(card);
+}
+
 function prevCard() {
   if (STATE.history.length === 0) return;
 
@@ -653,6 +664,34 @@ function setupSettings() {
   });
   document.getElementById('btn-close-feedback-view').addEventListener('click', () => {
     document.getElementById('feedback-view-overlay').style.display = 'none';
+  });
+
+  // Liked cards collection
+  document.getElementById('btn-liked-collection').addEventListener('click', () => {
+    document.getElementById('settings-overlay').style.display = 'none';
+    const feedback = loadStorage(STORAGE_KEYS.feedback) || {};
+    const likedIds = Object.entries(feedback)
+      .filter(([_, v]) => v.rating === 'like')
+      .map(([id]) => id);
+    const likedCards = likedIds
+      .map(id => STATE.cards.find(c => c.id === id))
+      .filter(Boolean);
+    const list = document.getElementById('liked-list');
+    if (likedCards.length === 0) {
+      list.innerHTML = '<p style="color:var(--text-muted);text-align:center;">No liked cards yet. Tap 👍 on cards you love.</p>';
+    } else {
+      list.innerHTML = likedCards.map(c => {
+        const meta = TYPE_META[c.type] || TYPE_META.discovery;
+        return `<div class="liked-card" onclick="jumpToCard('${c.id}')">
+          <span class="liked-card-badge" style="color:${meta.color}">${meta.emoji}</span>
+          <span class="liked-card-title">${c.title}</span>
+        </div>`;
+      }).join('');
+    }
+    document.getElementById('liked-overlay').style.display = 'flex';
+  });
+  document.getElementById('btn-close-liked').addEventListener('click', () => {
+    document.getElementById('liked-overlay').style.display = 'none';
   });
 }
 
