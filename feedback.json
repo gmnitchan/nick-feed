@@ -740,7 +740,8 @@
       "power-022": 9.9,
       "contradict-015": 2.9,
       "philosophy-008": 30.3,
-      "contradict-004": 30.6
+      "contradict-004": 30.6,
+      "contradict-016": 30
     }
   },
   "comments": {
@@ -790,8 +791,8 @@
     }
   },
   "streak": {
-    "count": 3,
-    "lastOpen": "2026-05-06"
+    "count": 1,
+    "lastOpen": "2026-05-10"
   },
   "sessionLog": [
     [
@@ -2818,8 +2819,18 @@
       1778068784805,
       "contradict-004",
       "expand"
+    ],
+    [
+      1778068801434,
+      "contradict-016",
+      "view"
+    ],
+    [
+      1778405676413,
+      "insight-037",
+      "view"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-06T12:00:01.430Z"
+  "exportedAt": "2026-05-10T09:34:36.418Z"
 }
