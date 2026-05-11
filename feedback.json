@@ -179,6 +179,30 @@
     "timeless-047": {
       "rating": "like",
       "date": "2026-05-11"
+    },
+    "timeless-044": {
+      "rating": "like",
+      "date": "2026-05-11"
+    },
+    "chinese-035": {
+      "rating": "dislike",
+      "date": "2026-05-11"
+    },
+    "poetry-055": {
+      "rating": "like",
+      "date": "2026-05-11"
+    },
+    "discovery-111": {
+      "rating": "like",
+      "date": "2026-05-11"
+    },
+    "timeless-038": {
+      "rating": "like",
+      "date": "2026-05-11"
+    },
+    "origin-023": {
+      "rating": "like",
+      "date": "2026-05-11"
     }
   },
   "passive": {
@@ -279,7 +303,14 @@
       "discovery-128",
       "insight-030",
       "poetry-052",
-      "timeless-047"
+      "timeless-047",
+      "timeless-044",
+      "underthehood-027",
+      "poetry-055",
+      "timeless-046",
+      "discovery-111",
+      "timeless-038",
+      "origin-023"
     ],
     "retrieved": [
       "poetry-013",
@@ -328,7 +359,9 @@
       "discovery-103",
       "whatif-019",
       "underthehood-030",
-      "philosophy-008"
+      "philosophy-008",
+      "timeless-044",
+      "discovery-111"
     ],
     "dwellTimes": {
       "timeless-003": 0.9,
@@ -765,7 +798,17 @@
       "insight-030": 120,
       "poetry-052": 1.5,
       "timeless-047": 120,
-      "untranslatable-017": 10.8
+      "untranslatable-017": 10.8,
+      "timeless-044": 1.7,
+      "chinese-035": 51.1,
+      "underthehood-027": 113.9,
+      "paradigm-012": 6.8,
+      "poetry-055": 92.5,
+      "timeless-046": 120,
+      "power-021": 16.5,
+      "discovery-111": 2.6,
+      "timeless-038": 104.2,
+      "origin-023": 120
     }
   },
   "comments": {
@@ -811,6 +854,15 @@
         "dwell": 0,
         "expanded": true,
         "rating": "like"
+      }
+    },
+    "chinese-035": {
+      "text": "This is too hard\nAlso make a button for chinese for too hard which both retires the card and serves as feedback for adjustment",
+      "date": "2026-05-11",
+      "context": {
+        "dwell": 1.8,
+        "expanded": false,
+        "rating": null
       }
     }
   },
@@ -2928,8 +2980,158 @@
       1778490973099,
       "timeless-044",
       "view"
+    ],
+    [
+      1778490979093,
+      "timeless-044",
+      "expand"
+    ],
+    [
+      1778491076770,
+      "chinese-035",
+      "view"
+    ],
+    [
+      1778491078547,
+      "timeless-044",
+      "back"
+    ],
+    [
+      1778491078548,
+      "timeless-044",
+      "view"
+    ],
+    [
+      1778491079877,
+      "timeless-044",
+      "like"
+    ],
+    [
+      1778491080228,
+      "chinese-035",
+      "view"
+    ],
+    [
+      1778491127407,
+      "chinese-035",
+      "comment"
+    ],
+    [
+      1778491130422,
+      "chinese-035",
+      "dislike"
+    ],
+    [
+      1778491131307,
+      "underthehood-027",
+      "view"
+    ],
+    [
+      1778491154159,
+      "underthehood-027",
+      "expand"
+    ],
+    [
+      1778491245183,
+      "paradigm-012",
+      "view"
+    ],
+    [
+      1778491252003,
+      "poetry-055",
+      "view"
+    ],
+    [
+      1778491265598,
+      "poetry-055",
+      "expand"
+    ],
+    [
+      1778491333147,
+      "poetry-055",
+      "like"
+    ],
+    [
+      1778491344501,
+      "timeless-046",
+      "view"
+    ],
+    [
+      1778491359768,
+      "timeless-046",
+      "expand"
+    ],
+    [
+      1778491466779,
+      "power-021",
+      "view"
+    ],
+    [
+      1778491483232,
+      "discovery-111",
+      "view"
+    ],
+    [
+      1778491492214,
+      "discovery-111",
+      "expand"
+    ],
+    [
+      1778491493267,
+      "timeless-038",
+      "view"
+    ],
+    [
+      1778491497037,
+      "discovery-111",
+      "back"
+    ],
+    [
+      1778491497038,
+      "discovery-111",
+      "view"
+    ],
+    [
+      1778491499050,
+      "discovery-111",
+      "like"
+    ],
+    [
+      1778491499602,
+      "timeless-038",
+      "view"
+    ],
+    [
+      1778491522053,
+      "timeless-038",
+      "expand"
+    ],
+    [
+      1778491587979,
+      "timeless-038",
+      "like"
+    ],
+    [
+      1778491603851,
+      "origin-023",
+      "view"
+    ],
+    [
+      1778491609934,
+      "origin-023",
+      "like"
+    ],
+    [
+      1778491624553,
+      "origin-023",
+      "expand"
+    ],
+    [
+      1778491773028,
+      "origin-023",
+      "like"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-11T09:16:13.107Z"
+  "exportedAt": "2026-05-11T09:29:37.929Z"
 }
