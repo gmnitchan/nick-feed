@@ -167,6 +167,14 @@
     "contradict-021": {
       "rating": "like",
       "date": "2026-05-06"
+    },
+    "discovery-128": {
+      "rating": "like",
+      "date": "2026-05-10"
+    },
+    "insight-030": {
+      "rating": "like",
+      "date": "2026-05-10"
     }
   },
   "passive": {
@@ -262,7 +270,11 @@
       "untranslatable-012",
       "contradict-021",
       "philosophy-008",
-      "contradict-004"
+      "contradict-004",
+      "whatif-029",
+      "discovery-128",
+      "insight-030",
+      "poetry-052"
     ],
     "retrieved": [
       "poetry-013",
@@ -741,7 +753,12 @@
       "contradict-015": 2.9,
       "philosophy-008": 30.3,
       "contradict-004": 30.6,
-      "contradict-016": 30
+      "contradict-016": 30,
+      "insight-037": 100.9,
+      "whatif-029": 51.9,
+      "discovery-128": 115.4,
+      "insight-030": 120,
+      "poetry-052": 1.5
     }
   },
   "comments": {
@@ -791,8 +808,8 @@
     }
   },
   "streak": {
-    "count": 1,
-    "lastOpen": "2026-05-10"
+    "count": 2,
+    "lastOpen": "2026-05-11"
   },
   "sessionLog": [
     [
@@ -2829,8 +2846,63 @@
       1778405676413,
       "insight-037",
       "view"
+    ],
+    [
+      1778405813473,
+      "whatif-029",
+      "view"
+    ],
+    [
+      1778405824567,
+      "whatif-029",
+      "expand"
+    ],
+    [
+      1778405865415,
+      "discovery-128",
+      "view"
+    ],
+    [
+      1778405945359,
+      "discovery-128",
+      "expand"
+    ],
+    [
+      1778405971803,
+      "discovery-128",
+      "like"
+    ],
+    [
+      1778405980773,
+      "insight-030",
+      "view"
+    ],
+    [
+      1778406036908,
+      "insight-030",
+      "expand"
+    ],
+    [
+      1778406047528,
+      "insight-030",
+      "like"
+    ],
+    [
+      1778406163237,
+      "poetry-052",
+      "view"
+    ],
+    [
+      1778406178150,
+      "poetry-052",
+      "expand"
+    ],
+    [
+      1778465701792,
+      "timeless-047",
+      "view"
     ]
   ],
   "learned": [],
-  "exportedAt": "2026-05-10T09:34:36.418Z"
+  "exportedAt": "2026-05-11T02:15:01.795Z"
 }
